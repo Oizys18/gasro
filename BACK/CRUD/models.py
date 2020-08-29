@@ -1,8 +1,21 @@
 from django.db import models
 from django.conf import settings
 
-# Create your models here.
 
+class Post(models.Model):
+    post_id = models.CharField(max_length=20)
+    subject = models.CharField(max_length=100)
+    content = models.TextField()
+
+    class Meta():
+        ordering = ('post_id',)
+
+    def __str__(self):
+        return self.subject
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
 # class Person(models.Model):
 #     imdb_id = models.CharField(max_length=20)
@@ -59,6 +72,6 @@ from django.conf import settings
 #     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 #     content = models.CharField(max_length=140)
 #     created_at = models.DateTimeField(auto_now_add=True)
-    
+
 #     class Meta:
 #         ordering = ('-pk',)
