@@ -13,9 +13,7 @@ schema_view = get_schema_view(
 app_name = 'crud'
 
 urlpatterns = [
-    # /field or function/ => list
-    # /field or function/ <int:pk> => specific
-    # path('', views.movies, name='movies'),
+    path('', views.posts, name='posts'),
     # path('mvs/', views.mvs, name='mvs'),
     # path('<int:pk>/', views.movie_detail, name='movie_detail'),
     # path('<int:pk>/like/', views.movie_like, name='movie_like'),
