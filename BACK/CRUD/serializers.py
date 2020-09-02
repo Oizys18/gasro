@@ -1,7 +1,19 @@
 from rest_framework import serializers
-# from .models import Movie, Person, Genre, Keyword, Review
+from .models import Comment, Post
 
 
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ('id', 'content', 'user', 'subject')
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = ('id', 'content', 'created_at')
+
+        
 # class GenreSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = Genre

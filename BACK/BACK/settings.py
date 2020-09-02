@@ -48,16 +48,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'CRUD',
-    #여기부터
     'drf_yasg',
     'corsheaders',
     'rest_framework',
-    'allauth',
-    'allauth.account',
     'rest_auth',
-    'rest_auth.registration',
+    'rest_framework_jwt',
     'rest_framework.authtoken',
-    #여기까지 설치필요 
+    'rest_auth.registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -66,7 +63,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 # For Rest-auth Registration
-SITE_ID = 1
+SITE_ID = 1 
 REST_USE_JWT = True
 
 REST_FRAMEWORK = {
@@ -204,5 +201,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-AUTH_USER_MODEL = 'accounts.User'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# AUTH_USER_MODEL = 'accounts.User'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') 

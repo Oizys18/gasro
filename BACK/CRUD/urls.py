@@ -1,13 +1,16 @@
 from django.urls import path
 from . import views
-from drf_yasg import openapi
+from rest_framework import permissions
 from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
         title='GASRO REST API',
         default_version='v1',
-    )
+    ),
+    public = True,
+    permission_classes =(permissions.AllowAny)
 )
 
 app_name = 'crud'
@@ -28,5 +31,5 @@ urlpatterns = [
     # path('pick_n/', views.pick_n, name='pick_n'),
     # path('pick_n/<int:num>/<str:genres>/', views.pick_n, name='pick_ns'),
     # path('docs/', schema_view.with_ui('redoc'), name='api_docs'),
-    # path('swagger/', schema_view.with_ui('swagger'), name='api_swagger'),
+    path('swagger/', schema_view.with_ui('swagger'), name='api_swagger'),
 ]
