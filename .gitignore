@@ -1,6 +1,7 @@
 
 # Created by https://www.toptal.com/developers/gitignore/api/django,react,visualstudiocode,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,react,visualstudiocode,python
+.vscode/
 
 ### Django ###
 *.log

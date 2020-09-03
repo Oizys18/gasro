@@ -30,6 +30,6 @@ urlpatterns = [
     # path('genres/<int:pk>/', views.genre_detail, name='genre_detail'),
     # path('pick_n/', views.pick_n, name='pick_n'),
     # path('pick_n/<int:num>/<str:genres>/', views.pick_n, name='pick_ns'),
-    # path('docs/', schema_view.with_ui('redoc'), name='api_docs'),
+    path('docs/', schema_view.with_ui('redoc'), name='api_docs'),
     path('swagger/', schema_view.with_ui('swagger'), name='api_swagger'),
 ]
