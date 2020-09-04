@@ -16,7 +16,7 @@ schema_view = get_schema_view(
 app_name = 'crud'
 
 urlpatterns = [
-    path('', views.posts, name='posts'),
+    # path('', views.posts, name='posts'),
     # path('mvs/', views.mvs, name='mvs'),
     # path('<int:pk>/', views.movie_detail, name='movie_detail'),
     # path('<int:pk>/like/', views.movie_like, name='movie_like'),
@@ -30,6 +30,6 @@ urlpatterns = [
     # path('genres/<int:pk>/', views.genre_detail, name='genre_detail'),
     # path('pick_n/', views.pick_n, name='pick_n'),
     # path('pick_n/<int:num>/<str:genres>/', views.pick_n, name='pick_ns'),
-    path('docs/', schema_view.with_ui('redoc'), name='api_docs'),
-    path('swagger/', schema_view.with_ui('swagger'), name='api_swagger'),
+    # path('docs/', schema_view.with_ui('redoc'), name='api_docs'),
+    # path('swagger/', schema_view.with_ui('swagger'), name='api_swagger'),
 ]

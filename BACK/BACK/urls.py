@@ -19,9 +19,7 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api-token-auth/', obtain_jwt_token),
-    # path('api/v1/movies/', include('movies.urls')),
-    # path('api/v1/accounts/', include('accounts.urls')),
     path('rest-auth/', include('rest_auth.urls')),
-    # path('rest-auth/registration/', include('rest_auth.registration.urls')),
+    path('post/', include('crud.urls')),
 ]
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

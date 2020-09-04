@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Post,Comment
-from .serializers import PostSerializer, CommentSerializer
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Post
+from .forms import PostForm
+from .serializers import PostSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.http import JsonResponse 
@@ -12,9 +13,16 @@ from django.core import serializers
 
 
 
-@api_view(['GET'])
-def posts(request):
-    posts_all = cache.get_or_set('postss_all',Post.objects.all())
-    # serializer = MovieSerializer(movies_all, many=True)
-    # return Response(serializer.data)
-    pass
+@api_view(['POST'])
+def create(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save()
+        return redirect(post)
+    else:
+        form = PostForm()
+    context = {
+        'form':form,
+    }
+    return render(request,'CRUD/create.html', context)
