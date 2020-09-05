@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block body %}
+<div class='m-5'>
+    <form action="{% url 'movies:create' %}" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <h1>NEW MOVIE</h1>
+            <hr>
+            {% bootstrap_form form %}
+            <hr>
+            <input type="submit" style="font-size: 20px;" value="제출">
+        </div>
+    </form>
+
+</div>
+{% endblock %}
