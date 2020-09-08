@@ -4,10 +4,10 @@
 
 {% block body %}
 <div class='m-5'>
-    <form action="{% url 'post:create' %}" method="post">
+    <form action="{% url 'post:delete' %}" method="post">
         {% csrf_token %}
         <div class="container">
-            <h1>NEW POST</h1>
+            <h1>DELETE POST</h1>
             <hr>
             {% bootstrap_form form %}
             <hr>
