@@ -70,7 +70,7 @@ ROOT_URLCONF = 'gasro_back.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'recap', 'templates',)],
+        'DIRS': [os.path.join(BASE_DIR, 'gasro_back', 'templates',)],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
