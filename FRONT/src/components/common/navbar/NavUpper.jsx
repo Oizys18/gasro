@@ -4,11 +4,33 @@ import DefaultButton from "components/common/buttons/DefaultButton";
 // import PropTypes from 'prop-types'
 
 export class NavUpper extends Component {
-  static propTypes = {};
+  constructor() {
+    super();
+    this.state = {
+      bgColor: "",
+    };
+  }
+  componentDidMount() {
+    window.addEventListener("scroll", this.onScroll);
+  }
 
+  onScroll = (e) => {
+    const scrollTop = ("scroll", e.srcElement.scrollingElement.scrollTop);
+    let nav = document.getElementById("navbar-upper");
+    if (scrollTop == 0) {
+      this.setState({ bgColor: "black" });
+    } else {
+      this.setState({ bgColor: "#FFFFFF" });
+    }
+  };
   render() {
     return (
-      <UpperWrapper>
+      <UpperWrapper
+        id="navbar-upper"
+        style={{
+          backgroundColor: this.state.bgColor ? this.state.bgColor : "black",
+        }}
+      >
         <DefaultButton>제품</DefaultButton>
         <DefaultButton>회사소개</DefaultButton>
         <DefaultButton>연락처</DefaultButton>
@@ -18,6 +40,7 @@ export class NavUpper extends Component {
 }
 
 export default NavUpper;
+
 const UpperWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
@@ -28,9 +51,7 @@ const UpperWrapper = styled.div`
   width: 100vw;
   height: 6vh;
   padding: 0 3em 0 0;
-  background-color: black;
   z-index: 2;
-  -webkit-box-shadow: 0px 13px 34px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 13px 34px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 13px 34px 0px rgba(0, 0, 0, 0.75);
+  background-color: "black";
+  transition: 0.3s;
 `;

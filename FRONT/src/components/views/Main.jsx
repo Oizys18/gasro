@@ -23,6 +23,7 @@ const MainWrapper = styled.div`
   display: flex;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
+  background-color:#FFFFFF;
 `;
