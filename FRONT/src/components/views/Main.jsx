@@ -9,6 +9,7 @@ class Main extends Component {
   render() {
     return (
       <MainWrapper>
+        asdasdfasfasfda
       </MainWrapper>
     );
   }
@@ -23,7 +24,5 @@ const MainWrapper = styled.div`
   display: flex;
   left: 0;
   top: 0;
-  height: 200vh;
-  width: 100vw;
   background-color:#FFFFFF;
 `;
