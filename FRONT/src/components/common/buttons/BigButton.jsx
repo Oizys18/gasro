@@ -1,18 +1,12 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export class BigButton extends Component {
-    static propTypes = {
+  static propTypes = {};
 
-    }
-
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+  render() {
+    return <div>Bigbutton component</div>;
+  }
 }
 
-export default BigButton
+export default BigButton;

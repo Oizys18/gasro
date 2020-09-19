@@ -9,7 +9,7 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                Header
+                Header component
             </div>
         )
     }
