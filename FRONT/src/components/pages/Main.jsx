@@ -6,6 +6,9 @@ class Main extends Component {
     return (
       <MainWrapper>
         <h1>Main page</h1>
+        <Content>
+          Main Content
+        </Content>
       </MainWrapper>
     );
   }
@@ -14,9 +17,13 @@ class Main extends Component {
 export default Main;
 
 const MainWrapper = styled.div`
-  background-color: grey;
-  width: 1080px;
-  height: 720px;
   justify-content: center;
   align-items: center;
+  display: flex;
+`;
+
+const Content = styled.div`
+  background-color:grey;
+  width: 50vw;
+  height: 50vh;
 `;
