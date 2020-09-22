@@ -5,7 +5,7 @@ const Theme = ({ children }) => (
   <ThemeProvider
     theme={{
       primaryFont: "Arial",
-      primaryColor: "#666",
+      primaryColor: "#ffffff",
       ...Media,
     }}
   >
