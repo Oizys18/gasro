@@ -18,9 +18,6 @@ class Main extends Component {
 export default Main;
 
 const MainWrapper = styled.div`
-  justify-content: center;
-  align-items: center;
-  display: flex;
 `;
 
 const Content = styled.div`
