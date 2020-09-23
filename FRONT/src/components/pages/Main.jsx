@@ -1,15 +1,16 @@
 import React, { Component } from "react";
+import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 
 class Main extends Component {
   render() {
     return (
-      <MainWrapper>
-        <h1>Main page</h1>
-        <Content>
-          Main Content
-        </Content>
-      </MainWrapper>
+      <Container>
+        <MainWrapper>
+          <h1>Main page</h1>
+          <Content>Main Content</Content>
+        </MainWrapper>
+      </Container>
     );
   }
 }
@@ -23,7 +24,6 @@ const MainWrapper = styled.div`
 `;
 
 const Content = styled.div`
-  background-color:grey;
-  width: 50vw;
-  height: 50vh;
+  background-color: grey;
+  height: 100vh;
 `;

@@ -1,31 +1,30 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { Container } from "react-bootstrap";
 
 export default class Footer extends Component {
-    static propTypes = {
-        prop: PropTypes
-    }
+  static propTypes = {
+    prop: PropTypes,
+  };
 
-    render() {
-        return (
-            <FooterWrapper>
-                Footer component
-            </FooterWrapper>
-        )
-    }
+  render() {
+    return (
+      <Container>
+        <FooterWrapper>Footer component</FooterWrapper>
+      </Container>
+    );
+  }
 }
 
-
 const FooterWrapper = styled.div`
-    justify-content: center;
-    align-items:center;
-    display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
-    /* size & position */
-    background-color:#ffffff;
-    position:relative;
-    top:0;
-    left:0;
-    width:100%;
-    height:5vh; 
-`
+  /* size & position */
+  background-color: #ffffff;
+  position: relative;
+  bottom: 0;
+  height: 5vh;
+`;

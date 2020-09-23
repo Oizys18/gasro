@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
+import { Container } from "react-bootstrap";
 
 export default class Header extends Component {
   static propTypes = {
@@ -8,11 +10,13 @@ export default class Header extends Component {
 
   render() {
     return (
-      <HeaderWrapper>
-        Header component
-        <MenuContainer></MenuContainer>
-        <MenuNavigator></MenuNavigator>
-      </HeaderWrapper>
+      <Container>
+        <HeaderWrapper>
+          Header component
+          <MenuContainer></MenuContainer>
+          <MenuNavigator></MenuNavigator>
+        </HeaderWrapper>
+      </Container>
     );
   }
 }
@@ -24,11 +28,10 @@ const HeaderWrapper = styled.div`
   display: flex;
 
   /* position & size */
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 5vh;
+  margin-bottom: 5vh;
 
   background-color: white 0.8;
   color: black;

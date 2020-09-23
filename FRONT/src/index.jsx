@@ -1,8 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Root from "routes/Root";
-import GlobalStyles from "assets/styles/GlobalStyles";
+import ReactDOM from "react-dom";
 import Theme from "assets/styles/Theme";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import GlobalStyles from "assets/styles/GlobalStyles";
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />

@@ -11,8 +11,8 @@ class Root extends Component {
         <Header />
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/products" exact component={Products} />
-          <Route path="/contact" exact component={Contact} />
+          {/* <Route path="/products" exact component={Products} />
+          <Route path="/contact" exact component={Contact} /> */}
           <Redirect path="*" to="/" />
         </Switch>
         <Footer />
