@@ -13,6 +13,6 @@ export class DefaultButton extends Component {
 export default DefaultButton;
 
 const StyledButton = styled(Button)`
-  /* padding:0 1em 0 1em; */
+  padding:0 1em 0 1em;
   margin: 0 0.5em 0 0.5em;
 `;
