@@ -8,3 +8,10 @@ export default class Products extends PureComponent {
     return <div>Product Component</div>;
   }
 }
+// const MainWrapper = styled.div`
+// `;
+
+// const Content = styled.div`
+//   background-color: grey;
+//   height: 100vh;
+// `;
