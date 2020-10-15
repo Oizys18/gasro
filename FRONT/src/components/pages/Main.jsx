@@ -18,6 +18,8 @@ class Main extends Component {
 export default Main;
 
 const MainWrapper = styled.div`
+
+
 `;
 
 const Content = styled.div`

@@ -10,18 +10,26 @@ export default class Footer extends Component {
 
   render() {
     return (
-      <Container>
-        <FooterWrapper>Footer component</FooterWrapper>
-      </Container>
+      <FooterWrapper>
+        <Container>
+          <FooterTop>Footer Top</FooterTop>
+          <FooterBottom>Footer Bottom</FooterBottom>
+        </Container>
+      </FooterWrapper>
     );
   }
 }
-
 const FooterWrapper = styled.div`
-  justify-content: center;
-  align-items: center;
-  display: flex;
-
+  width: 100%;
+`;
+const FooterTop = styled.div`
+  /* size & position */
+  background-color: #ffffff;
+  position: relative;
+  bottom: 0;
+  height: 5vh;
+`;
+const FooterBottom = styled.div`
   /* size & position */
   background-color: #ffffff;
   position: relative;

@@ -10,13 +10,14 @@ export default class Header extends Component {
 
   render() {
     return (
-      <Container>
         <HeaderWrapper>
+          <Container>
           Header component
+
           <MenuContainer></MenuContainer>
           <MenuNavigator></MenuNavigator>
+          </Container>
         </HeaderWrapper>
-      </Container>
     );
   }
 }
