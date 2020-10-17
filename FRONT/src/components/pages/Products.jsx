@@ -1,11 +1,13 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react";
+import { Container } from "react-bootstrap";
 
-export default class Products extends PureComponent {
-  static propTypes = {};
-
+export default class Products extends Component {
   render() {
-    return <div>Product Component</div>;
+    return (
+      <Container>
+        <div>Product Component</div>
+      </Container>
+    );
   }
 }
 // const MainWrapper = styled.div`

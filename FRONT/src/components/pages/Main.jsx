@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 
-class Main extends Component {
+export default class Main extends Component {
   render() {
     return (
       <Container>
@@ -15,9 +15,9 @@ class Main extends Component {
   }
 }
 
-export default Main;
 
-const MainWrapper = styled.div`
+
+const MainWrapper = styled.div` 
 
 
 `;
