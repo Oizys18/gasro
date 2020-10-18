@@ -7,7 +7,6 @@ export default class Main extends Component {
     return (
       <Container>
         <MainWrapper>
-          <h1>Main page</h1>
           <Content>Main Content</Content>
         </MainWrapper>
       </Container>

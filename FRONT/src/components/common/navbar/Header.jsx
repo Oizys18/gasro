@@ -10,14 +10,12 @@ export default class Header extends Component {
 
   render() {
     return (
-        <HeaderWrapper>
-          <Container>
-          Header component
-
-          <MenuContainer></MenuContainer>
-          <MenuNavigator></MenuNavigator>
-          </Container>
-        </HeaderWrapper>
+      <HeaderWrapper>
+        <Container>
+          <MenuContainer>MenuContainer</MenuContainer>
+          <MenuNavigator>MenuNavigator</MenuNavigator>
+        </Container>
+      </HeaderWrapper>
     );
   }
 }
@@ -32,11 +30,14 @@ const HeaderWrapper = styled.div`
   position: sticky;
   top: 0;
   left: 0;
-  margin-bottom: 5vh;
-
   background-color: white 0.8;
   color: black;
+  border-bottom: 1px solid lightgrey;
 `;
 
-const MenuContainer = styled.div``;
-const MenuNavigator = styled.div``;
+const MenuContainer = styled.div`
+  background-color: grey;
+`;
+const MenuNavigator = styled.div`
+  background-color:lightgrey;
+`;
