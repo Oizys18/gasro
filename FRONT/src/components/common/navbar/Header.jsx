@@ -12,8 +12,23 @@ export default class Header extends Component {
     return (
       <HeaderWrapper>
         <Container>
-          <MenuContainer>MenuContainer</MenuContainer>
-          <MenuNavigator>MenuNavigator</MenuNavigator>
+          <MenuContainer>
+            <MenuFront>
+              <Logo>
+                <img src="" alt="" />
+              </Logo>
+              <MenuNavigator>
+                <a href="/products">제품</a>
+                <a href="/company">회사소개</a>
+                <a href="/notice">공지사항</a>
+                <a href="/contact">상담문의</a>
+              </MenuNavigator>
+            </MenuFront>
+            <MenuBack>
+              hi
+              <IconButton></IconButton>
+            </MenuBack>
+          </MenuContainer>
         </Container>
       </HeaderWrapper>
     );
@@ -25,19 +40,36 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   display: flex;
-
+  width: 100%;
   /* position & size */
   position: sticky;
   top: 0;
   left: 0;
-  background-color: white 0.8;
   color: black;
+  background-color: #f0f4f7;
   border-bottom: 1px solid lightgrey;
+  z-index: 1;
 `;
 
 const MenuContainer = styled.div`
-  background-color: grey;
+  height: 3rem;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  align-items: center;
 `;
-const MenuNavigator = styled.div`
-  background-color:lightgrey;
+const MenuNavigator = styled.div``;
+
+const Logo = styled.div`
+  margin: 1em;
+  padding: 0 15px 0 15px;
 `;
+
+const IconButton = styled.div``;
+
+const MenuFront = styled.div`
+  display: flex;
+  justify-content: cetner;
+  align-items: center;
+`;
+const MenuBack = styled.div``;

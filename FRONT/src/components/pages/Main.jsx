@@ -5,23 +5,25 @@ import styled from "styled-components";
 export default class Main extends Component {
   render() {
     return (
-      <Container>
-        <MainWrapper>
+      <MainWrapper>
+        <Banner>banner</Banner>
+        <Container>
           <Content>Main Content</Content>
-        </MainWrapper>
-      </Container>
+        </Container>
+      </MainWrapper>
     );
   }
 }
 
-
-
-const MainWrapper = styled.div` 
-
-
-`;
+const MainWrapper = styled.div``;
 
 const Content = styled.div`
   background-color: grey;
   height: 100vh;
+`;
+const Banner = styled.div`
+  width: 100%;
+  background-color: lightgrey;
+  height: 70vh;
+  z-index: 0;
 `;
