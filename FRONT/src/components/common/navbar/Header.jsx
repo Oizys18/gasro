@@ -25,7 +25,6 @@ export default class Header extends Component {
               </MenuNavigator>
             </MenuFront>
             <MenuBack>
-              hi
               <IconButton></IconButton>
             </MenuBack>
           </MenuContainer>

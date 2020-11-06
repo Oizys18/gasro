@@ -22,6 +22,7 @@ Including another URLconf
 
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.urls import path, include
 from rest_framework import routers
 from articles.views import PostViewSet
 
@@ -31,4 +32,5 @@ router.register('posts', PostViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
+    # path('posts/', include('articles.urls')),
 ]
