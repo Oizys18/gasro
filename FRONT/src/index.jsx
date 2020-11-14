@@ -1,5 +1,5 @@
 import React from "react";
-import Root from "routes/Root";
+import Routes from "routes/Routes";
 import ReactDOM from "react-dom";
 import Theme from "assets/styles/Theme";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,7 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
     <Theme>
-      <Root />
+      <Routes />
     </Theme>
   </React.StrictMode>,
   document.getElementById("root")
