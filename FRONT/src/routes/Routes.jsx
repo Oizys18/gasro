@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Main from "components/pages/Main";
-import Products from "components/pages/Products";
-import Contact from "components/pages/Contact";
+import Main from "containers/Main";
+import Products from "containers/Products";
+import Contact from "containers/Contact";
 import Header from "components/common/navbar/Header";
 import Footer from "components/common/navbar/Footer";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
