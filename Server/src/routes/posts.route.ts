@@ -33,4 +33,4 @@ class PostRoute implements Route {
   }
 }
 
-export default PostsRoute;
+export default PostRoute;

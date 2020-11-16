@@ -3,7 +3,7 @@ import { CreatePostDto } from "../dtos/posts.dto";
 import { Post } from "../interfaces/posts.interface";
 import PostService from "../services/posts.service";
 
-class PostController {
+class PostsController {
   public PostService = new PostService();
 
   public getPosts = async (req: Request, res: Response, next: NextFunction) => {
@@ -42,6 +42,7 @@ class PostController {
       res.status(201).json({ data: createPostData, message: "created" });
     } catch (error) {
       next(error);
+      console.log("but why?");
     }
   };
 
@@ -82,4 +83,4 @@ class PostController {
   };
 }
 
-export default PostController;
+export default PostsController;

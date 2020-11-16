@@ -13,14 +13,14 @@ class PostService {
     return posts;
   }
 
-  public async findpostById(postId: number): Promise<Post> {
+  public async findPostById(postId: number): Promise<Post> {
     const findpost: Post = await this.posts.findByPk(postId);
     if (!findpost) throw new HttpException(409, "You're not post");
 
     return findpost;
   }
 
-  public async createpost(postData: CreatePostDto): Promise<Post> {
+  public async createPost(postData: CreatePostDto): Promise<Post> {
     if (isEmptyObject(postData))
       throw new HttpException(400, "You're not postData");
 
