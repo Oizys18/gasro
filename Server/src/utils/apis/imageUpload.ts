@@ -1,0 +1,26 @@
+import multer from "multer";
+export const upload = function (req, res) {
+  const deferred = Q.defer();
+  const storage = multer.diskStorage({
+    // 서버에 저장할 폴더
+    destination: function (req, file, cb) {
+      cb(null, imagePath);
+    },
+
+    // 서버에 저장할 파일 명
+    filename: function (req, file, cb) {
+      file.uploadedFile = {
+        name: req.params.filename,
+        ext: file.mimetype.split("/")[1],
+      };
+      cb(null, file.uploadedFile.name + "." + file.uploadedFile.ext);
+    },
+  });
+
+  const upload = multer({ storage: storage }).single("file");
+  upload(req, res, function (err) {
+    if (err) deferred.reject();
+    else deferred.resolve(req.file.uploadedFile);
+  });
+  return deferred.promise;
+};

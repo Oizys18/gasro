@@ -3,7 +3,6 @@ import PostController from "../controllers/posts.constroller";
 import { CreatePostDto } from "../dtos/posts.dto";
 import Route from "../interfaces/routes.interface";
 import validationMiddleware from "../middlewares/validation.middleware";
-
 class PostRoute implements Route {
   public path = "/posts";
   public router = Router();
