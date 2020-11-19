@@ -9,7 +9,7 @@ export class CreatePostDto {
   public content: string;
 
   @IsString()
-  public image: BlobDataType;
+  public image: string;
 
   @IsString()
   public youtube: string;

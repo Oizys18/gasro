@@ -3,6 +3,7 @@ import PostController from "../controllers/posts.constroller";
 import { CreatePostDto } from "../dtos/posts.dto";
 import Route from "../interfaces/routes.interface";
 import validationMiddleware from "../middlewares/validation.middleware";
+import upload from "../utils/apis/upload";
 class PostRoute implements Route {
   public path = "/posts";
   public router = Router();
@@ -15,6 +16,16 @@ class PostRoute implements Route {
   private initializeRoutes() {
     this.router.get(`${this.path}`, this.PostController.getPosts);
     this.router.get(`${this.path}/:id(\\d+)`, this.PostController.getPostById);
+
+    // 이미지 파일 업로드
+    this.router.post(
+      `${this.path}/upload`,
+      upload.array("img", 5),
+      (req, res) => {
+        console.log("UPLOAD SUCCESS!", req.files);
+        res.json({ success: true, file: req.files });
+      }
+    );
     this.router.post(
       `${this.path}`,
       validationMiddleware(CreatePostDto),

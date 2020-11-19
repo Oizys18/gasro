@@ -25,10 +25,10 @@ export default class Post extends Model<Post> {
   content: string;
 
   @AllowNull(true)
-  @Column(DataType.BLOB)
-  image: BlobDataType;
+  @Column(DataType.STRING(200))
+  image: string;
 
   @AllowNull(true)
-  @Column(DataType.STRING(5000))
+  @Column(DataType.STRING(500))
   youtube: string;
 }
