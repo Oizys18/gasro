@@ -3,6 +3,6 @@ export interface Post {
   id: number;
   title: string;
   content: string;
-  image?: BlobDataType;
+  image?: string;
   youtube?: string;
 }
