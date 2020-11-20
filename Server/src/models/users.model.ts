@@ -1,6 +1,14 @@
-import { AllowNull, AutoIncrement, Column, DataType, Model, PrimaryKey, Table } from 'sequelize-typescript';
+import {
+  AllowNull,
+  AutoIncrement,
+  Column,
+  DataType,
+  Model,
+  PrimaryKey,
+  Table,
+} from "sequelize-typescript";
 
-@Table({ modelName: 'user', timestamps: true, paranoid: true })
+@Table({ modelName: "user", timestamps: true, paranoid: true })
 export default class User extends Model<User> {
   @PrimaryKey
   @AutoIncrement
