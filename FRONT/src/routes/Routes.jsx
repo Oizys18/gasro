@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Main from "containers/Main";
 import Products from "containers/Products";
 import Contact from "containers/Contact";
-import Header from "components/common/navbar/Header";
-import Footer from "components/common/navbar/Footer";
+import Header from "components/navbar/Header";
+import Footer from "components/navbar/Footer";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 class Root extends Component {
