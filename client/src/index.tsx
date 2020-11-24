@@ -1,13 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
+import GlobalStyles from "assets/styles/GlobalStyles";
+import theme from "assets/styles/theme";
+import Routes from "routes/Routes";
+import { ThemeProvider } from "assets/styles/theme-components";
 
 ReactDOM.render(
-  <React.StrictMode></React.StrictMode>,
+  <React.StrictMode>
+    <GlobalStyles />
+    <ThemeProvider theme={theme}>
+      <Routes />
+    </ThemeProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
