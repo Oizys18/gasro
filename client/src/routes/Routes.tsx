@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import Main from "containers/Main";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 const Routes: React.FC = () => (
@@ -7,7 +8,7 @@ const Routes: React.FC = () => (
     <Wrapper>
       <Container>
         <Switch>
-          {/* <Route path="/" exact component={Main} /> */}
+          <Route path="/" exact component={Main} />
           <Redirect path="*" to="/" />
         </Switch>
       </Container>
