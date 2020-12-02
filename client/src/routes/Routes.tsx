@@ -6,12 +6,10 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 const Routes: React.FC = () => (
   <BrowserRouter>
     <Wrapper>
-      <Container>
-        <Switch>
-          <Route path="/" exact component={Main} />
-          <Redirect path="*" to="/" />
-        </Switch>
-      </Container>
+      <Switch>
+        <Route path="/" exact component={Main} />
+        <Redirect path="*" to="/" />
+      </Switch>
     </Wrapper>
   </BrowserRouter>
 );
@@ -23,10 +21,4 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-const Container = styled.div`
-  width: 90%;
-  max-width: 1240px;
-  min-width: 960px;
-  margin: 0 auto;
 `;

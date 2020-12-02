@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-
+import { Container } from "@material-ui/core";
 interface mainState {}
 export default class Main extends React.Component<mainState> {
   constructor(props: mainState) {
@@ -11,7 +11,9 @@ export default class Main extends React.Component<mainState> {
   public render() {
     return (
       <MainWrapper>
-        <div>Main</div>
+        <Container>
+          <div>Main</div>
+        </Container>
       </MainWrapper>
     );
   }
