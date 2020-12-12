@@ -20,5 +20,4 @@ export default class Main extends React.Component<mainState> {
 }
 
 const MainWrapper = styled.div`
-  width: 100%;
 `;
