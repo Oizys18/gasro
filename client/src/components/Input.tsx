@@ -2,8 +2,6 @@ import React from "react";
 import { Input } from "@material-ui/core";
 
 interface Props {
-  // autoComplete:string;
-  // autoFocus:boolean;
   color?: any;
   placeholder?: string;
   required?: boolean;
