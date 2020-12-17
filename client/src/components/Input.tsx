@@ -9,7 +9,7 @@ interface Props {
   value?: string;
 }
 
-const InputForm: React.FC<Props> = ({ ...props }) => {
+const InputForm = ({ ...props }: Props) => {
   return (
     <>
       <Input

@@ -5,11 +5,11 @@ interface Props {
   message: string;
   disabled?: boolean;
   color?: any;
-  action?: () => void;
+  onClick: (name: string) => void;
   href?: string;
 }
 
-const BasicButton: React.FC<Props> = ({ ...props }) => {
+const BasicButton = ({ ...props }: Props) => {
   return (
     <>
       <Button

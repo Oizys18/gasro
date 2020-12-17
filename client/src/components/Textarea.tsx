@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TextField } from "@material-ui/core";
 interface Props {}
 
-const TextArea: React.FC<Props> = ({ ...props }) => {
+const TextArea = ({ ...props }: Props) => {
   return (
     <>
       <div>
