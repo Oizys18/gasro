@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TextField } from "@material-ui/core";
 interface Props {}
 
-const TextArea = ({ ...props }: Props) => {
+function TextArea({ ...props }: Props) {
   return (
     <>
       <div>
@@ -10,5 +10,5 @@ const TextArea = ({ ...props }: Props) => {
       </div>
     </>
   );
-};
+}
 export default TextArea;

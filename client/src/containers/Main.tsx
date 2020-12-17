@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
 interface Imain {}
-const Main = ({ ...props }: Imain) => {
+function Main({ ...props }: Imain) {
   return (
     <MainWrapper>
       <Container>
@@ -10,7 +10,7 @@ const Main = ({ ...props }: Imain) => {
       </Container>
     </MainWrapper>
   );
-};
+}
 
 const MainWrapper = styled.div``;
 export default Main;

@@ -9,7 +9,7 @@ interface Props {
   value?: string;
 }
 
-const InputForm = ({ ...props }: Props) => {
+function InputForm({ ...props }: Props) {
   return (
     <>
       <Input
@@ -20,6 +20,6 @@ const InputForm = ({ ...props }: Props) => {
       ></Input>
     </>
   );
-};
+}
 
 export default InputForm;

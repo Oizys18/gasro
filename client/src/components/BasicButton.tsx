@@ -9,7 +9,7 @@ interface Props {
   href?: string;
 }
 
-const BasicButton = ({ ...props }: Props) => {
+function BasicButton({ ...props }: Props) {
   return (
     <>
       <Button
@@ -22,5 +22,5 @@ const BasicButton = ({ ...props }: Props) => {
       </Button>
     </>
   );
-};
+}
 export default BasicButton;

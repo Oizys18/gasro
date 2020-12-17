@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
 interface Icontacts {}
-const Contacts = ({ ...props }: mainState) => {
+function Contacts({ ...props }: Icontacts) {
   return (
     <MainWrapper>
       <Container>
@@ -10,7 +10,7 @@ const Contacts = ({ ...props }: mainState) => {
       </Container>
     </MainWrapper>
   );
-};
+}
 
 const MainWrapper = styled.div`
   width: 100%;
