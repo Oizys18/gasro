@@ -4,13 +4,24 @@ import { Container } from "@material-ui/core";
 interface Imain {}
 function Main({ ...props }: Imain) {
   return (
-    <MainWrapper>
-      <Container>
-        <div>Main Page</div>
-      </Container>
-    </MainWrapper>
+    <>
+      <MainWrapper>
+        <Container>
+          <ContentWrapper>
+            <div>Main Page</div>
+          </ContentWrapper>
+        </Container>
+      </MainWrapper>
+    </>
   );
 }
 
-const MainWrapper = styled.div``;
 export default Main;
+const MainWrapper = styled.div`
+  margin-top: 30px;
+  overflow: hidden;
+`;
+const ContentWrapper = styled.div`
+  height: 1500px;
+  background-color: darkgrey;
+`;

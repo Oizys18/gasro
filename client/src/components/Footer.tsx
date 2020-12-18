@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
+
 interface Props {}
-function Header({ ...props }: Props) {
+function Footer({ ...props }: Props) {
   return (
     <>
-      <HeaderWrapper>
+      <FooterWrapper>
         <Container>
-          <div>Header</div>
+          <div>Footer</div>
         </Container>
-      </HeaderWrapper>
+      </FooterWrapper>
     </>
   );
 }
-export default Header;
+export default Footer;
 
-const HeaderWrapper = styled.div`
+const FooterWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  opacity: 0.9;
   height: 30px;
   background-color: grey;
-  position: fixed;
-  top: 0;
-  overflow: hidden;
 `;
