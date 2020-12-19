@@ -6,7 +6,7 @@ function Contacts({ ...props }: Icontacts) {
   return (
     <MainWrapper>
       <Container>
-        <div>Main Page</div>
+        <div>Contacts</div>
       </Container>
     </MainWrapper>
   );
