@@ -17,7 +17,6 @@ export default Header;
 
 const HeaderWrapper = styled.div`
   width: 100%;
-  opacity: 0.9;
   height: 30px;
   background-color: grey;
   position: fixed;
