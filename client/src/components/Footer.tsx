@@ -8,7 +8,10 @@ function Footer({ ...props }: Props) {
     <>
       <FooterWrapper>
         <Container>
-          <div>Footer</div>
+          <FooterContainer>
+            <Contacts>Contacts</Contacts>
+            <Info>Info</Info>
+          </FooterContainer>
         </Container>
       </FooterWrapper>
     </>
@@ -17,9 +20,12 @@ function Footer({ ...props }: Props) {
 export default Footer;
 
 const FooterWrapper = styled.div`
-  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 30px;
+  height: 50px;
   background-color: grey;
 `;
+
+const FooterContainer = styled.div``;
+const Contacts = styled.div``;
+const Info = styled.div``;
