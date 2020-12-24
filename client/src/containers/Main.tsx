@@ -18,7 +18,6 @@ function Main({ ...props }: Imain) {
 
 export default Main;
 const MainWrapper = styled.div`
-  margin-top: 30px;
   overflow: hidden;
 `;
 const ContentWrapper = styled.div`

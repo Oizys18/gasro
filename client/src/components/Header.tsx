@@ -10,15 +10,11 @@ function Header({ ...props }: Props) {
         <Container>
           <HeaderDivider>
             <HeaderTop>
-              <BasicButton message="1" onClick={() => {}}></BasicButton>
-              <BasicButton message="2" onClick={() => {}}></BasicButton>
-              <BasicButton message="3" onClick={() => {}}></BasicButton>
+              <BasicButton message="제품" onClick={() => {}} />
+              <BasicButton message="회사소개" onClick={() => {}} />
+              <BasicButton message="공지사항" onClick={() => {}} />
+              <BasicButton message="고객서비스" onClick={() => {}} />
             </HeaderTop>
-            <HeaderBottom>
-              <BasicButton message="1" onClick={() => {}}></BasicButton>
-              <BasicButton message="2" onClick={() => {}}></BasicButton>
-              <BasicButton message="3" onClick={() => {}}></BasicButton>
-            </HeaderBottom>
           </HeaderDivider>
         </Container>
       </HeaderWrapper>
@@ -30,16 +26,19 @@ export default Header;
 const HeaderWrapper = styled.div`
   width: 100%;
   background-color: grey;
-  position: fixed;
-  top: 0;
   overflow: hidden;
 `;
 
 const HeaderDivider = styled.div`
   display: flex;
+  height: 5vh;
   flex-direction: column;
+  justify-content: space-evenly;
 `;
 
-const HeaderTop = styled.div``;
+const HeaderTop = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
 
 const HeaderBottom = styled.div``;
