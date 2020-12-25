@@ -25,7 +25,7 @@ export default Header;
 
 const HeaderWrapper = styled.div`
   width: 100%;
-  background-color: grey;
+  /* background-color: grey; */
   overflow: hidden;
 `;
 
