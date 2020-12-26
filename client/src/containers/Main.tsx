@@ -8,7 +8,7 @@ function Main({ ...props }: Imain) {
       <MainWrapper>
         <Container>
           <ContentWrapper>
-            <div>Main Page</div>
+            <div>메인 페이지 컨텐츠 영역</div>
           </ContentWrapper>
         </Container>
       </MainWrapper>

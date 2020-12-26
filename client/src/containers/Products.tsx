@@ -9,7 +9,7 @@ function Products({ ...props }: Iproducts) {
     <>
       <ProductWrapper>
         <Container>
-          <div>Products</div>
+          <div>제품 소개 영역</div>
         </Container>
       </ProductWrapper>
     </>
