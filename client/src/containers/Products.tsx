@@ -18,6 +18,5 @@ function Products({ ...props }: Iproducts) {
 
 export default Products;
 const ProductWrapper = styled.div`
-  margin-top: 30px;
   overflow: hidden;
 `;
