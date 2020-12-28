@@ -9,12 +9,13 @@ function Header({ ...props }: Props) {
       <HeaderWrapper>
         <Container>
           <HeaderDivider>
-            <HeaderTop>
+            <Logo>Logo</Logo>
+            <Menu>
               <BasicButton message="제품" onClick={() => {}} />
               <BasicButton message="회사소개" onClick={() => {}} />
               <BasicButton message="공지사항" onClick={() => {}} />
               <BasicButton message="고객서비스" onClick={() => {}} />
-            </HeaderTop>
+            </Menu>
           </HeaderDivider>
         </Container>
       </HeaderWrapper>
@@ -32,13 +33,17 @@ const HeaderWrapper = styled.div`
 const HeaderDivider = styled.div`
   display: flex;
   height: 5vh;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
-const HeaderTop = styled.div`
+const Menu = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
 
 const HeaderBottom = styled.div``;
+
+const Logo = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;
