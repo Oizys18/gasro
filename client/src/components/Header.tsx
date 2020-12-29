@@ -9,7 +9,7 @@ function Header({ ...props }: Props) {
       <HeaderWrapper>
         <Container>
           <HeaderDivider>
-            <Logo>Logo</Logo>
+            <Logo>Gastec Logo</Logo>
             <Menu>
               <BasicButton message="제품" onClick={() => {}} />
               <BasicButton message="회사소개" onClick={() => {}} />
