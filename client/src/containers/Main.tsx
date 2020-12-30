@@ -1,11 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
+import MainCarousel from "components/MainCarousel";
 interface Imain {}
 function Main({ ...props }: Imain) {
   return (
     <>
       <MainWrapper>
+        <MainCarousel></MainCarousel>
         <Container>
           <ContentWrapper>
             <div>메인 페이지 컨텐츠 영역</div>
