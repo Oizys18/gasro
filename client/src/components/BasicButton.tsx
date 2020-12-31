@@ -1,12 +1,11 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-
+import styled from "styled-components";
 interface Props {
   message: string;
   disabled?: boolean;
   color?: any;
-  onClick: (name: string) => void;
-  href?: string;
+  onClick?: (name: string) => void;
 }
 
 function BasicButton({ ...props }: Props) {
@@ -14,9 +13,9 @@ function BasicButton({ ...props }: Props) {
     <>
       <Button
         disableRipple={true}
+        disableElevation={true}
         color={props.color ? props.color : "default"}
         disabled={props.disabled ? props.disabled : false}
-        href={props.href ? props.href : ""}
       >
         {props.message}
       </Button>

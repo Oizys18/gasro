@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import BasicButton from "components/BasicButton";
 import { Container } from "@material-ui/core";
+import { Link } from "react-router-dom";
 interface Props {}
 function Header({ ...props }: Props) {
   return (
@@ -11,10 +12,18 @@ function Header({ ...props }: Props) {
           <HeaderDivider>
             <Logo>Gastec Logo</Logo>
             <Menu>
-              <BasicButton message="제품" onClick={() => {}} />
-              <BasicButton message="회사소개" onClick={() => {}} />
-              <BasicButton message="공지사항" onClick={() => {}} />
-              <BasicButton message="고객서비스" onClick={() => {}} />
+              <Link to="/products">
+                <BasicButton message="제품" />
+              </Link>
+              <Link to="/">
+                <BasicButton message="회사소개" />
+              </Link>
+              <Link to="/notice">
+                <BasicButton message="공지사항" />
+              </Link>
+              <Link to="/support">
+                <BasicButton message="고객서비스" />
+              </Link>
             </Menu>
           </HeaderDivider>
         </Container>
@@ -26,24 +35,21 @@ export default Header;
 
 const HeaderWrapper = styled.div`
   width: 100%;
-  background-color: grey;
   overflow: hidden;
 `;
 
 const HeaderDivider = styled.div`
   display: flex;
   height: 5vh;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `;
 
 const Menu = styled.div`
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
 `;
-
-const HeaderBottom = styled.div``;
 
 const Logo = styled.div`
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
 `;

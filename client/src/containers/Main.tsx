@@ -7,7 +7,13 @@ function Main({ ...props }: Imain) {
   return (
     <>
       <MainWrapper>
-        <MainCarousel></MainCarousel>
+        <MainCarousel
+          autoPlay={true}
+          useKeyboardArrows={true}
+          swipeable={true}
+          interval={3000}
+          infiniteLoop={true}
+        />
         <Container>
           <ContentWrapper>
             <div>메인 페이지 컨텐츠 영역</div>
