@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container } from "@material-ui/core";
 
 interface Props {}
-function Footer({ ...props }: Props) {
+export default function Footer({ ...props }: Props) {
   return (
     <>
       <FooterWrapper>
@@ -17,7 +17,6 @@ function Footer({ ...props }: Props) {
     </>
   );
 }
-export default Footer;
 
 const FooterWrapper = styled.div`
   bottom: 0;

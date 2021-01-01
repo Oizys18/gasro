@@ -8,7 +8,7 @@ interface Props {
   onClick?: (name: string) => void;
 }
 
-function BasicButton({ ...props }: Props) {
+export default function BasicButton({ ...props }: Props) {
   return (
     <>
       <Button
@@ -22,4 +22,3 @@ function BasicButton({ ...props }: Props) {
     </>
   );
 }
-export default BasicButton;

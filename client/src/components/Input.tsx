@@ -9,7 +9,7 @@ interface Props {
   value?: string;
 }
 
-function InputForm({ ...props }: Props) {
+export default function InputForm({ ...props }: Props) {
   return (
     <>
       <Input
@@ -21,5 +21,3 @@ function InputForm({ ...props }: Props) {
     </>
   );
 }
-
-export default InputForm;

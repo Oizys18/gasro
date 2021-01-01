@@ -13,7 +13,7 @@ interface configProps {
   interval?: number;
   infiniteLoop?: boolean;
 }
-function MainCarousel({ ...props }: configProps) {
+export default function MainCarousel({ ...props }: configProps) {
   return (
     <>
       <Carousel
@@ -40,4 +40,3 @@ function MainCarousel({ ...props }: configProps) {
     </>
   );
 }
-export default MainCarousel;

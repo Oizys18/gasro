@@ -4,7 +4,7 @@ import BasicButton from "components/BasicButton";
 import { Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
 interface Props {}
-function Header({ ...props }: Props) {
+export default function Header({ ...props }: Props) {
   return (
     <>
       <HeaderWrapper>
@@ -31,7 +31,6 @@ function Header({ ...props }: Props) {
     </>
   );
 }
-export default Header;
 
 const HeaderWrapper = styled.div`
   width: 100%;
