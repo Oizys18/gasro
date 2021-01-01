@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
 import MainCarousel from "components/MainCarousel";
+import BasicCard from "components/BasicCard";
 interface Imain {}
 function Main({ ...props }: Imain) {
   return (
@@ -16,7 +17,12 @@ function Main({ ...props }: Imain) {
         />
         <Container>
           <ContentWrapper>
-            <div>메인 페이지 컨텐츠 영역</div>
+            <Card>
+              <BasicCard></BasicCard>
+            </Card>
+            <Card>
+              <BasicCard></BasicCard>
+            </Card>
           </ContentWrapper>
         </Container>
       </MainWrapper>
@@ -31,4 +37,8 @@ const MainWrapper = styled.div`
 const ContentWrapper = styled.div`
   height: 1500px;
   background-color: darkgrey;
+`;
+
+const Card = styled.div`
+  width: 50%;
 `;
