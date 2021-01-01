@@ -4,7 +4,7 @@ import { Container } from "@material-ui/core";
 import MainCarousel from "components/MainCarousel";
 import BasicCard from "components/BasicCard";
 interface Imain {}
-function Main({ ...props }: Imain) {
+export default function Main({ ...props }: Imain) {
   return (
     <>
       <MainWrapper>
@@ -30,7 +30,6 @@ function Main({ ...props }: Imain) {
   );
 }
 
-export default Main;
 const MainWrapper = styled.div`
   overflow: hidden;
 `;
