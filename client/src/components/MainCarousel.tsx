@@ -26,7 +26,7 @@ function MainCarousel({ ...props }: configProps) {
       >
         <div>
           <img src={carOne} alt="carousel-one" />
-          {/* <p className="legend">Legend 1</p> */}
+          <p className="legend">Legend 1</p>
         </div>
         <div>
           <img src={carTwo} alt="carousel-two" />
