@@ -2,7 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
 import MainCarousel from "components/MainCarousel";
-import BasicCard from "components/BasicCard";
+// import BasicCard from "components/BasicCard";
+import SimpleTabs from "components/SimpleTabs";
 interface Imain {}
 export default function Main({ ...props }: Imain) {
   return (
@@ -17,12 +18,7 @@ export default function Main({ ...props }: Imain) {
         />
         <Container>
           <ContentWrapper>
-            <Card>
-              <BasicCard></BasicCard>
-            </Card>
-            <Card>
-              <BasicCard></BasicCard>
-            </Card>
+            <SimpleTabs></SimpleTabs>
           </ContentWrapper>
         </Container>
       </MainWrapper>
@@ -33,10 +29,7 @@ export default function Main({ ...props }: Imain) {
 const MainWrapper = styled.div`
   overflow: hidden;
 `;
-const ContentWrapper = styled.div`
-  height: 1500px;
-  background-color: darkgrey;
-`;
+const ContentWrapper = styled.div``;
 
 const Card = styled.div`
   width: 50%;
