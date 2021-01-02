@@ -5,6 +5,10 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import BasicCard from "components/BasicCard";
+import styled from "styled-components";
+import Grid from "@material-ui/core/Grid";
+import img from "assets/images/1.jpg";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -64,29 +68,55 @@ export default function SimpleTabs() {
           aria-label="simple tabs example"
           indicatorColor="primary"
         >
-          <Tab disableRipple={true} label="Item One" {...a11yProps(0)} />
-          <Tab disableRipple={true} label="Item Two" {...a11yProps(1)} />
-          <Tab disableRipple={true} label="Item Three" {...a11yProps(2)} />
+          <Tab disableRipple={true} label="가스식" {...a11yProps(0)} />
+          <Tab disableRipple={true} label="전기식" {...a11yProps(1)} />
+          <Tab disableRipple={true} label="추천제품" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Item One Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-        provident explicabo laboriosam fuga rerum molestias distinctio, sit,
-        ipsam ullam sint officia animi odit, expedita quaerat beatae debitis
-        nostrum vero error. Item One Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Sequi provident explicabo laboriosam fuga rerum
-        molestias distinctio, sit, ipsam ullam sint officia animi odit, expedita
-        quaerat beatae debitis nostrum vero error. Item One Lorem ipsum, dolor
-        sit amet consectetur adipisicing elit. Sequi provident explicabo
-        laboriosam fuga rerum molestias distinctio, sit, ipsam ullam sint
-        officia animi odit, expedita quaerat beatae debitis nostrum vero error.
+        <Grid container spacing={3}>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+        </Grid>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Grid container spacing={3}>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+        </Grid>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Grid container spacing={3}>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+          <Grid item xs={4}>
+            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+          </Grid>
+        </Grid>
       </TabPanel>
     </div>
   );
 }
+
+const TabWrapper = styled.div`
+  justify-content: center;
+  display: flex;
+`;

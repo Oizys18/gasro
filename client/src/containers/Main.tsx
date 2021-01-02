@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
 import MainCarousel from "components/MainCarousel";
-// import BasicCard from "components/BasicCard";
 import SimpleTabs from "components/SimpleTabs";
 interface Imain {}
 export default function Main({ ...props }: Imain) {
