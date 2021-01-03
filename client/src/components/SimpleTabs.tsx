@@ -76,39 +76,39 @@ export default function SimpleTabs() {
       <TabPanel value={value} index={0}>
         <Grid container spacing={3}>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
         </Grid>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Grid container spacing={3}>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
         </Grid>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Grid container spacing={3}>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
           <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"}></BasicCard>
+            <BasicCard img={img} title={"hello"} content={"world"} />
           </Grid>
         </Grid>
       </TabPanel>
