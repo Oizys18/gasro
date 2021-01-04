@@ -29,7 +29,7 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <Typography component={"span"}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -86,32 +86,8 @@ export default function SimpleTabs() {
           </Grid>
         </Grid>
       </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Grid container spacing={3}>
-          <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"} />
-          </Grid>
-          <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"} />
-          </Grid>
-          <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"} />
-          </Grid>
-        </Grid>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <Grid container spacing={3}>
-          <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"} />
-          </Grid>
-          <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"} />
-          </Grid>
-          <Grid item xs={4}>
-            <BasicCard img={img} title={"hello"} content={"world"} />
-          </Grid>
-        </Grid>
-      </TabPanel>
+      <TabPanel value={value} index={1}></TabPanel>
+      <TabPanel value={value} index={2}></TabPanel>
     </div>
   );
 }

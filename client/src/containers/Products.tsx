@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
-
+import MainCarousel from "components/MainCarousel";
 interface Iproducts {}
 
 function Products({ ...props }: Iproducts) {
@@ -9,7 +9,13 @@ function Products({ ...props }: Iproducts) {
     <>
       <ProductWrapper>
         <Container>
-          <div>제품 소개 영역</div>
+          <MainCarousel
+            autoPlay={true}
+            useKeyboardArrows={true}
+            swipeable={true}
+            interval={3000}
+            infiniteLoop={true}
+          />
         </Container>
       </ProductWrapper>
     </>

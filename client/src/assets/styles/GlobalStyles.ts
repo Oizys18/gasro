@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing:border-box;
     }
     body{
-        background-color: #ffffff;
+        background-color: #F0F4F7;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;        
     }
     a {
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     input,button{
         background-color: transparent;
         border: none;
-        outline:none;
+        outline:none; 
     }
     h1,h2,h3,h4,h5,h6{
         font-family:'Maven Pro',sans-serif;
