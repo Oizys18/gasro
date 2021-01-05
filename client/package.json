@@ -24,6 +24,7 @@
     "react-scripts": "3.4.3",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "scrollreveal": "^4.0.7",
     "styled-components": "^5.2.0",
     "styled-reset": "^4.3.1",
     "web-vitals": "^1.0.1"
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.12.67",
+    "@types/scrollreveal": "0.0.6",
     "ts-loader": "^8.0.3",
     "ts-node": "^9.0.0",
     "typescript": "^3.8.3",
