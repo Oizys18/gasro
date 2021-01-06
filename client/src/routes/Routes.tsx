@@ -14,7 +14,6 @@ const Routes: React.FC = () => (
       <Route path="/" exact component={Main} />
       <Route path="/products" exact component={Products} />
       <Route path="/support" exact component={Support} />
-      <Route path="/landing" exact component={Landing} />
       <Redirect path="*" to="/" />
     </Switch>
     <Footer />
