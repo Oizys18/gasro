@@ -2,13 +2,15 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
     ${reset}
+
     *{
         box-sizing:border-box;
     }
     body{
         background-color: #F0F4F7;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;        
+        font-family: 'Poppins', sans-serif;
     }
     a {
         color:inherit;
@@ -21,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
         outline:none; 
     }
     h1,h2,h3,h4,h5,h6{
-        font-family:'Maven Pro',sans-serif;
+        font-family:'Poppins', sans-serif;
     }
     ol,ul,li{
         list-style: none;

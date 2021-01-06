@@ -4,7 +4,6 @@ import ScrollReveal from "scrollreveal";
 interface ILanding {}
 
 function Landing({ ...props }: ILanding) {
-  ScrollReveal({ reset: true });
   const hi = function () {
     ScrollReveal().reveal("#hello");
   };
