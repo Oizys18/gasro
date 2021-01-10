@@ -2,15 +2,14 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap");
     ${reset}
-
     *{
         box-sizing:border-box;
     }
     body{
         background-color: #F0F4F7;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
     }
     a {
         color:inherit;
@@ -23,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         outline:none; 
     }
     h1,h2,h3,h4,h5,h6{
-        font-family:'Poppins', sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
     }
     ol,ul,li{
         list-style: none;

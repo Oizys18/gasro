@@ -10,10 +10,13 @@ export default function Header({ ...props }: Props) {
       <HeaderWrapper>
         <Container>
           <HeaderDivider>
-            <Logo>Gastec Logo</Logo>
+            <Link to="/">
+              <Logo>Gastec Logo</Logo>
+            </Link>
             <Menu>
               <Link to="/products">
-                <BasicButton message="제품" />
+                <Hello type="button">제품</Hello>
+                {/* <BasicButton message="제품" /> */}
               </Link>
               <Link to="/">
                 <BasicButton message="회사소개" />
@@ -51,4 +54,11 @@ const Menu = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
+`;
+
+const Hello = styled.button`
+  font-family: "Noto Sans KR", sans-serif;
+  :hover {
+    color: red;
+  }
 `;
