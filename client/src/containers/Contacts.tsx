@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Container } from "@material-ui/core";
+import Container from "components/Container";
 interface Icontacts {}
 function Contacts({ ...props }: Icontacts) {
   return (

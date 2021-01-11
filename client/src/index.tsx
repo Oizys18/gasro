@@ -8,14 +8,12 @@ import { ThemeProvider } from "assets/styles/theme-components";
 import "config/lang/i18n";
 
 ReactDOM.render(
-  // <React.StrictMode>
   <React.Fragment>
     <GlobalStyles />
     <ThemeProvider theme={theme}>
       <Routes />
     </ThemeProvider>
   </React.Fragment>,
-  // </React.StrictMode>,
   document.getElementById("root")
 );
 

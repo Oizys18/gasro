@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Container } from "@material-ui/core";
-interface Iinfo {}
-function Info({ ...props }: Iinfo) {
+import Container from "components/Container";
+interface Inotice {}
+function Notice({ ...props }: Inotice) {
   return (
     <>
       <MainWrapper>
@@ -16,7 +16,7 @@ function Info({ ...props }: Iinfo) {
   );
 }
 
-export default Info;
+export default Notice;
 const MainWrapper = styled.div`
   overflow: hidden;
 `;

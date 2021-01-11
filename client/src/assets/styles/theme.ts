@@ -57,7 +57,7 @@ Object.keys(sizes).reduce((acc: Media, label: string) => {
 }, media);
 
 const colors = {
-  white: "#ffffff",
+  white: "#341234",
   black: "#000000",
 };
 
