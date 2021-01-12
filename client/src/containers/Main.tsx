@@ -1,8 +1,12 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import imageOne from "assets/images/oven1.png";
 import imageTwo from "assets/images/oven2.png";
+import ScrollReveal from "scrollreveal";
 interface Imain {}
 export default function Main({ ...props }: Imain) {
+  useEffect(() => {
+    ScrollReveal().reveal("home__img");
+  });
   return (
     <>
       <main className="l-main">

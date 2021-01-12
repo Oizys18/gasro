@@ -3,37 +3,26 @@ import { Link, useLocation } from "react-router-dom";
 interface Props {}
 export default function Header({ ...props }: Props) {
   const location = useLocation();
-
+  const [menu, setMenu] = useState<boolean>(false);
   useEffect(() => {
     // 모바일 햄버거 toggle
     const toggle = document.getElementById("nav-toggle"),
-      nav = document.getElementById("nav-menu");
-    if (toggle && nav) {
+      navMenu = document.getElementById("nav-menu");
+    if (toggle && navMenu) {
       toggle.addEventListener("click", () => {
-        nav.classList.toggle("show-menu");
+        if (menu) {
+          setMenu(false);
+        } else {
+          setMenu(true);
+        }
       });
     }
-    // 메뉴 포커스
-    // switch (location.pathname) {
-    //   case "/":
-    //     const company = document.getElementById("company");
-    //     company?.classList.add("active-link");
-    //     break;
-    //   case "/products":
-    //     const products = document.getElementById("products");
-    //     products?.classList.add("active-link");
-    //     break;
-    //   case "/notice":
-    //     const notice = document.getElementById("notice");
-    //     notice?.classList.add("active-link");
-    //     break;
-    //   case "/support":
-    //     const support = document.getElementById("support");
-    //     support?.classList.add("active-link");
-    //     break;
-    // }
   });
-
+  useEffect(() => {
+    if (menu) {
+      setMenu(false);
+    }
+  }, [location]);
   return (
     <>
       <a href="#home" className="scrolltop show-scroll" id="scroll-top">
@@ -45,12 +34,14 @@ export default function Header({ ...props }: Props) {
             <h2 className="nav__logo">Gastec Korea</h2>
           </Link>
 
-          <div className="nav__menu" id="nav-menu">
+          <div
+            className={menu ? "nav__menu show-menu" : "nav__menu"}
+            id="nav-menu"
+          >
             <ul className="nav__list">
               <li className="nav__item">
                 <Link to="/">
                   <a
-                    href="#home"
                     className={
                       location.pathname == "/"
                         ? "nav__link active-link"
