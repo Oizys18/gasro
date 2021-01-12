@@ -3,7 +3,6 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap");
-    ${reset}
 
     :root {
   --header-height: 3rem;
@@ -73,6 +72,15 @@ body.dark-theme{
 
 /*========== Button Dark/Light ==========*/
 .change-theme{
+  position: absolute;
+  right: 1.5rem;
+  top: 2.2rem;
+  display: flex;
+  color: var(--title-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.translation{
   position: absolute;
   right: 1.5rem;
   top: 2.2rem;
@@ -555,6 +563,10 @@ img{
   }
 
   .change-theme{
+    position: initial;
+    margin-left: var(--mb-4);
+  }
+  .translation{
     position: initial;
     margin-left: var(--mb-4);
   }
