@@ -10,9 +10,9 @@ import "config/lang/i18n";
 ReactDOM.render(
   <React.Fragment>
     <GlobalStyles />
-    <ThemeProvider theme={theme}>
-      <Routes />
-    </ThemeProvider>
+    {/* <ThemeProvider theme={theme}> */}
+    <Routes />
+    {/* </ThemeProvider> */}
   </React.Fragment>,
   document.getElementById("root")
 );

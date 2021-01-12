@@ -12,12 +12,13 @@ export default class Footer extends React.Component {
             <div className="footer__content">
               <h3 className="footer__title">
                 <a href="#home" className="footer__logo">
-                  Christmas Gift
+                  사업장주소
                 </a>
               </h3>
               <p className="footer__description">
-                I sent a gift and it gives <br />
-                happiness
+                서울시 강서구 양천로 47나길 18 (마곡동) <br />
+                TEL : (02) 3665-8611~4 <br />
+                FAX : (02) 3665-8615
               </p>
             </div>
 

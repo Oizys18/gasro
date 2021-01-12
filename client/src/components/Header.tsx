@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 interface Props {}
 export default function Header({ ...props }: Props) {
   // const [focus, setFocus] = useState<number>(0);
+  const location = useLocation();
+  console.log(location.pathname);
   useEffect(() => {
     const toggle = document.getElementById("nav-toggle"),
       nav = document.getElementById("nav-menu");
-
-    // Validate that variables exist
     if (toggle && nav) {
       toggle.addEventListener("click", () => {
-        // We add the show-menu class to the div tag with the nav__menu class
         nav.classList.toggle("show-menu");
       });
     }
@@ -24,9 +23,7 @@ export default function Header({ ...props }: Props) {
       <header className="l-header" id="header">
         <nav className="nav bd-container">
           <Link to="/">
-            <a href="#home" className="nav__logo">
-              Gastec Korea
-            </a>
+            <div className="nav__logo">Gastec Korea</div>
           </Link>
 
           <div className="nav__menu" id="nav-menu">

@@ -6,10 +6,12 @@ import Notice from "containers/Notice";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 const Routes: React.FC = () => (
   <BrowserRouter>
     <Header />
+    <ScrollToTop />
     <Switch>
       <Route path="/" exact component={Main} />
       <Route path="/products" exact component={Products} />

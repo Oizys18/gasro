@@ -6,18 +6,24 @@ export default function Main({ ...props }: Imain) {
   return (
     <>
       <main className="l-main">
-        <section className="home" id="home">
-          <div className="home__container bd-container bd-grid">
+        <section className="home section bd-container" id="home">
+          <div className="home__container  bd-grid">
             <div className="home__img">
               <img src={imageOne} alt="" />
             </div>
 
             <div className="home__data">
-              <h1 className="home__title">최고야</h1>
-              <p className="home__description">아시아 최대판매 가스오븐</p>
-              <a href="#home" className="button">
+              <h1 className="home__title">GASRO QUICK</h1>
+              <h2>
+                아시아 최고의 보급률을 자랑하는
+                <br /> 컨베이어 피자오븐
+              </h2>
+              <p className="home__description">
+                아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐
+              </p>
+              {/* <a href="#home" className="button">
                 Get Started
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
