@@ -18,17 +18,40 @@ export default function Header({ ...props }: Props) {
       });
     }
   });
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     if (menu) {
       setMenu(false);
     }
   }, [location]);
+  const nav = document.getElementById("header");
+  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+  if (nav) {
+    if (window.pageYOffset >= 200) {
+      nav.classList.add("scroll-header");
+    } else {
+      nav.classList.remove("scroll-header");
+    }
+  }
   return (
     <>
       <a href="#home" className="scrolltop show-scroll" id="scroll-top">
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
-      <header className="l-header" id="header">
+      <header className="l-header " id="header">
         <nav className="nav bd-container">
           <Link to="/">
             <h2 className="nav__logo">Gastec Korea</h2>

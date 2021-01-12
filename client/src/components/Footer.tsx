@@ -12,18 +12,18 @@ export default class Footer extends React.Component {
             <div className="footer__content">
               <h3 className="footer__title">
                 <a href="#home" className="footer__logo">
-                  사업장주소
+                  사업장 주소
                 </a>
               </h3>
               <p className="footer__description">
-                서울시 강서구 양천로 47나길 18 (마곡동) <br />
+                서울시 강서구 양천로 47나길 18 <br />
                 TEL : (02) 3665-8611~4 <br />
                 FAX : (02) 3665-8615
               </p>
             </div>
 
             <div className="footer__content">
-              <h3 className="footer__title">Our Services</h3>
+              <h3 className="footer__title">서비스</h3>
               <ul>
                 <li>
                   <a href="#home" className="footer__link">
