@@ -108,7 +108,9 @@ function Products({ ...props }: Iproducts) {
         </div>
         <div className="home__container">
           <h3 className="section-title">오븐 사용법</h3>
-          <Vstepper></Vstepper>
+          <Reveal keyframes={fadeLeft} cascade={true} duration={800}>
+            <Vstepper></Vstepper>
+          </Reveal>
         </div>
       </section>
     </>

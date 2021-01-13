@@ -1,4 +1,8 @@
 import React from "react";
+import catalog_kor from "assets/documents/catalog_kor.pdf";
+import el_kor from "assets/documents/el_kor.pdf";
+import gas_kor from "assets/documents/gas_kor.pdf";
+import rol_kor from "assets/documents/rol_kor.pdf";
 interface Props {}
 export default class Footer extends React.Component {
   constructor(props: Props) {
@@ -31,8 +35,8 @@ export default class Footer extends React.Component {
                   </a>
                 </li>
                 <li>
-                  <a href="#home" className="footer__link">
-                    카탈로그
+                  <a href={catalog_kor} className="footer__link">
+                    카탈로그 다운로드
                   </a>
                 </li>
                 {/* <li>
@@ -47,17 +51,17 @@ export default class Footer extends React.Component {
               <h3 className="footer__title">사용설명서 다운로드</h3>
               <ul>
                 <li>
-                  <a href="#home" className="footer__link">
+                  <a href={el_kor} download className="footer__link">
                     전기식 오븐
                   </a>
                 </li>
                 <li>
-                  <a href="#home" className="footer__link">
+                  <a href={gas_kor} download className="footer__link">
                     가스식 오븐
                   </a>
                 </li>
                 <li>
-                  <a href="#home" className="footer__link">
+                  <a href={rol_kor} download className="footer__link">
                     롤러기
                   </a>
                 </li>

@@ -98,9 +98,9 @@ export default function Main({ ...props }: Imain) {
           <h2 className="section-title">홍보영상</h2>
           <div className="videoH">
             {/* <div className="home section bd-container">
-            <VideoHover></VideoHover>
           </div> */}
-            <Video></Video>
+            <VideoHover></VideoHover>
+            {/* <Video></Video> */}
           </div>
         </section>
       </main>
