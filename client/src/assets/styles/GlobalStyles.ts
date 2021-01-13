@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
 
     :root {
   --header-height: 3rem;
@@ -126,7 +125,16 @@ img{
 .section{
   padding: 4rem 0 2rem;
 }
+.videoH{
+  /* position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto; */
 
+
+}
 .section-title, .section-title-center{
   font-size: var(--h2-font-size);
   color: var(--title-color);
@@ -226,7 +234,7 @@ img{
   content: '';
   position: absolute;
   bottom: -.75rem;
-  left: 45%;
+  left: 50%;
   width: 5px;
   height: 5px;
   background-color: var(--title-color);
@@ -287,7 +295,12 @@ img{
 .home__description{
   margin-bottom: var(--mb-3);
 }
-
+.decoration__description{
+  margin-bottom: var(--mb-3);
+}
+.home__data{
+  text-align:center;
+}
 /*========== BUTTONS ==========*/
 .button{
   display: inline-block;
@@ -329,6 +342,7 @@ img{
 }
 
 /*========== DECORATION ==========*/
+
 .decoration__container{
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
@@ -517,6 +531,9 @@ img{
   .home__img{
     order: 1;
   }
+  .home__data{
+    text-align: initial;
+  }
 
   .section-title-center,
   .share__data,
@@ -629,7 +646,9 @@ img{
   .send__container{
     column-gap: 5rem;
   }
+  
 }
+
 `;
 
 export default GlobalStyle;

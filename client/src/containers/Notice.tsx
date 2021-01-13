@@ -1,23 +1,17 @@
 import * as React from "react";
-import styled from "styled-components";
+import Board from "components/Board";
 interface Inotice {}
 function Notice({ ...props }: Inotice) {
   return (
     <>
-      <MainWrapper>
-        <ContentWrapper>
-          <div>게시판</div>
-        </ContentWrapper>
-      </MainWrapper>
+      <section className="home section bd-container" id="home">
+        {/* <div className="home__container "> */}
+        <h1 className="home__title ">공지사항</h1>
+        <Board></Board>
+        {/* </div> */}
+      </section>
     </>
   );
 }
 
 export default Notice;
-const MainWrapper = styled.div`
-  overflow: hidden;
-`;
-const ContentWrapper = styled.div`
-  height: 1500px;
-  background-color: darkgrey;
-`;

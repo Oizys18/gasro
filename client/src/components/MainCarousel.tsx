@@ -1,17 +1,19 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import carOne from "assets/images/1.jpg";
-import carTwo from "assets/images/2.jpg";
-import carThree from "assets/images/3.jpg";
-
+import bannerOne from "assets/images/banner01.jpg";
+import bannerTwo from "assets/images/banner02.jpg";
+import bannerThree from "assets/images/banner03.jpg";
+import bannerFour from "assets/images/banner04.jpg";
+import Video from "components/Video";
+import VideoHover from "components/VideoHover.js";
+import styled from "styled-components";
 interface configProps {
   autoPlay?: boolean;
   showArrows?: boolean;
   useKeyboardArrows?: boolean;
   swipeable?: boolean;
   interval?: number;
-  infiniteLoop?: boolean;
 }
 export default function MainCarousel({ ...props }: configProps) {
   return (
@@ -22,21 +24,28 @@ export default function MainCarousel({ ...props }: configProps) {
         useKeyboardArrows={props.useKeyboardArrows}
         swipeable={props.swipeable}
         interval={props.interval}
-        infiniteLoop={props.infiniteLoop}
+        infiniteLoop={true}
+        showIndicators={false}
+        showThumbs={false}
       >
+        <VideoWrapper>
+          <VideoHover></VideoHover>
+        </VideoWrapper>
         <div>
-          <img src={carOne} alt="carousel-one" />
-          {/* <p className="legend">Legend 1</p> */}
+          <img src={bannerOne} alt="carousel-one" />
         </div>
         <div>
-          <img src={carTwo} alt="carousel-two" />
-          {/* <p className="legend">Legend 2</p> */}
+          <img src={bannerTwo} alt="carousel-two" />
         </div>
         <div>
-          <img src={carThree} alt="carousel-three" />
-          {/* <p className="legend">Legend 3</p> */}
+          <img src={bannerThree} alt="carousel-three" />
+        </div>
+        <div>
+          <img src={bannerFour} alt="carousel-three" />
         </div>
       </Carousel>
     </>
   );
 }
+
+const VideoWrapper = styled.div``;

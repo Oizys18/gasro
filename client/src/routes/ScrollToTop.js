@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-
 function ScrollToTop({ history }) {
     useEffect(() => {
         const unlisten = history.listen(() => {

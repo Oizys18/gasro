@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/react": "^16.9.0",
@@ -15,7 +17,9 @@
     "react-awesome-reveal": "^3.5.2",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
+    "react-hover-video-player": "^6.7.0",
     "react-i18next": "^11.8.5",
+    "react-player": "^2.7.2",
     "react-responsive-carousel": "^3.2.11",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",

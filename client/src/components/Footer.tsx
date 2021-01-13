@@ -27,38 +27,38 @@ export default class Footer extends React.Component {
               <ul>
                 <li>
                   <a href="#home" className="footer__link">
-                    Pricing{" "}
+                    개인정보처리방침
                   </a>
                 </li>
                 <li>
                   <a href="#home" className="footer__link">
-                    Discounts
+                    카탈로그
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#home" className="footer__link">
                     Shipping mode
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
             <div className="footer__content">
-              <h3 className="footer__title">Our Company</h3>
+              <h3 className="footer__title">사용설명서 다운로드</h3>
               <ul>
                 <li>
                   <a href="#home" className="footer__link">
-                    Blog
+                    전기식 오븐
                   </a>
                 </li>
                 <li>
                   <a href="#home" className="footer__link">
-                    About us
+                    가스식 오븐
                   </a>
                 </li>
                 <li>
                   <a href="#home" className="footer__link">
-                    Our mision
+                    롤러기
                   </a>
                 </li>
               </ul>
@@ -77,7 +77,7 @@ export default class Footer extends React.Component {
               </a>
             </div>
           </div>
-
+          <div className="privacy"></div>
           <p className="footer__copy">2021 Gastec Korea. All right reserved</p>
         </footer>
       </>

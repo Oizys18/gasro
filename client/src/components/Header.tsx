@@ -4,6 +4,21 @@ interface Props {}
 export default function Header({ ...props }: Props) {
   const location = useLocation();
   const [menu, setMenu] = useState<boolean>(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  const nav = document.getElementById("header");
+  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+  if (nav) {
+    if (window.pageYOffset >= 200) {
+      nav.classList.add("scroll-header");
+    } else {
+      nav.classList.remove("scroll-header");
+    }
+  }
   useEffect(() => {
     // 모바일 햄버거 toggle
     const toggle = document.getElementById("nav-toggle"),
@@ -18,12 +33,6 @@ export default function Header({ ...props }: Props) {
       });
     }
   });
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
@@ -37,24 +46,16 @@ export default function Header({ ...props }: Props) {
       setMenu(false);
     }
   }, [location]);
-  const nav = document.getElementById("header");
-  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-  if (nav) {
-    if (window.pageYOffset >= 200) {
-      nav.classList.add("scroll-header");
-    } else {
-      nav.classList.remove("scroll-header");
-    }
-  }
+
   return (
     <>
-      <a href="#home" className="scrolltop show-scroll" id="scroll-top">
+      <a href="#top" className="scrolltop show-scroll" id="scroll-top">
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
       <header className="l-header " id="header">
         <nav className="nav bd-container">
           <Link to="/">
-            <h2 className="nav__logo">Gastec Korea</h2>
+            <h1 className="nav__logo">Gasro Quick</h1>
           </Link>
 
           <div
@@ -64,7 +65,7 @@ export default function Header({ ...props }: Props) {
             <ul className="nav__list">
               <li className="nav__item">
                 <Link to="/">
-                  <a
+                  <div
                     className={
                       location.pathname == "/"
                         ? "nav__link active-link"
@@ -73,13 +74,13 @@ export default function Header({ ...props }: Props) {
                     id="company"
                   >
                     회사소개
-                  </a>
+                  </div>
                 </Link>
               </li>
               <li className="nav__item">
                 <Link to="/products">
-                  <a
-                    href="#home"
+                  <div
+                    // href="#home"
                     className={
                       location.pathname == "/products"
                         ? "nav__link active-link"
@@ -88,13 +89,12 @@ export default function Header({ ...props }: Props) {
                     id="products"
                   >
                     제품소개
-                  </a>
+                  </div>
                 </Link>
               </li>
               <li className="nav__item">
                 <Link to="/notice">
-                  <a
-                    href="#home"
+                  <div
                     className={
                       location.pathname == "/notice"
                         ? "nav__link active-link"
@@ -103,13 +103,13 @@ export default function Header({ ...props }: Props) {
                     id="notice"
                   >
                     공지사항
-                  </a>
+                  </div>
                 </Link>
               </li>
               <li className="nav__item">
                 <Link to="/support">
-                  <a
-                    href="#home"
+                  <div
+                    // href="#home"
                     className={
                       location.pathname == "/support"
                         ? "nav__link active-link"
@@ -118,7 +118,7 @@ export default function Header({ ...props }: Props) {
                     id="support"
                   >
                     고객지원
-                  </a>
+                  </div>
                 </Link>
               </li>
               {/* 
