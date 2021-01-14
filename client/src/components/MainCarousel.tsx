@@ -1,42 +1,45 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import bannerOne from "assets/images/banner01.jpg";
-import bannerTwo from "assets/images/banner02.jpg";
-import bannerThree from "assets/images/banner03.jpg";
-import bannerFour from "assets/images/banner04.jpg";
-import styled from "styled-components";
+import gt300 from "assets/images/ovens/gt300D.png";
+import gt600 from "assets/images/ovens/gt600D.png";
+import gt700 from "assets/images/ovens/gt700D.png";
+import Chip from "@material-ui/core/Chip";
 interface configProps {
-  autoPlay?: boolean;
-  showArrows?: boolean;
-  useKeyboardArrows?: boolean;
   swipeable?: boolean;
-  interval?: number;
 }
 export default function MainCarousel({ ...props }: configProps) {
   return (
     <>
       <Carousel
-        autoPlay={props.autoPlay}
-        showArrows={props.showArrows}
-        useKeyboardArrows={props.useKeyboardArrows}
-        swipeable={props.swipeable}
-        interval={props.interval}
+        autoPlay={true}
+        showArrows={false}
+        swipeable={true}
+        useKeyboardArrows={true}
+        interval={2000}
         infiniteLoop={true}
-        // showIndicators={false}
-        // showThumbs={false}
+        showIndicators={false}
+        showThumbs={false}
+        showStatus={false}
+        stopOnHover={true}
       >
         <div>
-          <img src={bannerOne} alt="carousel-one" />
+          <legend style={{ position: "absolute", right: "0", bottom: "0" }}>
+            <Chip variant="outlined" label="GT300" />
+          </legend>
+          <img src={gt300} alt="carousel-one" />
         </div>
         <div>
-          <img src={bannerTwo} alt="carousel-two" />
+          <legend style={{ position: "absolute", right: "0", bottom: "0" }}>
+            <Chip variant="outlined" label="GT600" />
+          </legend>
+          <img src={gt600} alt="carousel-two" />
         </div>
         <div>
-          <img src={bannerThree} alt="carousel-three" />
-        </div>
-        <div>
-          <img src={bannerFour} alt="carousel-three" />
+          <legend style={{ position: "absolute", right: "0", bottom: "0" }}>
+            <Chip variant="outlined" label="GT700" />
+          </legend>
+          <img src={gt700} alt="carousel-three" />
         </div>
       </Carousel>
     </>

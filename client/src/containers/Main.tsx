@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import imageOne from "assets/images/oven1.png";
+import imageOne from "assets/images/gt300AB.png";
 import imageTwo from "assets/images/oven2.png";
 import imageFour from "assets/images/oven4.png";
+import pizzaTwo from "assets/images/foods/pizza2.jpg";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import VideoDialog from "components/VideoDialog";
@@ -21,19 +22,20 @@ export default function Main({ ...props }: Imain) {
   return (
     <>
       <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
-      {/* <MainCarousel></MainCarousel> */}
       <main className="l-main" id="top">
         <section className="home section bd-container" id="home">
           <div className="home__container  bd-grid">
             <div className="home__img">
               <Reveal keyframes={fadeDown} duration={800}>
-                <img src={imageOne} alt="" />
+                {/* <img src={imageOne} alt="" /> */}
+                <MainCarousel></MainCarousel>
               </Reveal>
             </div>
 
             <div className="home__data ">
               <Reveal keyframes={fadeDown} duration={800}>
-                <h1 className="home__title ">Gasro Quick</h1>
+                {/* <h2 className="home__title">Gasro Quick</h2> */}
+                <h1>Gasro Quick</h1>
                 <h2>
                   아시아 최고의 보급률을 자랑하는
                   <br /> 컨베이어 피자오븐
@@ -41,9 +43,9 @@ export default function Main({ ...props }: Imain) {
                 <p className="home__description">
                   아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐
                 </p>
-                <a href="#" className="button" onClick={handleClickOpen}>
-                  소개영상 재생
-                </a>
+                <Link to="/products">
+                  <div className="button">제품소개</div>
+                </Link>
               </Reveal>
             </div>
           </div>
@@ -53,36 +55,42 @@ export default function Main({ ...props }: Imain) {
             <Reveal keyframes={fadeLeft} cascade={true} duration={1000}>
               <div className="share__data">
                 <h2 className="section-title-center">
-                  GASRO QUICK <br />
-                  컨베이어 피자오븐
+                  {/* GASRO QUICK <br /> */}
+                  피자굽기 딱 좋아
                 </h2>
                 <p className="share__description">
-                  Sharing these holidays is the best gift you can give, give a
-                  present or share your love with the people you love the most
-                  and celebrate with great happiness.
+                  맛있는 피자를 구워먹을 수 있습니다. 맛있는 피자를 구워먹을 수
+                  있습니다. 맛있는 피자를 구워먹을 수 있습니다. 맛있는 피자를
+                  구워먹을 수 있습니다.
                 </p>
-                <Link to="/products">
-                  <div className="button">제품소개</div>
-                </Link>
+
+                <a href="#" className="button" onClick={handleClickOpen}>
+                  소개영상
+                </a>
               </div>
             </Reveal>
             <div className="share__img">
               <Reveal keyframes={fadeRight} duration={1800}>
-                <img src={imageTwo} alt="" />
+                <img
+                  src={pizzaTwo}
+                  alt=""
+                  style={{
+                    border: "0.5px solid grey",
+                    padding: "5px",
+                    borderRadius: "10px",
+                  }}
+                />
               </Reveal>
             </div>
           </div>
         </section>
         <section className="decoration section bd-container" id="decoration">
-          <h2 className="section-title">
-            컨베이어 피자오븐 <br />
-            For Your Home
-          </h2>
+          <h2 className="section-title">제품군</h2>
           <div className="decoration__container bd-grid">
             <Reveal keyframes={fadeDown} cascade={true}>
               <div className="decoration__data">
-                <img src={imageTwo} alt="" className="decoration__img" />
-                <h3 className="decoration__title">GT500</h3>
+                <img src={imageOne} alt="" className="decoration__img" />
+                <h3 className="decoration__title">GT300</h3>
                 <a href="#home" className="button button-link">
                   Go Shopping
                 </a>
@@ -90,15 +98,15 @@ export default function Main({ ...props }: Imain) {
 
               <div className="decoration__data">
                 <img src={imageOne} alt="" className="decoration__img" />
-                <h3 className="decoration__title">GT500</h3>
+                <h3 className="decoration__title">GT600</h3>
                 <a href="#home" className="button button-link">
                   Go Shopping
                 </a>
               </div>
 
               <div className="decoration__data">
-                <img src={imageFour} alt="" className="decoration__img" />
-                <h3 className="decoration__title">GT500</h3>
+                <img src={imageOne} alt="" className="decoration__img" />
+                <h3 className="decoration__title">GT700</h3>
                 <a href="#top" className="button button-link">
                   Go Shopping
                 </a>
