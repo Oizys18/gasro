@@ -8,28 +8,19 @@ const videoStyle = {
 };
 
 class Video extends React.Component {
-  stopMovie = (e: any) => {
-    e.target.pause();
-    console.log("hello");
-  };
-
-  playMovie = (e: any) => {
-    e.target.play();
-  };
   render() {
     return (
-      // <div className="home section bd-container">
       <video
         style={videoStyle}
-        className="react-player"
+        className="react-player videoH"
         src={gasro}
         width="100%"
         height="100%"
         controls={true}
         loop={false}
         poster={white}
+        id="video"
       />
-      // </div>
     );
   }
 }

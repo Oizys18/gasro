@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Poppins:wght@400;500;700&display=swap');
     :root {
   --header-height: 3rem;
 
@@ -18,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
   /*========== Font and typography ==========*/
   --body-font: 'Noto Sans KR', sans-serif;
+  /* --body-font: 'Poppins', sans-serif; */
   --biggest-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
@@ -25,8 +25,10 @@ const GlobalStyle = createGlobalStyle`
   --small-font-size: .813rem;
 
   /*========== Font weight ==========*/
-  --font-semi-bold: 600;
+  --font-normal: 400;
+  --font-semi-bold: 500;
   --font-bold: 700;
+  --font-bolder: 900;
 
   /*========== Margenes ==========*/
   --mb-1: .5rem;
@@ -126,12 +128,8 @@ img{
   padding: 4rem 0 2rem;
 }
 .videoH{
-  /* position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-margin: auto; */
+  opacity:0;
+  position:absolute
 
 
 }
@@ -198,11 +196,15 @@ margin: auto; */
   margin-bottom: var(--mb-3);
 }
 
-.nav__link, .nav__logo, .nav__toggle{
+.nav__link, .nav__toggle{
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+  /* font-weight: var(--font-bolder); */
 }
-
+.nav__logo{
+  color: var(--title-color);
+  font-weight: var(--font-bolder);
+}
 .nav__logo:hover{
   color: var(--first-color);
 }
@@ -296,7 +298,8 @@ margin: auto; */
   margin-bottom: var(--mb-3);
 }
 .decoration__description{
-  margin-bottom: var(--mb-3);
+  /* margin-top:var(--mb-1); */
+  margin-bottom: var(--mb-4);
 }
 .home__data{
   text-align:center;
@@ -344,10 +347,12 @@ margin: auto; */
 /*========== DECORATION ==========*/
 
 .decoration__container{
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
 }
 
 .decoration__data{
+  display:grid;
+  position:relative;
   text-align: center;
   padding: 1rem 1rem 2rem;
   background-color: var(--container-color);
@@ -361,11 +366,13 @@ margin: auto; */
 
 .decoration__img{
   width: 180px;
+  justify-self:center;
 }
 
 .decoration__title{
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
+  margin-bottom: var(--mb-2);
+  margin-top: var(--mb-2);
 }
 
 /*========== ACCESSORIES ==========*/
@@ -417,7 +424,7 @@ margin: auto; */
   bottom: 0;
   right: 0;
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: .5rem .625rem;
   border-radius: 1rem 0 1rem 0;
 }
@@ -519,7 +526,8 @@ margin: auto; */
 @media screen and (min-width: 576px){
   .home__container,
   .share__container,
-  .send__container{
+  .send__container,
+  .product__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
   }

@@ -22,6 +22,7 @@ export default function VideoHover() {
 			videoSrc={gasro}
 			// unloadVideoOnPaused
 			// sizingMode="container"
+			fullscreen
 			muted={false}
 			control={true}
 			pausedOverlay={

@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import imageOne from "assets/images/oven1.png";
 import imageTwo from "assets/images/oven2.png";
 import imageFour from "assets/images/oven4.png";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
-import VideoHover from "components/VideoHover.js";
-import Video from "components/Video";
+import VideoDialog from "components/VideoDialog";
+import MainCarousel from "components/MainCarousel";
 interface Imain {}
 export default function Main({ ...props }: Imain) {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <>
+      <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
+      {/* <MainCarousel></MainCarousel> */}
       <main className="l-main" id="top">
         <section className="home section bd-container" id="home">
           <div className="home__container  bd-grid">
@@ -21,7 +33,7 @@ export default function Main({ ...props }: Imain) {
 
             <div className="home__data ">
               <Reveal keyframes={fadeDown} duration={800}>
-                <h1 className="home__title ">GASRO QUICK</h1>
+                <h1 className="home__title ">Gasro Quick</h1>
                 <h2>
                   아시아 최고의 보급률을 자랑하는
                   <br /> 컨베이어 피자오븐
@@ -29,9 +41,9 @@ export default function Main({ ...props }: Imain) {
                 <p className="home__description">
                   아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐
                 </p>
-                {/* <a href="#home" className="button">
-                Get Started
-              </a> */}
+                <a href="#" className="button" onClick={handleClickOpen}>
+                  소개영상 재생
+                </a>
               </Reveal>
             </div>
           </div>
@@ -49,9 +61,9 @@ export default function Main({ ...props }: Imain) {
                   present or share your love with the people you love the most
                   and celebrate with great happiness.
                 </p>
-                <a href="#home" className="button">
-                  Send a Gift
-                </a>
+                <Link to="/products">
+                  <div className="button">제품소개</div>
+                </Link>
               </div>
             </Reveal>
             <div className="share__img">
@@ -94,15 +106,35 @@ export default function Main({ ...props }: Imain) {
             </Reveal>
           </div>
         </section>
-        <section className="decoration section bd-container" id="decoration">
-          <h2 className="section-title">홍보영상</h2>
-          <div className="videoH">
-            {/* <div className="home section bd-container">
-          </div> */}
-            <VideoHover></VideoHover>
-            {/* <Video></Video> */}
+        <section className="send section">
+          <div className="send__container bd-container bd-grid">
+            <div className="send__content">
+              <h2 className="section-title-center send__title">추가홍보문구</h2>
+              <p className="send__description">
+                아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐 아시아 최고의
+                보급률을 자랑하는 컨베이어 피자오븐
+              </p>
+              {/* <form action="">
+                <div className="send__direction">
+                  <input
+                    type="text"
+                    placeholder="House address"
+                    className="send__input"
+                  />
+                  <a href="#" className="button">
+                    Send
+                  </a>
+                </div>
+              </form> */}
+            </div>
           </div>
         </section>
+        {/* <section className="decoration section bd-container" id="decoration">
+          <h2 className="section-title">홍보영상</h2>
+          <div className="videoH">
+            <Video></Video>
+          </div>
+        </section> */}
       </main>
     </>
   );

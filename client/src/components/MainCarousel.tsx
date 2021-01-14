@@ -5,8 +5,6 @@ import bannerOne from "assets/images/banner01.jpg";
 import bannerTwo from "assets/images/banner02.jpg";
 import bannerThree from "assets/images/banner03.jpg";
 import bannerFour from "assets/images/banner04.jpg";
-import Video from "components/Video";
-import VideoHover from "components/VideoHover.js";
 import styled from "styled-components";
 interface configProps {
   autoPlay?: boolean;
@@ -25,12 +23,9 @@ export default function MainCarousel({ ...props }: configProps) {
         swipeable={props.swipeable}
         interval={props.interval}
         infiniteLoop={true}
-        showIndicators={false}
-        showThumbs={false}
+        // showIndicators={false}
+        // showThumbs={false}
       >
-        <VideoWrapper>
-          <VideoHover></VideoHover>
-        </VideoWrapper>
         <div>
           <img src={bannerOne} alt="carousel-one" />
         </div>
@@ -47,5 +42,3 @@ export default function MainCarousel({ ...props }: configProps) {
     </>
   );
 }
-
-const VideoWrapper = styled.div``;
