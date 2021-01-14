@@ -13,7 +13,7 @@ export default function Header({ ...props }: Props) {
   const nav = document.getElementById("header");
   // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
   if (nav) {
-    if (window.pageYOffset >= 200) {
+    if (scrollPosition >= 200) {
       nav.classList.add("scroll-header");
     } else {
       nav.classList.remove("scroll-header");
@@ -34,6 +34,7 @@ export default function Header({ ...props }: Props) {
     }
   });
   useEffect(() => {
+    // scroll eventlistener
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
@@ -42,6 +43,7 @@ export default function Header({ ...props }: Props) {
   }, []);
 
   useEffect(() => {
+    // close mobile dropdown menu when path changes
     if (menu) {
       setMenu(false);
     }
@@ -67,7 +69,7 @@ export default function Header({ ...props }: Props) {
                 <Link to="/">
                   <div
                     className={
-                      location.pathname == "/"
+                      location.pathname === "/"
                         ? "nav__link active-link"
                         : "nav__link"
                     }
@@ -82,7 +84,7 @@ export default function Header({ ...props }: Props) {
                   <div
                     // href="#home"
                     className={
-                      location.pathname == "/products"
+                      location.pathname === "/products"
                         ? "nav__link active-link"
                         : "nav__link"
                     }
@@ -96,7 +98,7 @@ export default function Header({ ...props }: Props) {
                 <Link to="/notice">
                   <div
                     className={
-                      location.pathname == "/notice"
+                      location.pathname === "/notice"
                         ? "nav__link active-link"
                         : "nav__link"
                     }
@@ -111,7 +113,7 @@ export default function Header({ ...props }: Props) {
                   <div
                     // href="#home"
                     className={
-                      location.pathname == "/support"
+                      location.pathname === "/support"
                         ? "nav__link active-link"
                         : "nav__link"
                     }
