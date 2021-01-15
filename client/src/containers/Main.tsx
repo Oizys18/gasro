@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import imageOne from "assets/images/gt300AB.png";
-import imageTwo from "assets/images/oven2.png";
-import imageFour from "assets/images/oven4.png";
+import gt300AB from "assets/images/ovens/gt300AB.png";
+import gt600AB from "assets/images/ovens/gt600AB.png";
+import gt700AB from "assets/images/ovens/gt700AB.png";
 import pizzaTwo from "assets/images/foods/pizza2.jpg";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -89,7 +89,7 @@ export default function Main({ ...props }: Imain) {
           <div className="decoration__container bd-grid">
             <Reveal keyframes={fadeDown} cascade={true}>
               <div className="decoration__data">
-                <img src={imageOne} alt="" className="decoration__img" />
+                <img src={gt300AB} alt="" className="decoration__img" />
                 <h3 className="decoration__title">GT300</h3>
                 <a href="#home" className="button button-link">
                   Go Shopping
@@ -97,7 +97,7 @@ export default function Main({ ...props }: Imain) {
               </div>
 
               <div className="decoration__data">
-                <img src={imageOne} alt="" className="decoration__img" />
+                <img src={gt600AB} alt="" className="decoration__img" />
                 <h3 className="decoration__title">GT600</h3>
                 <a href="#home" className="button button-link">
                   Go Shopping
@@ -105,7 +105,7 @@ export default function Main({ ...props }: Imain) {
               </div>
 
               <div className="decoration__data">
-                <img src={imageOne} alt="" className="decoration__img" />
+                <img src={gt700AB} alt="" className="decoration__img" />
                 <h3 className="decoration__title">GT700</h3>
                 <a href="#top" className="button button-link">
                   Go Shopping
