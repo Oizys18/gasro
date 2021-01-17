@@ -27,14 +27,13 @@ export default function Main({ ...props }: Imain) {
           <div className="home__container  bd-grid">
             <div className="home__img">
               <Reveal keyframes={fadeDown} duration={800}>
-                {/* <img src={imageOne} alt="" /> */}
                 <MainCarousel></MainCarousel>
               </Reveal>
             </div>
 
             <div className="home__data ">
               <Reveal keyframes={fadeDown} duration={800}>
-                {/* <h2 className="home__title">Gasro Quick</h2> */}
+                <h2 className="home__title">Gasro Quick</h2>
                 <h1>Gasro Quick</h1>
                 <h2>
                   아시아 최고의 보급률을 자랑하는
