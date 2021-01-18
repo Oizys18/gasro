@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
 import white from "assets/images/1.png";
-// import ReactPlayer from "react-player/lazy";
 import gasro from "assets/videos/gasro.mp4";
 const videoStyle = {
   padding: "none",
