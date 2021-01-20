@@ -85,7 +85,7 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
         onClose={props.handleClose}
         aria-labelledby="customized-dialog-title"
         open={props.open}
-        maxWidth="md"
+        maxWidth="lg"
       >
         <DialogTitle id="customized-dialog-title">{props.title}</DialogTitle>
         <IconButton

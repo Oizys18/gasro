@@ -9,105 +9,112 @@ import gt700ND from "assets/images/ovens/gt700ND.png";
 import rollerF from "assets/images/ovens/rollerF.png";
 import rollerS from "assets/images/ovens/rollerS.png";
 import { keyframes } from "@emotion/react";
-import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
 import ProductDialog from "components/ProductDialog";
 
 import Vstepper from "components/Vstepper";
 interface Iproducts {}
 
 function Products({ ...props }: Iproducts) {
-  const [openOne, setOpenOne] = React.useState(false);
-  const [openTwo, setOpenTwo] = React.useState(false);
-  const [openThree, setOpenThree] = React.useState(false);
+  const [openOne, setOpenOne] = useState(false);
+  const [openTwo, setOpenTwo] = useState(false);
+  const [openThree, setOpenThree] = useState(false);
+  const handleModal = (productNumber: number, openModal: boolean) => {
+    if (openModal) {
+      switch (productNumber) {
+        case 1:
+          setOpenOne(true);
+          break;
+        case 2:
+          setOpenTwo(true);
+          break;
+        case 3:
+          setOpenThree(true);
+          break;
+      }
+    } else {
+      switch (productNumber) {
+        case 1:
+          setOpenOne(false);
+          break;
+        case 2:
+          setOpenTwo(false);
+          break;
+        case 3:
+          setOpenThree(false);
+          break;
+      }
+    }
+  };
 
-  const clickOne = () => {
-    setOpenOne(true);
-  };
-  const closeOne = () => {
-    setOpenOne(false);
-  };
-  const clickTwo = () => {
-    setOpenTwo(true);
-  };
-  const closeTwo = () => {
-    setOpenTwo(false);
-  };
-  const clickThree = () => {
-    setOpenThree(true);
-  };
-  const closeThree = () => {
-    setOpenThree(false);
-  };
   return (
     <>
-      <ProductDialog
-        title="Gasro Quick-300 Series"
-        handleClose={closeOne}
-        open={openOne}
-        imgSrc={gt300D}
-        modelE=""
-        modelG=""
-        size=""
-        voltageE=""
-        voltageG=""
-        tempE=""
-        velt=""
-        wattE=""
-        wattG=""
-        weight=""
-        textE=""
-        textG=""
-        lngUse=""
-        lpgUse=""
-        lngPressure=""
-        lpgPressure=""
-      ></ProductDialog>
-      <ProductDialog
-        title="Gasro Quick-600 Series"
-        handleClose={closeTwo}
-        open={openTwo}
-        imgSrc={gt600D}
-        modelE=""
-        modelG=""
-        size=""
-        voltageE=""
-        voltageG=""
-        tempE=""
-        velt=""
-        wattE=""
-        wattG=""
-        weight=""
-        textE=""
-        textG=""
-        lngUse=""
-        lpgUse=""
-        lngPressure=""
-        lpgPressure=""
-      ></ProductDialog>
-      <ProductDialog
-        title="Gasro Quick-700 Series"
-        handleClose={closeThree}
-        open={openThree}
-        imgSrc={gt700D}
-        modelE=""
-        modelG=""
-        size=""
-        voltageE=""
-        voltageG=""
-        tempE=""
-        velt=""
-        wattE=""
-        wattG=""
-        weight=""
-        textE=""
-        textG=""
-        lngUse=""
-        lpgUse=""
-        lngPressure=""
-        lpgPressure=""
-      ></ProductDialog>
       <section className="home section bd-container" id="decoration">
+        <ProductDialog
+          title="Gasro Quick-300 Series"
+          handleClose={() => handleModal(1, false)}
+          open={openOne}
+          imgSrc={gt300D}
+          modelE=""
+          modelG=""
+          size=""
+          voltageE=""
+          voltageG=""
+          tempE=""
+          velt=""
+          wattE=""
+          wattG=""
+          weight=""
+          textE=""
+          textG=""
+          lngUse=""
+          lpgUse=""
+          lngPressure=""
+          lpgPressure=""
+        ></ProductDialog>
+        <ProductDialog
+          title="Gasro Quick-600 Series"
+          handleClose={() => handleModal(2, false)}
+          open={openTwo}
+          imgSrc={gt600D}
+          modelE=""
+          modelG=""
+          size=""
+          voltageE=""
+          voltageG=""
+          tempE=""
+          velt=""
+          wattE=""
+          wattG=""
+          weight=""
+          textE=""
+          textG=""
+          lngUse=""
+          lpgUse=""
+          lngPressure=""
+          lpgPressure=""
+        ></ProductDialog>
+        <ProductDialog
+          title="Gasro Quick-700 Series"
+          handleClose={() => handleModal(3, false)}
+          open={openThree}
+          imgSrc={gt700D}
+          modelE=""
+          modelG=""
+          size=""
+          voltageE=""
+          voltageG=""
+          tempE=""
+          velt=""
+          wattE=""
+          wattG=""
+          weight=""
+          textE=""
+          textG=""
+          lngUse=""
+          lpgUse=""
+          lngPressure=""
+          lpgPressure=""
+        ></ProductDialog>
         <h2 className="section-title">컨베이어 오븐</h2>
         <div className="decoration__container bd-grid">
           <Reveal keyframes={fadeDown} cascade={true} duration={800}>
@@ -130,7 +137,7 @@ function Products({ ...props }: Iproducts) {
               <a
                 href="#"
                 className="button accessory__button"
-                onClick={clickOne}
+                onClick={() => handleModal(1, true)}
               >
                 상세정보
               </a>
@@ -155,7 +162,7 @@ function Products({ ...props }: Iproducts) {
               <a
                 href="#"
                 className="button accessory__button"
-                onClick={clickTwo}
+                onClick={() => handleModal(2, true)}
               >
                 상세정보
               </a>
@@ -180,7 +187,7 @@ function Products({ ...props }: Iproducts) {
               <a
                 href="#"
                 className="button accessory__button"
-                onClick={clickThree}
+                onClick={() => handleModal(3, true)}
               >
                 상세정보
               </a>
@@ -245,12 +252,12 @@ function Products({ ...props }: Iproducts) {
             </div>
           </Reveal>
         </div>
-        <div className="home__container">
-          <h3 className="section-title">오븐 사용법</h3>
-          <Reveal keyframes={fadeLeft} cascade={true} duration={800}>
-            <Vstepper></Vstepper>
-          </Reveal>
-        </div>
+        <Reveal keyframes={fadeLeft} cascade={true} duration={800}>
+          <div className="home__container">
+            <h3 className="section-title">오븐 사용법</h3>
+            <Vstepper />
+          </div>
+        </Reveal>
       </section>
     </>
   );
