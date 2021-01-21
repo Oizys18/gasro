@@ -104,7 +104,8 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
             </Grid>
             <Grid item xs={8}>
               <Grid container>
-                <Grid item></Grid>
+                <Grid item>Hello</Grid>
+                <Grid item>Hello</Grid>
               </Grid>
             </Grid>
           </Grid>
