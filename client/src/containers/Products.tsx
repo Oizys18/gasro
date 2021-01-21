@@ -54,7 +54,7 @@ function Products({ ...props }: Iproducts) {
           handleClose={() => handleModal(1, false)}
           open={openOne}
           imgSrc={gt300D}
-          modelE="GT300E"
+          modelE=""
           modelG=""
           size=""
           voltageE=""

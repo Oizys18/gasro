@@ -13,6 +13,8 @@ import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+
 interface DialogProps {
   title: string;
   open: boolean;
@@ -96,18 +98,16 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
           <CloseIcon />
         </IconButton>
         <DialogContent dividers>
-          <img src={props.imgSrc} alt="" />
-
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <img src={props.imgSrc} alt="" />
+            </Grid>
+            <Grid item xs={8}>
+              <Grid container>
+                <Grid item></Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={props.handleClose} color="primary">
