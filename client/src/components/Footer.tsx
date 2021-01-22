@@ -34,7 +34,7 @@ export default class Footer extends React.Component {
                 <ul>
                   <li>
                     <a href="#home" className="footer__link">
-                      개인정보처리방침
+                      개인정보 처리방침
                     </a>
                   </li>
                   <li>

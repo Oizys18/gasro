@@ -14,6 +14,13 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+// import Table from "@material-ui/core/Table";
+// import TableBody from "@material-ui/core/TableBody";
+// import TableCell from "@material-ui/core/TableCell";
+// import TableContainer from "@material-ui/core/TableContainer";
+// import TableHead from "@material-ui/core/TableHead";
+// import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
 
 interface DialogProps {
   title: string;
@@ -99,20 +106,33 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
         </IconButton>
         <DialogContent dividers>
           <Grid container spacing={2}>
-            <Grid item xs={4}>
-              <img src={props.imgSrc} alt="" />
+            <Grid item xs={5}>
+              <Paper elevation={3} variant="outlined">
+                <img src={props.imgSrc} alt="" />
+              </Paper>
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={7}>
               <Grid container>
-                <Grid item>Hello</Grid>
-                <Grid item>Hello</Grid>
+                <Grid item>
+                  <Paper elevation={3}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eum, repellendus vitae in officiis quos, ea culpa reiciendis
+                    natus saepe ratione delectus deleniti est ipsam veritatis
+                    necessitatibus, hic dolore provident soluta.
+                  </Paper>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={props.handleClose} color="primary">
-            Save changes
+          <Button
+            autoFocus
+            onClick={props.handleClose}
+            variant="outlined"
+            color="default"
+          >
+            닫기
           </Button>
         </DialogActions>
       </Dialog>
