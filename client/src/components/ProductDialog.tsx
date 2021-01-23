@@ -107,19 +107,15 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
         <DialogContent dividers>
           <Grid container spacing={2}>
             <Grid item xs={5}>
-              <Paper elevation={3} variant="outlined">
-                <img src={props.imgSrc} alt="" />
-              </Paper>
+              <img src={props.imgSrc} alt="" />
             </Grid>
             <Grid item xs={7}>
               <Grid container>
                 <Grid item>
-                  <Paper elevation={3}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eum, repellendus vitae in officiis quos, ea culpa reiciendis
-                    natus saepe ratione delectus deleniti est ipsam veritatis
-                    necessitatibus, hic dolore provident soluta.
-                  </Paper>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+                  repellendus vitae in officiis quos, ea culpa reiciendis natus
+                  saepe ratione delectus deleniti est ipsam veritatis
+                  necessitatibus, hic dolore provident soluta.
                 </Grid>
               </Grid>
             </Grid>
