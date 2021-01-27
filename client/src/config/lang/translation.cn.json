@@ -1,3 +1,6 @@
 {
-    "hello": "Hello !!"
+  "hello": "Hello !!",
+  "Main": {
+    "mainOne": "아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐 "
   }
+}
