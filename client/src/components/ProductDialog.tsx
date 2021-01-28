@@ -162,14 +162,18 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
                     textColor="secondary"
                     centered
                   >
-                    <Tab disableRipple label="Item One" {...a11yProps(0)} />
-                    <Tab disableRipple label="Item Two" {...a11yProps(1)} />
+                    <Tab disableRipple label="가스식" {...a11yProps(0)} />
+                    <Tab disableRipple label="전기식" {...a11yProps(1)} />
                   </Tabs>
                   <TabPanel value={value} index={0}>
-                    Item One
+                    <Grid container>
+                      <Grid item>가스식 표</Grid>
+                    </Grid>
                   </TabPanel>
                   <TabPanel value={value} index={1}>
-                    Item Two
+                    <Grid container>
+                      <Grid item>전기식 표</Grid>
+                    </Grid>
                   </TabPanel>
                 </Box>
 

@@ -84,7 +84,7 @@ export default function Main({ ...props }: Imain) {
           </div>
         </section>
         <section className="decoration section bd-container" id="decoration">
-          <h2 className="section-title">제품군</h2>
+          {/* <h2 className="section-title">제품군</h2> */}
           <div className="decoration__container bd-grid">
             <Reveal keyframes={fadeDown} cascade={true}>
               <div className="decoration__data">
