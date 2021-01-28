@@ -164,16 +164,12 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
                   >
                     <Tab disableRipple label="Item One" {...a11yProps(0)} />
                     <Tab disableRipple label="Item Two" {...a11yProps(1)} />
-                    <Tab disableRipple label="Item Three" {...a11yProps(2)} />
                   </Tabs>
                   <TabPanel value={value} index={0}>
                     Item One
                   </TabPanel>
                   <TabPanel value={value} index={1}>
                     Item Two
-                  </TabPanel>
-                  <TabPanel value={value} index={2}>
-                    Item Three
                   </TabPanel>
                 </Box>
 
