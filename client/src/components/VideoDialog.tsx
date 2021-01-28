@@ -28,10 +28,6 @@ export default function VideoDialog({ ...props }: Props) {
           autoPlay={true}
           id="video"
         />
-        {/* </DialogContentText> */}
-        {/* </DialogContent> */}
-        {/* <DialogActions> */}
-        {/* </DialogActions> */}
         <a href="#" style={{ position: "absolute", right: "0" }}>
           <i
             className="bx bxs-x-circle bx-flip-horizontal bx-sm"
