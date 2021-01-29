@@ -72,7 +72,7 @@ export default function Main({ ...props }: Imain) {
               <Reveal keyframes={fadeRight} duration={1800}>
                 <img
                   src={pizzaTwo}
-                  alt=""
+                  alt="pizzatwo"
                   style={{
                     border: "0.5px solid grey",
                     padding: "5px",
@@ -88,7 +88,7 @@ export default function Main({ ...props }: Imain) {
           <div className="decoration__container bd-grid">
             <Reveal keyframes={fadeDown} cascade={true}>
               <div className="decoration__data">
-                <img src={gt300AB} alt="" className="decoration__img" />
+                <img src={gt300AB} alt="gt300AB" className="decoration__img" />
                 <h3 className="decoration__title">GT300</h3>
                 <a href="#home" className="button button-link">
                   Go Shopping
@@ -96,7 +96,7 @@ export default function Main({ ...props }: Imain) {
               </div>
 
               <div className="decoration__data">
-                <img src={gt600AB} alt="" className="decoration__img" />
+                <img src={gt600AB} alt="gt600AB" className="decoration__img" />
                 <h3 className="decoration__title">GT600</h3>
                 <a href="#home" className="button button-link">
                   Go Shopping
@@ -104,7 +104,7 @@ export default function Main({ ...props }: Imain) {
               </div>
 
               <div className="decoration__data">
-                <img src={gt700AB} alt="" className="decoration__img" />
+                <img src={gt700AB} alt="gt700AB" className="decoration__img" />
                 <h3 className="decoration__title">GT700</h3>
                 <a href="#top" className="button button-link">
                   Go Shopping
