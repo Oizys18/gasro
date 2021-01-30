@@ -13,7 +13,7 @@ export default function Header({ ...props }: Props) {
   const nav = document.getElementById("header");
   // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
   if (nav) {
-    if (scrollPosition >= 200) {
+    if (scrollPosition >= 100) {
       nav.classList.add("scroll-header");
     } else {
       nav.classList.remove("scroll-header");

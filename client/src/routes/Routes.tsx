@@ -5,15 +5,10 @@ import Support from "containers/Support";
 import Notice from "containers/Notice";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Redirect,
-  useLocation,
-} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
-
+import Paper from "@material-ui/core/Paper";
+import styled from "styled-components";
 function Routes() {
   return (
     <>
