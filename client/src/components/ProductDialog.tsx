@@ -177,12 +177,12 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
                   </TabPanel>
                 </Box>
 
-                {/* <Grid item>
+                <Grid item>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
                   repellendus vitae in officiis quos, ea culpa reiciendis natus
                   saepe ratione delectus deleniti est ipsam veritatis
                   necessitatibus, hic dolore provident soluta.
-                </Grid> */}
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
