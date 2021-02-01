@@ -14,16 +14,16 @@ import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Grid from "@material-ui/core/Grid";
-// import Table from "@material-ui/core/Table";
-// import TableBody from "@material-ui/core/TableBody";
-// import TableCell from "@material-ui/core/TableCell";
-// import TableContainer from "@material-ui/core/TableContainer";
-// import TableHead from "@material-ui/core/TableHead";
-// import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
 
 interface DialogProps {
   title: string;
@@ -149,41 +149,38 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
         </IconButton>
         <DialogContent dividers>
           <Grid container spacing={2}>
-            <Grid item xs={5}>
+            <Grid item xs={12} sm={6}>
               <img src={props.imgSrc} alt="" />
             </Grid>
-            <Grid item xs={7}>
-              <Grid container>
-                <Box className={classes.root}>
-                  <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    indicatorColor="secondary"
-                    textColor="secondary"
-                    centered
-                  >
-                    <Tab disableRipple label="가스식" {...a11yProps(0)} />
-                    <Tab disableRipple label="전기식" {...a11yProps(1)} />
-                  </Tabs>
-                  <TabPanel value={value} index={0}>
-                    <Grid container>
-                      <Grid item>가스식 표</Grid>
-                    </Grid>
-                  </TabPanel>
-                  <TabPanel value={value} index={1}>
-                    <Grid container>
-                      <Grid item>전기식 표</Grid>
-                    </Grid>
-                  </TabPanel>
-                </Box>
-
-                <Grid item>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                  repellendus vitae in officiis quos, ea culpa reiciendis natus
-                  saepe ratione delectus deleniti est ipsam veritatis
-                  necessitatibus, hic dolore provident soluta.
-                </Grid>
-              </Grid>
+            <Grid item xs={12} sm={6}>
+              <Box className={classes.root}>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  indicatorColor="secondary"
+                  textColor="secondary"
+                  centered
+                >
+                  <Tab disableRipple label="가스식" {...a11yProps(0)} />
+                  <Tab disableRipple label="전기식" {...a11yProps(1)} />
+                </Tabs>
+                <TabPanel value={value} index={0}>
+                  <TableContainer>
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Dessert (100g serving)</TableCell>
+                        <TableCell align="right">Calories</TableCell>
+                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                      </TableRow>
+                    </TableHead>
+                  </TableContainer>
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                  전기식 표<Table></Table>
+                </TabPanel>
+              </Box>
             </Grid>
           </Grid>
         </DialogContent>
