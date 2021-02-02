@@ -12,6 +12,7 @@ import { keyframes } from "@emotion/react";
 import ProductDialog from "components/ProductDialog";
 import Paper from "@material-ui/core/Paper";
 import Vstepper from "components/Vstepper";
+
 interface Iproducts {}
 
 function Products({ ...props }: Iproducts) {
@@ -54,66 +55,93 @@ function Products({ ...props }: Iproducts) {
           handleClose={() => handleModal(1, false)}
           open={openOne}
           imgSrc={gt300D}
-          modelE=""
-          modelG=""
-          size=""
-          voltageE=""
-          voltageG=""
-          tempE=""
-          velt=""
-          wattE=""
-          wattG=""
-          weight=""
-          textE=""
-          textG=""
-          lngUse=""
-          lpgUse=""
-          lngPressure=""
-          lpgPressure=""
+          model="GT300W / GT-300"
+          size="1520(W)*1060(D)*450(H)"
+          voltageE="380V"
+          voltageG="220V"
+          temp="0°F~570°F(0°C~300°C)"
+          velt="480mm (18inches)"
+          wattE="11KW /Hr"
+          wattG="350W /Hr"
+          weight="132kg"
+          textE="-. 1~3층으로 쌓아 올릴수 있는 직렬오븐 입니다.
+          -. 분리식 부품으로 청소 간편합니다.
+          -. 효율적 에너지 전달로 에너지 절약이 됩니다.
+          -. 콘트롤 조작이 간편합니다.
+          -. 외부가 뜨겁지 않게 설계되었습니다.
+          -. 태우지 않고 빠르게 구울수 있습니다."
+          textG="-.1~3층으로 쌓아 올릴수 있는 직렬오븐
+          -.분리식 부품으로 청소 간편
+          -.효율적 에너지 전달로 에너지 절약
+          -.콘트롤 조작이 간편
+          -.공기역학적으로 공기가 수직으로 이동
+          -.외부가 뜨겁지 않게 설계
+          -.태우지 않고 빠르게 구울수 있음.
+          -.예열상태에 따라 열량을 자동으로 조절
+          "
+          lngUse="10,000kal/hr"
+          lpgUse="0.83Kg/hr"
+          lngPressure="230mmH2O"
+          lpgPressure="280mmH2O"
         ></ProductDialog>
         <ProductDialog
           title="Gasro Quick-600 Series"
           handleClose={() => handleModal(2, false)}
           open={openTwo}
           imgSrc={gt600D}
-          modelE=""
-          modelG=""
-          size=""
-          voltageE=""
-          voltageG=""
-          tempE=""
-          velt=""
-          wattE=""
-          wattG=""
-          weight=""
-          textE=""
-          textG=""
-          lngUse=""
-          lpgUse=""
-          lngPressure=""
-          lpgPressure=""
+          model="GT-600W / GT-600"
+          size="1520(W)*1160(D)*450(H)"
+          voltageE="380V"
+          voltageG="220V"
+          temp="0°F~570°F (0°C~300°C)"
+          velt="580mm(22inches)"
+          wattE="12.5Kw/Hr"
+          wattG="350W/Hr"
+          weight="153kg"
+          textE="-. 1~3층올 쌓아올릴수 있는 직렬오븐입니다.
+          -. 분리식 부품으로 청소가 간편합니다.
+          -. 효율적 에너지 전달로 에너지가 절약 됩니다.
+          -. 컨트롤 조작이 간편합니다.
+          -. 공기역학으로 공기가 수직으로 이동합니다.
+          "
+          textG="-.1~3층올 쌓아올릴수 있는 직렬오븐
+          -.분리식 부품으로 청소간편
+          -.효율적 에너지 전달로 에너지절약
+          -.컨트롤 조작이 간편
+          -.공기역학적으로 공기가 수직으로 이동"
+          lngUse="15,000Kal/hr"
+          lpgUse="1.2kg/hr"
+          lngPressure="230mmH2O"
+          lpgPressure="280mmH2O"
         ></ProductDialog>
         <ProductDialog
           title="Gasro Quick-700 Series"
           handleClose={() => handleModal(3, false)}
           open={openThree}
           imgSrc={gt700D}
-          modelE=""
-          modelG=""
-          size=""
-          voltageE=""
-          voltageG=""
-          tempE=""
-          velt=""
-          wattE=""
-          wattG=""
-          weight=""
-          textE=""
-          textG=""
-          lngUse=""
-          lpgUse=""
-          lngPressure=""
-          lpgPressure=""
+          model="GT-700W / GT700"
+          size="2010(W)*1425(D)*450(H)"
+          voltageE="380V"
+          voltageG="220V"
+          temp="0°F~570°F (0°C~300°C)"
+          velt="840mm(33inches)"
+          wattE="21Kw/Hr"
+          wattG="350W/Hr"
+          weight="185Kg"
+          textE="-. 1~3층올 쌓아올릴수 있는 직렬오븐 입니다.
+          -. 분리식 부품으로 청소가 간편합니다.
+          -. 효율적 에너지 전달로 에너지절약이 됩니다.
+          -. 컨트롤 조작이 간편 합니다.
+          -. 공기역학적으로 공기가 수직으로 이동합니다."
+          textG="-. 1~3층올 쌓아올릴수 있는 직렬오븐
+          -. 분리식 부품으로 청소간편
+          -. 효율적 에너지 전달로 에너지절약
+          -. 컨트롤 조작이 간편
+          -. 공기역학적으로 공기가 수직으로 이동"
+          lngUse="20,500Kal/hr"
+          lpgUse="1.7kg/hr"
+          lngPressure="230mmH2O"
+          lpgPressure="280mmH2O"
         ></ProductDialog>
         <h2 className="section-title">컨베이어 오븐</h2>
         <div className="decoration__container bd-grid">

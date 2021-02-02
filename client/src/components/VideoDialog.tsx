@@ -1,7 +1,5 @@
 import React from "react";
-// import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import styled from "styled-components";
 import white from "assets/images/1.png";
 import gasro from "assets/videos/gasro.mp4";
 interface Props {
@@ -34,7 +32,6 @@ export default function VideoDialog({ ...props }: Props) {
             onClick={props.handleClose}
             style={{
               color: "red",
-              //   backgroundColor: "white",
               borderRadius: "0.8em",
               margin: "8px",
             }}

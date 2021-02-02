@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 interface Props {}
 export default function Header({ ...props }: Props) {
   const location = useLocation();
-  const [menu, setMenu] = useState<boolean>(false);
+  const [menu, setMenu] = useState<boolean>();
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;

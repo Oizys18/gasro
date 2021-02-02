@@ -1,10 +1,7 @@
 import HoverVideoPlayer from 'react-hover-video-player';
 import React from "react"
 import gasro from "assets/videos/gasro.mp4";
-import banner01 from "assets/images/banner01.jpg";
-import pizza from "assets/images/pizza.png";
 import white from "assets/images/1.png";
-import styled from "styled-components"
 export default function VideoHover() {
 	return (
 		<HoverVideoPlayer
@@ -20,8 +17,6 @@ export default function VideoHover() {
 				height: "100%",
 			}}
 			videoSrc={gasro}
-			// unloadVideoOnPaused
-			// sizingMode="container"
 			fullscreen
 			muted={false}
 			control={true}
@@ -34,30 +29,3 @@ export default function VideoHover() {
 		/>
 	);
 }
-
-// export default class VideoHover extends React.Component {
-// 	stopMovie = (e) => {
-// 		e.target.pause();
-// 	}
-
-// 	playMovie = (e) => {
-// 		e.target.play();
-// 	}
-
-// 	render() {
-// 		return (
-// 			<div >
-// 				<video
-// 					width="100%"
-// 					height="100%"
-// 					onMouseOver={this.playMovie}
-// 					onMouseOut={this.stopMovie}
-// 					src={gasro}
-// 					poster={white}
-// 					// controls={true}
-// 					// preload='none'
-// 					loop />
-// 			</div>
-// 		);
-// 	}
-// }

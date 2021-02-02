@@ -31,8 +31,8 @@ export default function Main({ ...props }: Imain) {
               </Reveal>
             </div>
 
-            <div className="home__data ">
-              <Reveal keyframes={fadeDown} duration={800}>
+            <Reveal keyframes={fadeDown} duration={1000}>
+              <div className="home__data">
                 <h2 className="home__title">Gasro Quick</h2>
                 <h1>Gasro Quick</h1>
                 <h2>
@@ -45,8 +45,8 @@ export default function Main({ ...props }: Imain) {
                 <Link to="/products">
                   <div className="button">제품소개</div>
                 </Link>
-              </Reveal>
-            </div>
+              </div>
+            </Reveal>
           </div>
         </section>
         <section className="share section bd-container" id="share">

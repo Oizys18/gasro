@@ -30,12 +30,11 @@ interface DialogProps {
   open: boolean;
   handleClose: (e: any) => void;
   imgSrc: string;
-  modelE: string;
-  modelG: string;
+  model: string;
   size: string;
   voltageE: string;
   voltageG: string;
-  tempE: string;
+  temp: string;
   velt: string;
   wattE: string;
   wattG: string;

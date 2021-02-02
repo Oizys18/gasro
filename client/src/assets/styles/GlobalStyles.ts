@@ -302,7 +302,7 @@ img{
   margin-bottom: var(--mb-4);
 }
 .home__data{
-  text-align:center;
+  text-align:left;
 }
 /*========== BUTTONS ==========*/
 .button{
