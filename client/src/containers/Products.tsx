@@ -291,7 +291,6 @@ function Products({ ...props }: Iproducts) {
   );
 }
 
-export default Products;
 const fadeDown = keyframes`
   from {
     opacity: 0;
@@ -315,3 +314,4 @@ to {
   transform: translate3d(0, 0, 0);
 }
 `;
+export default Products;
