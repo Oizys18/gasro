@@ -6,7 +6,6 @@ function Notice({ ...props }: Inotice) {
     <>
       <section className="home section bd-container" id="home">
         <h1 className="home__title ">공지사항</h1>
-        <Board></Board>
       </section>
     </>
   );
