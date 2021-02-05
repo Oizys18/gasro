@@ -7,18 +7,10 @@ function Support({ ...props }: Isupport) {
   return (
     <>
       <section className="send section">
-        <div className="send__container bd-container bd-grid">
+        <div className="send__container bd-container">
           <div className="send__content">
             <h2 className="section-title-center send__title">고객지원 문의</h2>
-            <p className="send__description">
-              공란 작성해주시면 메일/전화로 연락드리겠습니다.어쩌구 저쩌구
-              <br></br>
-              <br></br>
-              양식 수정 - A4 처럼
-              <br></br>
-              <br></br>
-              작성 후 확인 클릭 시 gasteckorea@naver.com으로 메일 전송
-            </p>
+            <p className="send__description">hello</p>
             {/* 라디오버튼 */}
             <form action="">
               <div className="send__radio">
