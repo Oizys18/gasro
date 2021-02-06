@@ -440,7 +440,7 @@ img{
 
 .send__description{
   text-align: center;
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-4); 
 }
 
 .send__direction{

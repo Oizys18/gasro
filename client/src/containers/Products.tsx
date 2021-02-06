@@ -6,13 +6,13 @@ import gt600D from "assets/images/ovens/gt600D.png";
 import gt600ND from "assets/images/ovens/gt600ND.png";
 import gt700D from "assets/images/ovens/gt700D.png";
 import gt700ND from "assets/images/ovens/gt700ND.png";
-import rollerF from "assets/images/ovens/rollerF.png";
-import rollerS from "assets/images/ovens/rollerS.png";
 import { keyframes } from "@emotion/react";
 import ProductDialog from "components/ProductDialog";
-import Paper from "@material-ui/core/Paper";
 import Vstepper from "components/Vstepper";
-
+import rollerF from "assets/images/ovens/rollerF.png";
+import rollerS from "assets/images/ovens/rollerS.png";
+import Paper from "@material-ui/core/Paper";
+import MainCarousel from "components/MainCarousel";
 interface Iproducts {}
 
 function Products({ ...props }: Iproducts) {

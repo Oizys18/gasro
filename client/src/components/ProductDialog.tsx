@@ -164,16 +164,47 @@ export default function CustomizedDialogs({ ...props }: DialogProps) {
                   <Tab disableRipple label="전기식" {...a11yProps(1)} />
                 </Tabs>
                 <TabPanel value={value} index={0}>
-                  <TableContainer>
-                    <TableHead>
-                      <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                      </TableRow>
-                    </TableHead>
+                  <TableContainer component={Paper} elevation={2}>
+                    <Table>
+                      <TableHead>
+                        <TableRow>
+                          <TableCell>model</TableCell>
+                          <TableCell align="center">{props.model}</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        <TableRow>
+                          <TableCell>size</TableCell>
+                          <TableCell align="center">{props.size}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>temp</TableCell>
+                          <TableCell align="center">{props.temp}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>voltageG</TableCell>
+                          <TableCell align="center">{props.voltageG}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>wattG</TableCell>
+                          <TableCell align="center">{props.wattG}</TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>lngUse</TableCell>
+                          <TableCell align="center">{props.lngUse}</TableCell>
+                          <TableCell align="center">
+                            {props.lngPressure}
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableCell>lpgUse</TableCell>
+                          <TableCell align="center">{props.lpgUse}</TableCell>
+                          <TableCell align="center">
+                            {props.lpgPressure}
+                          </TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
                   </TableContainer>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
