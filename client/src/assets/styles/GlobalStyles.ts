@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
     :root {
   --header-height: 3rem;
 
@@ -25,10 +25,12 @@ const GlobalStyle = createGlobalStyle`
   --small-font-size: .813rem;
 
   /*========== Font weight ==========*/
-  --font-normal: 400;
-  --font-semi-bold: 500;
+  --font-thin: 100;
+  --font-light:300;
+  --font-regular: 400;
+  --font-medium: 500;
   --font-bold: 700;
-  --font-bolder: 900;
+  --font-black: 900;
 
   /*========== Margenes ==========*/
   --mb-1: .5rem;
@@ -105,7 +107,7 @@ h1,h2,h3,ul,p{
 }
 
 h1,h2,h3{
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-medium);
   color: var(--title-color);
 }
 
@@ -198,12 +200,12 @@ img{
 
 .nav__link, .nav__toggle{
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-  /* font-weight: var(--font-bolder); */
+  font-weight: var(--font-medium);
+  /* font-weight: var(--font-black); */
 }
 .nav__logo{
   color: var(--title-color);
-  font-weight: var(--font-bolder);
+  font-weight: var(--font-black);
 }
 .nav__logo:hover{
   color: var(--first-color);
@@ -311,7 +313,7 @@ img{
   color: #fff;
   padding: 1rem 1.5rem;
   border-radius: .5rem;
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-medium);
   transition: .3s;
 }
 
@@ -415,7 +417,7 @@ img{
 }
 
 .accessory__preci{
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-medium);
   color: var(--title-color);
 }
 
