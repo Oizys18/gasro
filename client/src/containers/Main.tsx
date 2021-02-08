@@ -39,9 +39,7 @@ export default function Main({ ...props }: Imain) {
                   아시아 최고의 보급률을 자랑하는
                   <br /> 컨베이어 피자오븐
                 </h2>
-                <p className="home__description">
-                  아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐
-                </p>
+                <p className="home__description">GT300 / GT600 / GT700</p>
                 <Link to="/products">
                   <div className="button">제품소개</div>
                 </Link>
