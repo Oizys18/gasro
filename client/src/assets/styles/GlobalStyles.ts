@@ -74,6 +74,15 @@ body.dark-theme{
 }
 
 /*========== Button Dark/Light ==========*/
+.language{
+  position: absolute;
+  right: 1.5rem;
+  top: 2.2rem;
+  display: flex;
+  color: var(--title-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
 .change-theme{
   position: absolute;
   right: 1.5rem;
@@ -153,7 +162,12 @@ img{
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
 }
-
+.hd-container{
+  max-width: 1300px;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
+}
 .bd-grid{
   display: grid;
   gap: 1.5rem;
@@ -172,11 +186,22 @@ img{
 .nav{
   height: var(--header-height);
   display: flex;
-  justify-content: space-between;
+  /* justify-content:space-between; */
   align-items: center;
 }
+.nav__menu{
+  width:80%;
+  display:flex;
+  justify-content:space-between;
+}
+.nav__icon{
+  display:inline-flex;
 
+}
 @media screen and (max-width: 768px){
+  .nav{
+    justify-content:space-between;
+  }
   .nav__menu{
     position: fixed;
     top: -100%;
@@ -191,6 +216,7 @@ img{
     box-shadow: 0 0 4px rgba(0,0,0,.1);
     border-radius: 2rem;
     z-index: var(--z-fixed);
+    
   }
 }
 
@@ -201,7 +227,7 @@ img{
 .nav__link, .nav__toggle{
   color: var(--title-color);
   font-weight: var(--font-medium);
-  /* font-weight: var(--font-black); */
+  font-size:var(--normal-font-size);
 }
 .nav__logo{
   color: var(--title-color);
@@ -581,8 +607,9 @@ img{
   }
 
   .nav__item{
-    margin-left: var(--mb-5);
+    margin-left: var(--mb-3);
     margin-bottom: 0;
+    display:flex;
   }
 
   .nav__toggle{
@@ -591,11 +618,11 @@ img{
 
   .change-theme{
     position: initial;
-    margin-left: var(--mb-4);
+    margin-left: var(--mb-1);
   }
-  .translation{
+  .language{
     position: initial;
-    margin-left: var(--mb-4);
+    margin-left: var(--mb-1);
   }
 
   .home__container{
@@ -641,6 +668,10 @@ img{
 
 @media screen and (min-width: 968px){
   .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hd-container{
     margin-left: auto;
     margin-right: auto;
   }

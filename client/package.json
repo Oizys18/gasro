@@ -17,14 +17,12 @@
     "react-awesome-reveal": "^3.5.2",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
-    "react-hover-video-player": "^6.7.0",
     "react-i18next": "^11.8.5",
     "react-player": "^2.7.2",
     "react-responsive-carousel": "^3.2.11",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "styled-components": "^5.2.0",
-    "styled-reset": "^4.3.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

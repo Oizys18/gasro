@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
+import StorefrontIcon from "@material-ui/icons/Storefront";
+import LanguageIcon from "@material-ui/icons/Language";
 interface Props {}
 export default function Header({ ...props }: Props) {
   const location = useLocation();
@@ -55,18 +59,17 @@ export default function Header({ ...props }: Props) {
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
       <header className="l-header " id="header">
-        <nav className="nav bd-container">
+        <nav className="nav hd-container">
           <Link to="/">
             <h1 className="nav__logo">Gasro Quick</h1>
           </Link>
-
           <div
             className={menu ? "nav__menu show-menu" : "nav__menu"}
             id="nav-menu"
           >
             <ul className="nav__list">
-              <li className="nav__item">
-                <Link to="/">
+              <Link to="/">
+                <li className="nav__item">
                   <div
                     className={
                       location.pathname === "/"
@@ -77,10 +80,10 @@ export default function Header({ ...props }: Props) {
                   >
                     회사소개
                   </div>
-                </Link>
-              </li>
-              <li className="nav__item">
-                <Link to="/products">
+                </li>
+              </Link>
+              <Link to="/products">
+                <li className="nav__item">
                   <div
                     // href="#home"
                     className={
@@ -92,10 +95,10 @@ export default function Header({ ...props }: Props) {
                   >
                     제품소개
                   </div>
-                </Link>
-              </li>
-              <li className="nav__item">
-                <Link to="/notice">
+                </li>
+              </Link>
+              <Link to="/notice">
+                <li className="nav__item">
                   <div
                     className={
                       location.pathname === "/notice"
@@ -106,10 +109,10 @@ export default function Header({ ...props }: Props) {
                   >
                     공지사항
                   </div>
-                </Link>
-              </li>
-              <li className="nav__item">
-                <Link to="/support">
+                </li>
+              </Link>
+              <Link to="/support">
+                <li className="nav__item">
                   <div
                     // href="#home"
                     className={
@@ -121,23 +124,18 @@ export default function Header({ ...props }: Props) {
                   >
                     고객지원
                   </div>
-                </Link>
-              </li>
-              {/* 
-              <li>
-                <i
-                  className="bx bx-toggle-left change-theme"
-                  id="theme-button"
-                ></i>
-              </li> */}
-
-              <li>
-                <i
-                  className="bx bx-world bx-sm change-theme"
-                  id="theme-button"
-                ></i>
-              </li>
+                </li>
+              </Link>
             </ul>
+            <div className="nav__icon">
+              <Link to="/support">
+                <HelpOutlineIcon className="change-theme"></HelpOutlineIcon>
+              </Link>
+              <LanguageIcon
+                id="theme-button"
+                className="language"
+              ></LanguageIcon>
+            </div>
           </div>
           <div className="nav__toggle" id="nav-toggle">
             <i className="bx bx-grid-alt"></i>
