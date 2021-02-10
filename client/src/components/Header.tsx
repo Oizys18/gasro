@@ -59,9 +59,10 @@ export default function Header({ ...props }: Props) {
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
       <header className="l-header " id="header">
+        <nav className="hd-container"></nav>
         <nav className="nav hd-container">
           <Link to="/" className="nav__logo">
-            Gasro Quick
+            가스텍코리아
           </Link>
           <div
             className={menu ? "nav__menu show-menu" : "nav__menu"}

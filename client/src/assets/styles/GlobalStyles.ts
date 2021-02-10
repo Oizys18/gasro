@@ -163,7 +163,7 @@ img{
   margin-right: var(--mb-3);
 }
 .hd-container{
-  max-width: 1200px;
+  max-width: 1300px;
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
@@ -180,6 +180,7 @@ img{
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+  outline:1px solid lightgrey;
 }
 
 /*========== NAV ==========*/
@@ -201,6 +202,7 @@ img{
     justify-content:space-between;
   }
   .nav__menu{
+    display:block;
     position: fixed;
     top: -100%;
     left: 0;
@@ -214,7 +216,6 @@ img{
     box-shadow: 0 0 4px rgba(0,0,0,.1);
     border-radius: 2rem;
     z-index: var(--z-fixed);
-    
   }
 }
 
@@ -228,10 +229,10 @@ img{
   font-size:var(--normal-font-size);
 }
 .nav__logo{
+  min-width:15%;
   display:inline-block;
-  font-size:var(--normal-font-size);
-  min-width:10%;
   color: var(--title-color);
+  font-size:var(--h2-font-size);
   font-weight: var(--font-black);
 }
 
