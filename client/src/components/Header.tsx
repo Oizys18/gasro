@@ -60,8 +60,8 @@ export default function Header({ ...props }: Props) {
       </a>
       <header className="l-header " id="header">
         <nav className="nav hd-container">
-          <Link to="/">
-            <h1 className="nav__logo">Gasro Quick</h1>
+          <Link to="/" className="nav__logo">
+            Gasro Quick
           </Link>
           <div
             className={menu ? "nav__menu show-menu" : "nav__menu"}
@@ -94,6 +94,21 @@ export default function Header({ ...props }: Props) {
                     id="products"
                   >
                     제품소개
+                  </div>
+                </li>
+              </Link>
+              <Link to="/product">
+                <li className="nav__item">
+                  <div
+                    // href="#home"
+                    className={
+                      location.pathname === "/product"
+                        ? "nav__link active-link"
+                        : "nav__link"
+                    }
+                    id="product"
+                  >
+                    제품
                   </div>
                 </li>
               </Link>

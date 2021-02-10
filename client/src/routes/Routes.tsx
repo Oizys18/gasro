@@ -1,6 +1,7 @@
 import * as React from "react";
 import Main from "containers/Main";
 import Products from "containers/Products";
+import Product from "containers/Product";
 import Support from "containers/Support";
 import Notice from "containers/Notice";
 import Header from "components/Header";
@@ -17,6 +18,7 @@ function Routes() {
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/products" exact component={Products} />
+        <Route path="/product" exact component={Product} />
         <Route path="/support" exact component={Support} />
         <Route path="/notice" exact component={Notice} />
         <Redirect path="*" to="/" />

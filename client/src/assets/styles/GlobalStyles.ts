@@ -163,7 +163,7 @@ img{
   margin-right: var(--mb-3);
 }
 .hd-container{
-  max-width: 1300px;
+  max-width: 1200px;
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
@@ -186,17 +186,15 @@ img{
 .nav{
   height: var(--header-height);
   display: flex;
-  /* justify-content:space-between; */
   align-items: center;
 }
 .nav__menu{
-  width:80%;
+  width:90%;
   display:flex;
   justify-content:space-between;
 }
 .nav__icon{
   display:inline-flex;
-
 }
 @media screen and (max-width: 768px){
   .nav{
@@ -230,9 +228,13 @@ img{
   font-size:var(--normal-font-size);
 }
 .nav__logo{
+  display:inline-block;
+  font-size:var(--normal-font-size);
+  min-width:10%;
   color: var(--title-color);
   font-weight: var(--font-black);
 }
+
 .nav__logo:hover{
   color: var(--first-color);
 }
