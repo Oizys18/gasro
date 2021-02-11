@@ -3,9 +3,9 @@ import React, { useState } from "react";
 function Product() {
   return (
     <>
-      <section className=""></section>
-      <section className=""></section>
-      <section className=""></section>
+      <section className="product-one"></section>
+      <section className="product-two"></section>
+      <section className="product-three"></section>
     </>
   );
 }
