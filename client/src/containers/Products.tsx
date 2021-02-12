@@ -230,7 +230,7 @@ function Products({ ...props }: Iproducts) {
         <div className="accessory__container bd-grid">
           <Reveal keyframes={fadeDown} cascade={true} duration={500}>
             <div className="accessory__content">
-              <img src={gt700D} alt="" className="accessory__img" />
+              <img src={rollerF} alt="" className="accessory__img" />
               <h3 className="accessory__title">Snow Globe</h3>
               <span className="accessory__category">Accessory</span>
               <span className="accessory__preci">$9.45</span>
@@ -240,7 +240,7 @@ function Products({ ...props }: Iproducts) {
             </div>
 
             <div className="accessory__content">
-              <img src={gt700D} alt="" className="accessory__img" />
+              <img src={rollerS} alt="" className="accessory__img" />
               <h3 className="accessory__title">Candy</h3>
               <span className="accessory__category">Accessory</span>
               <span className="accessory__preci">$2.52</span>
