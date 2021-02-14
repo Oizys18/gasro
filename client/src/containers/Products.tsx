@@ -278,6 +278,15 @@ function Products({ ...props }: Iproducts) {
                 <i className="bx bx-heart"></i>
               </a>
             </div>
+            <div className="accessory__content">
+              <img src={gt700D} alt="" className="accessory__img" />
+              <h3 className="accessory__title">Surprise gift</h3>
+              <span className="accessory__category">Accessory</span>
+              <span className="accessory__preci">$7.99</span>
+              <a href="#home" className="button accessory__button">
+                <i className="bx bx-heart"></i>
+              </a>
+            </div>
           </Reveal>
         </div>
         <Reveal keyframes={fadeLeft} cascade={true} duration={800}>
