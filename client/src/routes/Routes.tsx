@@ -3,6 +3,7 @@ import Main from "containers/Main";
 import Products from "containers/Products";
 import Product from "containers/Product";
 import Support from "containers/Support";
+import Company from "containers/Company";
 import Notice from "containers/Notice";
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -19,6 +20,7 @@ function Routes() {
         <Route path="/" exact component={Main} />
         <Route path="/products" exact component={Products} />
         <Route path="/product" exact component={Product} />
+        <Route path="/company" exact component={Company} />
         <Route path="/support" exact component={Support} />
         <Route path="/notice" exact component={Notice} />
         <Redirect path="*" to="/" />

@@ -79,10 +79,11 @@ export default function Header({ ...props }: Props) {
                     }
                     id="company"
                   >
-                    회사소개
+                    홈
                   </div>
                 </li>
               </Link>
+
               <Link to="/products">
                 <li className="nav__item">
                   <div
@@ -98,7 +99,21 @@ export default function Header({ ...props }: Props) {
                   </div>
                 </li>
               </Link>
-              <Link to="/product">
+              <Link to="/company">
+                <li className="nav__item">
+                  <div
+                    className={
+                      location.pathname === "/company"
+                        ? "nav__link active-link"
+                        : "nav__link"
+                    }
+                    id="company"
+                  >
+                    회사소개
+                  </div>
+                </li>
+              </Link>
+              {/* <Link to="/product">
                 <li className="nav__item">
                   <div
                     // href="#home"
@@ -112,8 +127,8 @@ export default function Header({ ...props }: Props) {
                     제품
                   </div>
                 </li>
-              </Link>
-              <Link to="/notice">
+              </Link> */}
+              {/* <Link to="/notice">
                 <li className="nav__item">
                   <div
                     className={
@@ -126,7 +141,7 @@ export default function Header({ ...props }: Props) {
                     공지사항
                   </div>
                 </li>
-              </Link>
+              </Link> */}
               <Link to="/support">
                 <li className="nav__item">
                   <div

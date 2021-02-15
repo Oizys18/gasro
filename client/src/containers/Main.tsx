@@ -23,7 +23,6 @@ export default function Main({ ...props }: Imain) {
   return (
     <>
       <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
-      {/* <div className="main-banner"></div> */}
       <BannerCarousel></BannerCarousel>
       <main className="l-main" id="top">
         <section className="home section bd-container" id="home">
@@ -33,7 +32,6 @@ export default function Main({ ...props }: Imain) {
                 <MainCarousel></MainCarousel>
               </Reveal>
             </div>
-
             <Reveal keyframes={fadeDown} duration={1000}>
               <div className="home__data">
                 <h2 className="home__title">Gasro Quick</h2>
