@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
     :root {
   --header-height: 3rem;
 
@@ -255,11 +256,12 @@ img{
   font-size:var(--normal-font-size);
 }
 .nav__logo{
-  min-width:15%;
+  min-width:17%;
   display:inline-block;
   color: var(--title-color);
   font-size:var(--h2-font-size);
   font-weight: var(--font-black);
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 .nav__logo:hover{
