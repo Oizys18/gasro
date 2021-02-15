@@ -62,7 +62,7 @@ export default function Header({ ...props }: Props) {
         <nav className="hd-container"></nav>
         <nav className="nav hd-container">
           <Link to="/" className="nav__logo">
-            가스텍코리아
+            Gastec Korea
           </Link>
           <div
             className={menu ? "nav__menu show-menu" : "nav__menu"}

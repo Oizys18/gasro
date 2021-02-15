@@ -44,6 +44,32 @@ const GlobalStyle = createGlobalStyle`
   --z-tooltip: 10;
   --z-fixed: 100;
 }
+/* scroll bar */
+
+/* width */
+/* ::-webkit-scrollbar {
+  width: 5px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+} */
+ 
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: grey; 
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: grey; 
+}
+ */
+.main-banner{
+  background-image:url('./banner01.png');
+  height:600px;
+}
 
 @media screen and (min-width: 968px){
   :root{

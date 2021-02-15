@@ -8,6 +8,7 @@ import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import VideoDialog from "components/VideoDialog";
 import MainCarousel from "components/MainCarousel";
+import BannerCarousel from "components/BannerCarousel";
 interface Imain {}
 export default function Main({ ...props }: Imain) {
   const [open, setOpen] = React.useState(false);
@@ -22,6 +23,8 @@ export default function Main({ ...props }: Imain) {
   return (
     <>
       <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
+      {/* <div className="main-banner"></div> */}
+      <BannerCarousel></BannerCarousel>
       <main className="l-main" id="top">
         <section className="home section bd-container" id="home">
           <div className="home__container  bd-grid">
