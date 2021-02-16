@@ -7,10 +7,9 @@ import Company from "containers/Company";
 import Notice from "containers/Notice";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import Landing from "containers/Landing";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
-import Paper from "@material-ui/core/Paper";
-import styled from "styled-components";
 function Routes() {
   return (
     <>
@@ -18,6 +17,7 @@ function Routes() {
       <ScrollToTop />
       <Switch>
         <Route path="/" exact component={Main} />
+        <Route path="/landing" exact component={Landing} />
         <Route path="/products" exact component={Products} />
         <Route path="/product" exact component={Product} />
         <Route path="/company" exact component={Company} />
