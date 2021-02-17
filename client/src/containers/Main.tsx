@@ -38,7 +38,7 @@ export default function Main({ ...props }: Imain) {
                 <h1>Gasro Quick</h1>
                 <h2>
                   아시아 최고의 보급률을 자랑하는
-                  <br /> 컨베이어 피자오븐
+                  <br /> 컨베이어 피자오븐s
                 </h2>
                 <p className="home__description">GT300 / GT600 / GT700</p>
                 <Link to="/products">
