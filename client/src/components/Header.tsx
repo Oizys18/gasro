@@ -59,8 +59,8 @@ export default function Header({ ...props }: Props) {
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
       <header className="l-header " id="header">
-        <nav className="hd-container"></nav>
-        <nav className="nav hd-container">
+        <nav className="bd-container"></nav>
+        <nav className="nav bd-container">
           <Link to="/" className="nav__logo">
             GASRO QUICK
           </Link>
@@ -158,7 +158,54 @@ export default function Header({ ...props }: Props) {
                 </li>
               </Link>
             </ul>
-            <div className="nav__icon">
+            <ul className="nav__list">
+              <Link to="/support">
+                <li className="nav__item">
+                  <div
+                    // href="#home"
+                    className={
+                      location.pathname === "/support"
+                        ? "nav__link active-link"
+                        : "nav__link"
+                    }
+                    id="support"
+                  >
+                    Q&A
+                  </div>
+                </li>
+              </Link>
+              <Link to="/support">
+                <li className="nav__item">
+                  <div
+                    // href="#home"
+                    className={
+                      location.pathname === "/support"
+                        ? "nav__link active-link"
+                        : "nav__link"
+                    }
+                    id="support"
+                  >
+                    공지사항
+                  </div>
+                </li>
+              </Link>
+              <Link to="/support">
+                <li className="nav__item">
+                  <div
+                    // href="#home"
+                    className={
+                      location.pathname === "/support"
+                        ? "nav__link active-link"
+                        : "nav__link"
+                    }
+                    id="support"
+                  >
+                    한국어
+                  </div>
+                </li>
+              </Link>
+            </ul>
+            {/* <div className="nav__icon">
               <Link to="/support">
                 <HelpOutlineIcon className="change-theme"></HelpOutlineIcon>
               </Link>
@@ -166,7 +213,7 @@ export default function Header({ ...props }: Props) {
                 id="theme-button"
                 className="language"
               ></LanguageIcon>
-            </div>
+            </div> */}
           </div>
           <div className="nav__toggle" id="nav-toggle">
             <i className="bx bx-grid-alt"></i>

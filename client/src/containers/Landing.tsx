@@ -15,18 +15,10 @@ interface ILanding {}
 function Landing({ ...props }: ILanding) {
   return (
     <>
+      <BannerCarousel></BannerCarousel>
       <section id="main-company">
         <div className="bd-container">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sint
-          illum hic nihil excepturi qui impedit voluptas, nulla cumque officia
-          quia veniam nemo aperiam officiis vel doloremque eligendi voluptate
-          alias. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae
-          ut omnis voluptate iste sit velit quas, atque, numquam, vel ad quidem
-          ratione fugit minima tempora. Exercitationem laudantium quibusdam
-          nostrum neque. Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Veniam vero corporis odio culpa iste id odit, minus dignissimos
-          laudantium illum. Eaque tenetur possimus magnam deleniti animi
-          molestias incidunt aliquam et.
+          <div className=""></div>
         </div>
       </section>
       <section id="main-product"></section>

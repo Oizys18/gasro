@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   --font-bold: 700;
   --font-black: 900;
 
-  /*========== Margenes ==========*/
+  /*========== Margins ==========*/
   --mb-1: .5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
@@ -189,12 +189,7 @@ img{
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
 }
-.hd-container{
-  max-width: 1300px;
-  width: calc(100% - 3rem);
-  margin-left: var(--mb-3);
-  margin-right: var(--mb-3);
-}
+
 .bd-grid{
   display: grid;
   gap: 1.5rem;
@@ -203,11 +198,13 @@ img{
 .l-header{
   width: 100%;
   position: fixed;
+  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
-  outline:1px solid lightgrey;
+  /* background-color: var(--body-color); */
+  /* outline:1px solid lightgrey; */
+  /* background-color: transparent; */
 }
 
 /*========== NAV ==========*/
@@ -251,14 +248,14 @@ img{
 }
 
 .nav__link, .nav__toggle{
-  color: var(--title-color);
+  color: white;
   font-weight: var(--font-medium);
   font-size:var(--normal-font-size);
 }
 .nav__logo{
-  min-width:17%;
+  min-width:22%;
   display:inline-block;
-  color: var(--title-color);
+  color: white;
   font-size:var(--h2-font-size);
   font-weight: var(--font-black);
   font-family: 'Lexend Deca', sans-serif;
@@ -295,16 +292,18 @@ img{
   content: '';
   position: absolute;
   bottom: -.75rem;
-  left: 50%;
+  left: 40%;
   width: 5px;
   height: 5px;
-  background-color: var(--title-color);
+  background-color: white;
   border-radius: 50%;
 }
 
 /* Change background header */
 .scroll-header{
   box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  background-color:var(--title-color);
+  transition:.4s;
 }
 
 /* Scroll top */
