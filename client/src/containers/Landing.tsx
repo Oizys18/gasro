@@ -74,6 +74,6 @@ const STitle = styled.h2`
 
 const CardWrapper = styled.div`
   width: 100%;
-  height: 462px;
+  height: 5rem;
   border: 1px solid black;
 `;
