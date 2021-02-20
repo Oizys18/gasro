@@ -33,7 +33,10 @@ function Landing({ ...props }: ILanding) {
             <STitle>가스텍코리아(주)</STitle>
           </div>
         </Wrapper>
-        <CardWrapper></CardWrapper>
+        <CardWrapper>
+          <div></div>
+          <div></div>
+        </CardWrapper>
       </section>
       <section className="bc-container" id="main-product"></section>
       <section className="bc-container" id="main-contact"></section>
@@ -76,4 +79,7 @@ const CardWrapper = styled.div`
   width: 100%;
   height: 460px;
   border: 1px solid black;
+  background: grey;
+  display: flex;
+  justify-content: center;
 `;
