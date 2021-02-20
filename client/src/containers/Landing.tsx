@@ -16,7 +16,7 @@ function Landing({ ...props }: ILanding) {
   return (
     <>
       <BannerCarousel></BannerCarousel>
-      <section className="bd-container" id="main-company">
+      <section className="bc-container" id="main-company">
         <Wrapper>
           <Text>
             <p>
@@ -35,8 +35,8 @@ function Landing({ ...props }: ILanding) {
         </Wrapper>
         <CardWrapper></CardWrapper>
       </section>
-      <section className="bd-container" id="main-product"></section>
-      <section className="bd-container" id="main-contact"></section>
+      <section className="bc-container" id="main-product"></section>
+      <section className="bc-container" id="main-contact"></section>
     </>
   );
 }
@@ -74,6 +74,6 @@ const STitle = styled.h2`
 
 const CardWrapper = styled.div`
   width: 100%;
-  height: 5rem;
+  height: 460px;
   border: 1px solid black;
 `;

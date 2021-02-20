@@ -189,7 +189,12 @@ img{
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
 }
-
+.bc-container{
+  max-width: 1280px;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
+}
 .bd-grid{
   display: grid;
   gap: 1.5rem;
@@ -701,7 +706,7 @@ img{
     margin-left: auto;
     margin-right: auto;
   }
-  .hd-container{
+  .bc-container{
     margin-left: auto;
     margin-right: auto;
   }
