@@ -35,7 +35,6 @@ function Landing({ ...props }: ILanding) {
         </Wrapper>
         <CardWrapper>
           <div></div>
-          <div></div>
         </CardWrapper>
       </section>
       <section className="bc-container" id="main-product"></section>
