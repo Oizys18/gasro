@@ -702,29 +702,41 @@ img{
 }
 
 @media screen and (min-width: 968px){
-  .bd-container{
-    margin-left: auto;
-    margin-right: auto;
-  }
+  /* new */
   .bc-container{
     margin-left: auto;
     margin-right: auto;
   }
 
+
+
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
   .home__img,
   .share__img,
   .send__img{
     width: 469px;
   }
-
   .home__container,
   .share__container,
   .send__container{
     column-gap: 5rem;
   }
-  
 }
+/* new */
 .carousel .slide{ background: none; }
+
+.main-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+.main-box{
+  /* position:relative; */
+}
+
 
 `;
 
