@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
  */
 .main-banner{
   background-image:url('./banner01.png');
-  height:600px;
+  min-height:600px;
 }
 
 @media screen and (min-width: 968px){
@@ -709,7 +709,6 @@ img{
   }
 
 
-
   .bd-container{
     margin-left: auto;
     margin-right: auto;
@@ -729,12 +728,13 @@ img{
 .carousel .slide{ background: none; }
 
 .main-container{
-  display:flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content:center;
   gap:40px;
 }
 .main-box{
-  /* position:relative; */
+  position:relative;
 }
 
 

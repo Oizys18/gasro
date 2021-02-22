@@ -36,19 +36,27 @@ function Landing({ ...props }: ILanding) {
           </div>
         </Wrapper>
         <CardWrapper className="main-container">
-          {/* <div className="main-box"> */}
-          <CardImg src={dough} alt="doughimg" className="main-box" />
-          {/* </div> */}
+          <CardImg src={dough} className="main-box" />
           <CardContent className="main-box">
             <CardTitle>기계, 그 이상</CardTitle>
             <CardText>
-              1995년 설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
-              왔습니다. 2000년 동종업체에서는 유일하게 정부로부터 신기술
-              벤처기업으로 인증 받았으며, 국제품질경영시스템 (KSA9001 / ISO9001)
-              통합인증을 받았습니다. 생산공정의 개선, 디지털화, 안전성과 편이성
-              증대를 실현하였으며, 제품의 다양화와 성능향상을 위해 항상 노력하고
-              있습니다.
+              <p>
+                1995년 설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
+                왔습니다.
+              </p>
+              <p>
+                2000년 동종업체에서는 유일하게 정부로부터 신기술 벤처기업으로
+                인증 받았으며, 국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을
+                받았습니다.
+              </p>
+              <p>
+                생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현하였으며,
+                제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.
+              </p>
             </CardText>
+            <div>
+              <h3>더 읽기</h3>
+            </div>
           </CardContent>
         </CardWrapper>
       </section>
@@ -61,9 +69,6 @@ function Landing({ ...props }: ILanding) {
 export default Landing;
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
   margin: 180px 0 130px;
 `;
 
@@ -73,7 +78,6 @@ const Text = styled.div`
 `;
 
 const Title = styled.div`
-  width: 100%;
   text-align: left;
   border-top: 1px solid #000;
   line-height: 0.1em;
@@ -90,21 +94,25 @@ const STitle = styled.h2`
 `;
 
 const CardWrapper = styled.div`
-  width: 100%;
-  height: 460px;
   border: 0px solid transparent;
   border-radius: 0px;
   background: #ffffff;
   box-shadow: 15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
 `;
 const CardImg = styled.img`
+  height: 460px;
+  width: 620px;
   object-fit: cover;
-  margin: none;
 `;
-const CardContent = styled.div``;
+const CardContent = styled.div`
+  /* align-self: center; */
+  padding: 40px 40px 40px 0;
+  /* margin: 90px 40px 90px 0; */
+`;
 
 const CardTitle = styled.div`
   font-size: 36px;
   font-weight: 700;
+  margin: 30px 0;
 `;
 const CardText = styled.div``;
