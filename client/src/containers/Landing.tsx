@@ -46,13 +46,15 @@ function Landing({ ...props }: ILanding) {
               </p>
               <p>
                 2000년 동종업체에서는 유일하게 정부로부터 신기술 벤처기업으로
-                인증 받았으며, 국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을
-                받았습니다.
+                인증 받았으며,
+              </p>
+              <p>
+                국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.
               </p>
               <p>
                 생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현하였으며,
-                제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.
               </p>
+              <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
             </CardText>
             <div>
               <h3>더 읽기</h3>
@@ -60,7 +62,24 @@ function Landing({ ...props }: ILanding) {
           </CardContent>
         </CardWrapper>
       </section>
-      <section className="bc-container" id="main-product"></section>
+      <section className="bc-container" id="main-product">
+        <Wrapper className="main-container">
+          <div className="main-box">
+            <PTitle>
+              <PTitleSpan>제품소개</PTitleSpan>
+            </PTitle>
+            <PTitleN>컨베이어 오븐</PTitleN>
+          </div>
+          <PText className="main-box">
+            <p>
+              설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
+              왔습니다.
+            </p>
+            <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
+            <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.</p>
+          </PText>
+        </Wrapper>
+      </section>
       <section className="bc-container" id="main-contact"></section>
     </>
   );
@@ -107,7 +126,6 @@ const CardImg = styled.img`
 const CardContent = styled.div`
   /* align-self: center; */
   padding: 40px 40px 40px 0;
-  /* margin: 90px 40px 90px 0; */
 `;
 
 const CardTitle = styled.div`
@@ -116,3 +134,25 @@ const CardTitle = styled.div`
   margin: 30px 0;
 `;
 const CardText = styled.div``;
+
+const PText = styled.div`
+  text-align: left;
+  font-size: 16px;
+`;
+
+const PTitle = styled.div`
+  text-align: right;
+  border-top: 1px solid #000;
+  line-height: 0.1em;
+  margin: 1em 0 0.7em;
+  font-size: 14px;
+`;
+const PTitleN = styled.h2`
+  font-size: 36px;
+  text-align: right;
+`;
+
+const PTitleSpan = styled.span`
+  background: #fefbfb;
+  padding: 0 0 0 40px;
+`;
