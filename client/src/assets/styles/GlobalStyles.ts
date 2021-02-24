@@ -258,12 +258,15 @@ img{
   font-size:var(--normal-font-size);
 }
 .nav__logo{
-  min-width:22%;
-  display:inline-block;
+  max-width:200px;
+  /* min-width:20%; */
+  margin:none;
+  padding:none;
+  /* display:inline-block;
   color: white;
   font-size:var(--h2-font-size);
   font-weight: var(--font-black);
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Lexend Deca', sans-serif; */
 }
 
 .nav__logo:hover{

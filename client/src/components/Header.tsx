@@ -4,6 +4,7 @@ import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import LanguageIcon from "@material-ui/icons/Language";
+import logo3 from "assets/images/logo3.png";
 interface Props {}
 export default function Header({ ...props }: Props) {
   const location = useLocation();
@@ -58,11 +59,13 @@ export default function Header({ ...props }: Props) {
       <a href="#top" className="scrolltop show-scroll" id="scroll-top">
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
+
       <header className="l-header " id="header">
         <nav className="nav bd-container">
-          <Link to="/" className="nav__logo">
-            GASRO QUICK
-          </Link>
+          {/* <Link to="/" className="nav__logo"> */}
+          {/* GASRO QUICK */}
+          <img src={logo3} alt="logo" className="nav__logo" />
+          {/* </Link> */}
           <div
             className={menu ? "nav__menu show-menu" : "nav__menu"}
             id="nav-menu"
