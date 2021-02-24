@@ -59,6 +59,7 @@ export default function Header({ ...props }: Props) {
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
       <header className="l-header " id="header">
+        <nav className="bd-container"></nav>
         <nav className="nav bd-container">
           <Link to="/" className="nav__logo">
             GASRO QUICK
@@ -112,35 +113,6 @@ export default function Header({ ...props }: Props) {
                   </div>
                 </li>
               </Link>
-              {/* <Link to="/product">
-                <li className="nav__item">
-                  <div
-                    // href="#home"
-                    className={
-                      location.pathname === "/product"
-                        ? "nav__link active-link"
-                        : "nav__link"
-                    }
-                    id="product"
-                  >
-                    제품
-                  </div>
-                </li>
-              </Link> */}
-              {/* <Link to="/notice">
-                <li className="nav__item">
-                  <div
-                    className={
-                      location.pathname === "/notice"
-                        ? "nav__link active-link"
-                        : "nav__link"
-                    }
-                    id="notice"
-                  >
-                    공지사항
-                  </div>
-                </li>
-              </Link> */}
               <Link to="/support">
                 <li className="nav__item">
                   <div
@@ -204,15 +176,6 @@ export default function Header({ ...props }: Props) {
                 </li>
               </Link>
             </ul>
-            {/* <div className="nav__icon">
-              <Link to="/support">
-                <HelpOutlineIcon className="change-theme"></HelpOutlineIcon>
-              </Link>
-              <LanguageIcon
-                id="theme-button"
-                className="language"
-              ></LanguageIcon>
-            </div> */}
           </div>
           <div className="nav__toggle" id="nav-toggle">
             <i className="bx bx-grid-alt"></i>

@@ -727,17 +727,29 @@ img{
 /* new */
 .carousel .slide{ background: none; }
 
-.main-container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content:center;
-  gap:40px;
-}
-.main-box{
-  position:relative;
-}
 
-
+.grid-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin:100px 0;
+}
+.grid-box-left{
+  text-align:right;
+}
+.grid-box-right{
+  text-align:left;
+}
+.grid-photo{
+  /* grid-area:photo; */
+  height: 460px;
+  width: 620px;
+  object-fit: cover;
+  object-position:center;
+}
+.grid-text{
+  align-self:center;
+}
 `;
 
 export default GlobalStyle;

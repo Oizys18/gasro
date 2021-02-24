@@ -5,7 +5,7 @@ import Product from "containers/Product";
 import Support from "containers/Support";
 import Company from "containers/Company";
 import Notice from "containers/Notice";
-import Header from "components/Header";
+import NewHeader from "components/NewHeader";
 import Footer from "components/Footer";
 import Landing from "containers/Landing";
 import { Switch, Route, Redirect } from "react-router-dom";
@@ -13,7 +13,7 @@ import ScrollToTop from "./ScrollToTop";
 function Routes() {
   return (
     <>
-      <Header />
+      <NewHeader />
       <ScrollToTop />
       <Switch>
         <Route path="/" exact component={Main} />

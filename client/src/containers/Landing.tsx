@@ -10,17 +10,20 @@ import { keyframes } from "@emotion/react";
 import VideoDialog from "components/VideoDialog";
 import MainCarousel from "components/MainCarousel";
 import BannerCarousel from "components/BannerCarousel";
-import leaf from "assets/images/foods/leaf.png";
 import dough from "assets/images/foods/dough.jpg";
-
+import product01 from "assets/images/product/product01.png";
+import product02 from "assets/images/product/product02.png";
+import product03 from "assets/images/product/product03.png";
+import product04 from "assets/images/product/product04.png";
+import product05 from "assets/images/product/product05.png";
 interface ILanding {}
 function Landing({ ...props }: ILanding) {
   return (
     <>
       <BannerCarousel></BannerCarousel>
       <section className="bc-container" id="main-company">
-        <Wrapper className="main-container">
-          <Text className="main-box">
+        <Wrapper className="grid-container">
+          <Text className="grid-box-left">
             <p>
               설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
               왔습니다.
@@ -28,16 +31,16 @@ function Landing({ ...props }: ILanding) {
             <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.</p>
           </Text>
-          <div className="main-box">
+          <div className="grid-box-right">
             <Title>
               <TitleSpan>회사소개</TitleSpan>
             </Title>
             <STitle>가스텍코리아(주)</STitle>
           </div>
         </Wrapper>
-        <CardWrapper className="main-container">
-          <CardImg src={dough} className="main-box" />
-          <CardContent className="main-box">
+        <CardWrapper className="grid-container">
+          <CardImg src={dough} className="grid-box-left grid-photo" />
+          <CardContent className="grid-box-right">
             <CardTitle>기계, 그 이상</CardTitle>
             <CardText>
               <p>
@@ -63,14 +66,14 @@ function Landing({ ...props }: ILanding) {
         </CardWrapper>
       </section>
       <section className="bc-container" id="main-product">
-        <Wrapper className="main-container">
-          <div className="main-box">
+        <Wrapper className="grid-container">
+          <div className="grid-box-left">
             <PTitle>
               <PTitleSpan>제품소개</PTitleSpan>
             </PTitle>
             <PTitleN>컨베이어 오븐</PTitleN>
           </div>
-          <PText className="main-box">
+          <PText className="grid-box-right">
             <p>
               설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
               왔습니다.
@@ -79,6 +82,52 @@ function Landing({ ...props }: ILanding) {
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.</p>
           </PText>
         </Wrapper>
+        <ProductFeature className="grid-container">
+          <img src={product01} alt="" className="grid-box-left grid-photo" />
+          <div className="grid-box-right grid-text">
+            <Title>
+              <TitleSpan>01</TitleSpan>
+            </Title>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
+          </div>
+        </ProductFeature>
+        <ProductFeature className="grid-container">
+          <div className="grid-box-left grid-text">
+            <PTitle>
+              <PTitleSpan>01</PTitleSpan>
+            </PTitle>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
+          </div>
+          <img src={product02} alt="" className="grid-box-right grid-photo" />
+        </ProductFeature>
+        <ProductFeature className="grid-container">
+          <img src={product03} alt="" className="grid-box-left grid-photo" />
+          <div className="grid-box-right grid-text">
+            <Title>
+              <TitleSpan>01</TitleSpan>
+            </Title>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
+          </div>
+        </ProductFeature>
+        <ProductFeature className="grid-container">
+          <div className="grid-box-left grid-text">
+            <PTitle>
+              <PTitleSpan>01</PTitleSpan>
+            </PTitle>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
+          </div>
+          <img src={product02} alt="" className="grid-box-right grid-photo" />
+        </ProductFeature>
+        <ProductCarousel></ProductCarousel>
+        <HowToUse></HowToUse>
       </section>
       <section className="bc-container" id="main-contact"></section>
     </>
@@ -86,7 +135,8 @@ function Landing({ ...props }: ILanding) {
 }
 
 export default Landing;
-
+const ProductCarousel = styled.div``;
+const HowToUse = styled.div``;
 const Wrapper = styled.div`
   margin: 180px 0 130px;
 `;
@@ -124,7 +174,6 @@ const CardImg = styled.img`
   object-fit: cover;
 `;
 const CardContent = styled.div`
-  /* align-self: center; */
   padding: 40px 40px 40px 0;
 `;
 
@@ -156,3 +205,5 @@ const PTitleSpan = styled.span`
   background: #fefbfb;
   padding: 0 0 0 40px;
 `;
+
+const ProductFeature = styled.div``;
