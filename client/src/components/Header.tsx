@@ -62,10 +62,9 @@ export default function Header({ ...props }: Props) {
 
       <header className="l-header " id="header">
         <nav className="nav bd-container">
-          {/* <Link to="/" className="nav__logo"> */}
-          {/* GASRO QUICK */}
-          <img src={logo3} alt="logo" className="nav__logo" />
-          {/* </Link> */}
+          <Link to="/" className="nav__logo">
+            Gasro Quick
+          </Link>
           <div
             className={menu ? "nav__menu show-menu" : "nav__menu"}
             id="nav-menu"

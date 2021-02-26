@@ -16,13 +16,13 @@ function Routes() {
       <Header />
       <ScrollToTop />
       <Switch>
-        <Route path="/" exact component={Main} />
-        <Route path="/landing" exact component={Landing} />
-        <Route path="/products" exact component={Products} />
+        <Route path="/" exact component={Landing} />
+        <Route path="/main" exact component={Main} />
         <Route path="/product" exact component={Product} />
         <Route path="/company" exact component={Company} />
         <Route path="/support" exact component={Support} />
         <Route path="/notice" exact component={Notice} />
+        <Route path="/products" exact component={Products} />
         <Redirect path="*" to="/" />
       </Switch>
       <Footer />

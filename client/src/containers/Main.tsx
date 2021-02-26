@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import gt300AB from "assets/images/ovens/gt300AB.png";
 import gt600AB from "assets/images/ovens/gt600AB.png";
@@ -9,174 +10,201 @@ import { keyframes } from "@emotion/react";
 import VideoDialog from "components/VideoDialog";
 import MainCarousel from "components/MainCarousel";
 import BannerCarousel from "components/BannerCarousel";
-interface Imain {}
-export default function Main({ ...props }: Imain) {
-  const [open, setOpen] = React.useState(false);
+import dough from "assets/images/foods/dough.jpg";
+import product01 from "assets/images/product/product01.png";
+import product02 from "assets/images/product/product02.png";
+import product03 from "assets/images/product/product03.png";
+import product04 from "assets/images/product/product04.png";
+import product05 from "assets/images/product/product05.png";
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+interface IMain {}
+function Main({ ...props }: IMain) {
   return (
     <>
-      <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
       <BannerCarousel></BannerCarousel>
-      <main className="l-main" id="top">
-        <section className="home section bd-container" id="home">
-          <div className="home__container  bd-grid">
-            <div className="home__img">
-              <Reveal keyframes={fadeDown} duration={800}>
-                <MainCarousel></MainCarousel>
-              </Reveal>
-            </div>
-            <Reveal keyframes={fadeDown} duration={1000}>
-              <div className="home__data">
-                <h2 className="home__title">Gasro Quick</h2>
-                <h1>Gasro Quick</h1>
-                <h2>
-                  아시아 최고의 보급률을 자랑하는
-                  <br /> 컨베이어 피자오븐s
-                </h2>
-                <p className="home__description">GT300 / GT600 / GT700</p>
-                <Link to="/products">
-                  <div className="button">제품소개</div>
-                </Link>
-              </div>
-            </Reveal>
+      <section className="bc-container" id="main-company">
+        <Wrapper className="grid-container">
+          <Text className="grid-box-left">
+            <p>
+              설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
+              왔습니다.
+            </p>
+            <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
+            <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.</p>
+          </Text>
+          <div className="grid-box-right">
+            <Title>
+              <TitleSpan>회사소개</TitleSpan>
+            </Title>
+            <STitle>가스텍코리아(주)</STitle>
           </div>
-        </section>
-        <section className="share section bd-container" id="share">
-          <div className="share__container bd-grid">
-            <Reveal keyframes={fadeLeft} cascade={true} duration={1000}>
-              <div className="share__data">
-                <h2 className="section-title-center">
-                  {/* GASRO QUICK <br /> */}
-                  피자굽기 딱 좋아
-                </h2>
-                <p className="share__description">
-                  맛있는 피자를 구워먹을 수 있습니다. 맛있는 피자를 구워먹을 수
-                  있습니다. 맛있는 피자를 구워먹을 수 있습니다. 맛있는 피자를
-                  구워먹을 수 있습니다.
-                </p>
-
-                <a href="#" className="button" onClick={handleClickOpen}>
-                  소개영상
-                </a>
-              </div>
-            </Reveal>
-            <div className="share__img">
-              <Reveal keyframes={fadeRight} duration={1800}>
-                <img
-                  src={pizzaTwo}
-                  alt="pizzatwo"
-                  style={{
-                    border: "0.5px solid grey",
-                    padding: "5px",
-                    borderRadius: "10px",
-                  }}
-                />
-              </Reveal>
-            </div>
-          </div>
-        </section>
-        <section className="decoration section bd-container" id="decoration">
-          {/* <h2 className="section-title">제품군</h2> */}
-          <div className="decoration__container bd-grid">
-            <Reveal keyframes={fadeDown} cascade={true}>
-              <div className="decoration__data">
-                <img src={gt300AB} alt="gt300AB" className="decoration__img" />
-                <h3 className="decoration__title">GT300</h3>
-                <a href="#home" className="button button-link">
-                  Go Shopping
-                </a>
-              </div>
-
-              <div className="decoration__data">
-                <img src={gt600AB} alt="gt600AB" className="decoration__img" />
-                <h3 className="decoration__title">GT600</h3>
-                <a href="#home" className="button button-link">
-                  Go Shopping
-                </a>
-              </div>
-
-              <div className="decoration__data">
-                <img src={gt700AB} alt="gt700AB" className="decoration__img" />
-                <h3 className="decoration__title">GT700</h3>
-                <a href="#top" className="button button-link">
-                  Go Shopping
-                </a>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-        <section className="send section">
-          <div className="send__container bd-container bd-grid">
-            <div className="send__content">
-              <h2 className="section-title-center send__title">추가홍보문구</h2>
-              <p className="send__description">
-                아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐 아시아 최고의
-                보급률을 자랑하는 컨베이어 피자오븐
+        </Wrapper>
+        <CardWrapper className="grid-container">
+          <CardImg src={dough} className="grid-box-left grid-photo" />
+          <CardContent className="grid-box-right">
+            <CardTitle>기계, 그 이상</CardTitle>
+            <CardText>
+              <p>
+                1995년 설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
+                왔습니다.
               </p>
-              {/* <form action="">
-                <div className="send__direction">
-                  <input
-                    type="text"
-                    placeholder="House address"
-                    className="send__input"
-                  />
-                  <a href="#" className="button">
-                    Send
-                  </a>
-                </div>
-              </form> */}
+              <p>
+                2000년 동종업체에서는 유일하게 정부로부터 신기술 벤처기업으로
+                인증 받았으며,
+              </p>
+              <p>
+                국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.
+              </p>
+              <p>
+                생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현하였으며,
+              </p>
+              <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
+            </CardText>
+            <div>
+              <h3>더 읽기</h3>
             </div>
+          </CardContent>
+        </CardWrapper>
+      </section>
+      <section className="bc-container" id="main-product">
+        <Wrapper className="grid-container">
+          <div className="grid-box-left">
+            <PTitle>
+              <PTitleSpan>제품소개</PTitleSpan>
+            </PTitle>
+            <PTitleN>컨베이어 오븐</PTitleN>
           </div>
-        </section>
-        {/* <section className="decoration section bd-container" id="decoration">
-          <h2 className="section-title">홍보영상</h2>
-          <div className="videoH">
-            <Video></Video>
+          <PText className="grid-box-right">
+            <p>
+              설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
+              왔습니다.
+            </p>
+            <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
+            <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.</p>
+          </PText>
+        </Wrapper>
+        <ProductFeature className="grid-container">
+          <img src={product01} alt="" className="grid-box-left grid-photo" />
+          <div className="grid-box-right grid-text">
+            <Title>
+              <TitleSpan>01</TitleSpan>
+            </Title>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
           </div>
-        </section> */}
-      </main>
+        </ProductFeature>
+        <ProductFeature className="grid-container">
+          <div className="grid-box-left grid-text">
+            <PTitle>
+              <PTitleSpan>01</PTitleSpan>
+            </PTitle>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
+          </div>
+          <img src={product02} alt="" className="grid-box-right grid-photo" />
+        </ProductFeature>
+        <ProductFeature className="grid-container">
+          <img src={product03} alt="" className="grid-box-left grid-photo" />
+          <div className="grid-box-right grid-text">
+            <Title>
+              <TitleSpan>01</TitleSpan>
+            </Title>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
+          </div>
+        </ProductFeature>
+        <ProductFeature className="grid-container">
+          <div className="grid-box-left grid-text">
+            <PTitle>
+              <PTitleSpan>01</PTitleSpan>
+            </PTitle>
+            <p>스테인레스 스틸 조형</p>
+            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
+            <p>스테인레스 스틸 조형</p>
+          </div>
+          <img src={product02} alt="" className="grid-box-right grid-photo" />
+        </ProductFeature>
+        <ProductCarousel></ProductCarousel>
+        <HowToUse></HowToUse>
+      </section>
+      <section className="bc-container" id="main-contact"></section>
     </>
   );
 }
-const fadeDown = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(0, -30px, 0);
-  }
 
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+export default Main;
+const ProductCarousel = styled.div``;
+const HowToUse = styled.div``;
+const Wrapper = styled.div`
+  margin: 180px 0 130px;
 `;
 
-const fadeLeft = keyframes`
-from {
-  opacity: 0;
-  transform: translate3d(-30px, 0, 0);
-}
-
-to {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
+const Text = styled.div`
+  text-align: right;
+  font-size: 16px;
 `;
 
-const fadeRight = keyframes`
-from {
-  opacity: 0;
-  transform: translate3d(30px, 0, 0);
-}
-
-to {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
+const Title = styled.div`
+  text-align: left;
+  border-top: 1px solid #000;
+  line-height: 0.1em;
+  margin: 1em 0 0.7em;
+  font-size: 14px;
 `;
+const TitleSpan = styled.span`
+  background: #fefbfb;
+  padding: 0 40px 0 0;
+`;
+
+const STitle = styled.h2`
+  font-size: 36px;
+`;
+
+const CardWrapper = styled.div`
+  border: 0px solid transparent;
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow: 15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
+`;
+const CardImg = styled.img`
+  height: 460px;
+  width: 620px;
+  object-fit: cover;
+`;
+const CardContent = styled.div`
+  padding: 40px 40px 40px 0;
+`;
+
+const CardTitle = styled.div`
+  font-size: 36px;
+  font-weight: 700;
+  margin: 30px 0;
+`;
+const CardText = styled.div``;
+
+const PText = styled.div`
+  text-align: left;
+  font-size: 16px;
+`;
+
+const PTitle = styled.div`
+  text-align: right;
+  border-top: 1px solid #000;
+  line-height: 0.1em;
+  margin: 1em 0 0.7em;
+  font-size: 14px;
+`;
+const PTitleN = styled.h2`
+  font-size: 36px;
+  text-align: right;
+`;
+
+const PTitleSpan = styled.span`
+  background: #fefbfb;
+  padding: 0 0 0 40px;
+`;
+
+const ProductFeature = styled.div``;

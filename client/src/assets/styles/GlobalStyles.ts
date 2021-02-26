@@ -258,15 +258,18 @@ img{
   font-size:var(--normal-font-size);
 }
 .nav__logo{
-  max-width:200px;
-  /* min-width:20%; */
+  /* max-width:200px;
   margin:none;
-  padding:none;
-  /* display:inline-block;
+  padding:none; */
+  /* outline:1px solid black; */
+  text-shadow:0 0 5px black;
+  min-width:22%;
+  display:inline-block;
   color: white;
+  letter-spacing:-1px;
   font-size:var(--h2-font-size);
   font-weight: var(--font-black);
-  font-family: 'Lexend Deca', sans-serif; */
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 .nav__logo:hover{
