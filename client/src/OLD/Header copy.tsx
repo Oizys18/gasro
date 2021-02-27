@@ -4,6 +4,7 @@ import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import LanguageIcon from "@material-ui/icons/Language";
+import logo3 from "assets/images/logo3.png";
 interface Props {}
 export default function Header({ ...props }: Props) {
   const location = useLocation();
@@ -15,7 +16,6 @@ export default function Header({ ...props }: Props) {
   };
 
   const nav = document.getElementById("header");
-  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
   if (nav) {
     if (scrollPosition >= 100) {
       nav.classList.add("scroll-header");
@@ -24,7 +24,6 @@ export default function Header({ ...props }: Props) {
     }
   }
   useEffect(() => {
-    // 모바일 햄버거 toggle
     const toggle = document.getElementById("nav-toggle"),
       navMenu = document.getElementById("nav-menu");
     if (toggle && navMenu) {
@@ -38,7 +37,6 @@ export default function Header({ ...props }: Props) {
     }
   });
   useEffect(() => {
-    // scroll eventlistener
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
@@ -47,7 +45,6 @@ export default function Header({ ...props }: Props) {
   }, []);
 
   useEffect(() => {
-    // close mobile dropdown menu when path changes
     if (menu) {
       setMenu(false);
     }
@@ -58,11 +55,11 @@ export default function Header({ ...props }: Props) {
       <a href="#top" className="scrolltop show-scroll" id="scroll-top">
         <i className="bx bx-up-arrow-alt scrolltop__icon"></i>
       </a>
+
       <header className="l-header " id="header">
-        <nav className="bd-container"></nav>
         <nav className="nav bd-container">
           <Link to="/" className="nav__logo">
-            GASRO QUICK
+            Gasro Quick
           </Link>
           <div
             className={menu ? "nav__menu show-menu" : "nav__menu"}
@@ -113,6 +110,35 @@ export default function Header({ ...props }: Props) {
                   </div>
                 </li>
               </Link>
+              {/* <Link to="/product">
+                <li className="nav__item">
+                  <div
+                    // href="#home"
+                    className={
+                      location.pathname === "/product"
+                        ? "nav__link active-link"
+                        : "nav__link"
+                    }
+                    id="product"
+                  >
+                    제품
+                  </div>
+                </li>
+              </Link> */}
+              {/* <Link to="/notice">
+                <li className="nav__item">
+                  <div
+                    className={
+                      location.pathname === "/notice"
+                        ? "nav__link active-link"
+                        : "nav__link"
+                    }
+                    id="notice"
+                  >
+                    공지사항
+                  </div>
+                </li>
+              </Link> */}
               <Link to="/support">
                 <li className="nav__item">
                   <div
@@ -176,6 +202,15 @@ export default function Header({ ...props }: Props) {
                 </li>
               </Link>
             </ul>
+            {/* <div className="nav__icon">
+              <Link to="/support">
+                <HelpOutlineIcon className="change-theme"></HelpOutlineIcon>
+              </Link>
+              <LanguageIcon
+                id="theme-button"
+                className="language"
+              ></LanguageIcon>
+            </div> */}
           </div>
           <div className="nav__toggle" id="nav-toggle">
             <i className="bx bx-grid-alt"></i>

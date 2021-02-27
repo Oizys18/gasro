@@ -16,8 +16,8 @@ function Routes() {
       <Header />
       <ScrollToTop />
       <Switch>
-        <Route path="/" exact component={Landing} />
-        <Route path="/main" exact component={Main} />
+        <Route path="/" exact component={Main} />
+        <Route path="/landing" exact component={Landing} />
         <Route path="/product" exact component={Product} />
         <Route path="/company" exact component={Company} />
         <Route path="/support" exact component={Support} />
