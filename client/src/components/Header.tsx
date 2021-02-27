@@ -1,8 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 interface Props {}
 export default function Header({ ...props }: Props) {
+  // const location = useLocation();
+  // const [menu, setMenu] = useState<boolean>();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+  const nav = document.getElementById("header");
+  if (nav) {
+    if (scrollPosition >= 100) {
+      nav.classList.add("scroll-header");
+    } else {
+      nav.classList.remove("scroll-header");
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <header className="l-header" id="header">
@@ -26,7 +48,7 @@ export default function Header({ ...props }: Props) {
           </ul>
           <ul className="nav-list">
             <li className="nav-item">공지사항</li>
-            <li className="nav-item">언어설정</li>
+            <li className="nav-item">Korea/한국어</li>
           </ul>
         </div>
       </header>

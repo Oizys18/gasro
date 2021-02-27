@@ -128,8 +128,16 @@ function Main({ ...props }: IMain) {
           <img src={product02} alt="" className="mg-img content" />
         </div>
       </section>
-      <section id="support" className="basic-container ">
-        support
+      <section id="support" className="support-wrapper">
+        <div className="basic-container support-container">
+          <h1 className="support-title">무엇이든 물어보세요 </h1>
+          <div className="support-content">
+            가스텍코리아 기술 전문가가 도와드립니다.
+          </div>
+          <a href="/notice" className="support-link">
+            문의하기
+          </a>
+        </div>
       </section>
     </>
   );

@@ -86,7 +86,9 @@ export default class Footer extends React.Component {
             </Reveal>
           </div>
           <div className="privacy"></div>
-          <p className="footer__copy">2021 Gastec Korea. All right reserved</p>
+          <p className="footer__copy">
+            Copyright ⓒGastec Korea. All right reserved
+          </p>
         </footer>
       </>
     );
