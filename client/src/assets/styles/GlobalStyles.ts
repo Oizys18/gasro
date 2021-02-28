@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   /*========== Font and typography ==========*/
   --body-font: 'Noto Sans KR', sans-serif;
   --biggest-font-size: 2rem;
+
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: .938rem;
@@ -252,7 +253,6 @@ img{
 }
 
 
-
 /* Main */
 .mg-container{
   display:grid;
@@ -260,6 +260,7 @@ img{
   gap:40px;
   align-items:center;
   margin:170px 0;
+
 }
 .mg-item-l{
   text-align:right
@@ -307,6 +308,67 @@ img{
   width: 620px;
   object-fit: cover;
 }
+
+
+/* product card */
+.card-container{
+  margin:250px 0 250px 0;
+  transition:1s;
+}
+.card-wrapper{
+  display:flex;
+  justify-content:center;
+  height:400px;
+  width:100%;
+  gap:40px;
+  transition:1s;
+}
+.card-content{
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.card-text{
+  text-align:left;
+  & .title {
+    font-size:var(--biggest-font-size);
+    font-weight:var(--font-bold);
+    color:var(--title-color);
+    margin:0 0 15px 0;
+  }
+  & .content{
+    font-size:var(--normal-font-size);
+    font-weight:var(--font-regular);
+    color:var(--title-color);
+    margin:0 0 15px 0;
+  }
+}
+.card-preview{
+  justify-content:center;
+  display:flex;
+  gap:15px;
+}
+.card-preview-img{
+  border:1px solid transparent;
+  border-radius:2px;
+  background-color:#FFF;
+  height:140px;
+  width:100%;
+  object-fit:cover;
+  box-shadow: 15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
+}
+
+.card-img{
+  width:50%;
+  height:auto;
+  background-color:#FFF;
+  box-shadow: 15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
+  border-radius:2px;
+}
+
+
+/* support */
 .support-wrapper{
   background-image:url('./images/banner.png');
   width:100%;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BannerCarousel from "components/BannerCarousel";
 import dough from "assets/images/foods/dough.jpg";
-
+import ProductCard from "components/ProductCard";
 // import styled from "styled-components";
 // import { Link } from "react-router-dom";
 // import gt300AB from "assets/images/ovens/gt300AB.png";
@@ -127,6 +127,11 @@ function Main({ ...props }: IMain) {
           </div>
           <img src={product02} alt="" className="mg-img content" />
         </div>
+        <div className="card-container">
+          <ProductCard></ProductCard>
+        </div>
+
+        <div className=""></div>
       </section>
       <section id="support" className="support-wrapper">
         <div className="basic-container support-container">
