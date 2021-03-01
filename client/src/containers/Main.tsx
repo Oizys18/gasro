@@ -130,8 +130,9 @@ function Main({ ...props }: IMain) {
         <div className="card-container">
           <ProductCard></ProductCard>
         </div>
-
-        <div className=""></div>
+      </section>
+      <section id="instruction">
+        <div className="instruction">사용설명</div>
       </section>
       <section id="support" className="support-wrapper">
         <div className="basic-container support-container">
