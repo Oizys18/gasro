@@ -127,7 +127,7 @@ function Main({ ...props }: IMain) {
           </div>
           <img src={product02} alt="" className="mg-img content" />
         </div>
-        <div className="card-container">
+        <div className="card-container" id="card-container">
           <ProductCard></ProductCard>
         </div>
       </section>
