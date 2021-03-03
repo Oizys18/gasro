@@ -47,11 +47,9 @@ export default function ProductCard() {
   };
   return (
     <>
-      <div className="card-wrapper">
-        <div className="card-content">
-          <div className="card-text">
-            <CardText curFocus={focus} />
-          </div>
+      <div className="card-content">
+        <div className="card-image">
+          <CardImg curFocus={focus}></CardImg>
           <div className="card-preview">
             <div
               className="preview-btn"
@@ -84,76 +82,64 @@ export default function ProductCard() {
               <img className="card-preview-img" src={gt700AB} alt="" />
             </div>
           </div>
-          <table className="detail-table">
-            <tr>
-              <th>총 중량</th>
-              <th>제품규격 W*D*H(mm)</th>
-              <th>컨베이어벨트(폭)</th>
-              <th>온도조절 범위</th>
-            </tr>
-            <tr>
-              <td data-th="Weight">132kg</td>
-              <td data-th="ModelSize">1520*1060*450</td>
-              <td data-th="VeltWidth">480mm(18inches)</td>
-              <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
-            </tr>
-          </table>
         </div>
-        <CardImg curFocus={focus}></CardImg>
-      </div>
-      <div>
-        {click === 1 ? (
-          <>
-            <div className="card-detail">
-              <table className="detail-table">
-                <tr>
-                  <th colSpan={5}>가스식</th>
-                </tr>
-                <tr>
-                  <th>입력전압</th>
-                  <th>소비전력</th>
-                  <th>가스종류</th>
-                  <th>가스소비량</th>
-                  <th>가스압력</th>
-                </tr>
-                <tr>
-                  <td data-th="Voltage" rowSpan={2}>
-                    220V
-                  </td>
-                  <td data-th="ElectricityUsage" rowSpan={2}>
-                    350W /Hr
-                  </td>
-                  <th>LNG</th>
-                  <td data-th="GasUsage">10,000kal/hr</td>
-                  <td data-th="GasUsage">0.83Kg/hr</td>
-                </tr>
-                <tr>
-                  <th>LPG</th>
-                  <td data-th="GasPressure">230mmH2O</td>
-                  <td data-th="GasPressure">280mmH2O</td>
-                </tr>
-                <tr></tr>
-              </table>
-              <table className="detail-table">
-                <tr>
-                  <th colSpan={3}>전기식</th>
-                </tr>
-                <tr>
-                  <th>입력전압</th>
-                  <th>소비전력</th>
-                </tr>
-                <tr>
-                  <td data-th="Voltage">220V</td>
-                  <td data-th="ElectricityUsage">350W /Hr</td>
-                </tr>
-              </table>
-            </div>
-          </>
-        ) : (
-          <></>
-        )}
-        {click === 2 ? <div className="card-detail">gt600AB</div> : <></>}
-        {click === 3 ? <div className="card-detail">gt700AB</div> : <></>}
+        <div className="card-text">
+          <CardText curFocus={focus} />
+        </div>
+        {/* <div>
+            {click === 1 ? (
+              <>
+                <div className="card-detail">
+                  <table className="detail-table">
+                    <tr>
+                      <th colSpan={5}>가스식</th>
+                    </tr>
+                    <tr>
+                      <th>입력전압</th>
+                      <th>소비전력</th>
+                      <th>가스종류</th>
+                      <th>가스소비량</th>
+                      <th>가스압력</th>
+                    </tr>
+                    <tr>
+                      <td data-th="Voltage" rowSpan={2}>
+                        220V
+                      </td>
+                      <td data-th="ElectricityUsage" rowSpan={2}>
+                        350W /Hr
+                      </td>
+                      <th>LNG</th>
+                      <td data-th="GasUsage">10,000kal/hr</td>
+                      <td data-th="GasUsage">0.83Kg/hr</td>
+                    </tr>
+                    <tr>
+                      <th>LPG</th>
+                      <td data-th="GasPressure">230mmH2O</td>
+                      <td data-th="GasPressure">280mmH2O</td>
+                    </tr>
+                    <tr></tr>
+                  </table>
+                  <table className="detail-table">
+                    <tr>
+                      <th colSpan={3}>전기식</th>
+                    </tr>
+                    <tr>
+                      <th>입력전압</th>
+                      <th>소비전력</th>
+                    </tr>
+                    <tr>
+                      <td data-th="Voltage">220V</td>
+                      <td data-th="ElectricityUsage">350W /Hr</td>
+                    </tr>
+                  </table>
+                </div>
+              </>
+            ) : (
+              <></>
+            )}
+            {click === 2 ? <div className="card-detail">gt600AB</div> : <></>}
+            {click === 3 ? <div className="card-detail">gt700AB</div> : <></>}
+          </div> */}
       </div>
     </>
   );
