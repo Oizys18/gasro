@@ -86,7 +86,7 @@ function Main({ ...props }: IMain) {
         <div className="mg-container">
           <img src={product01} alt="" className="mg-img content" />
           <div className="mg-item-r title">
-            <div className="mg-title-l">
+            <div className="numTitle-r">
               <span className="numTitle">01</span>
             </div>
             <p>스테인레스 스틸 조형</p>
@@ -96,8 +96,8 @@ function Main({ ...props }: IMain) {
         </div>
         <div className="mg-container">
           <div className="mg-item-l title">
-            <div className="mg-title-r">
-              <span className="numTitle">02</span>
+            <div className="numTitle-l">
+              <span>02</span>
             </div>
             <p>스테인레스 스틸 조형</p>
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
@@ -108,8 +108,8 @@ function Main({ ...props }: IMain) {
         <div className="mg-container">
           <img src={product03} alt="" className="mg-img content" />
           <div className="mg-item-r title">
-            <div className="mg-title-l">
-              <span className="numTitle">03</span>
+            <div className="numTitle-r">
+              <span>03</span>
             </div>
             <p>스테인레스 스틸 조형</p>
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
@@ -118,8 +118,8 @@ function Main({ ...props }: IMain) {
         </div>
         <div className="mg-container">
           <div className="mg-item-l title">
-            <div className="mg-title-r">
-              <span className="numTitle">04</span>
+            <div className="numTitle-l">
+              <span>04</span>
             </div>
             <p>스테인레스 스틸 조형</p>
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>

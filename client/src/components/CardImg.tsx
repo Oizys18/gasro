@@ -8,21 +8,21 @@ interface cardProps {
 export default function CardImg(props: cardProps) {
   if (props.curFocus === 1) {
     return (
-      <>
-        <img className="card-img" src={gt300AB} alt="gt300AB" />
-      </>
+      <div className="card-img">
+        <img src={gt300AB} alt="gt300AB" />
+      </div>
     );
   } else if (props.curFocus === 2) {
     return (
-      <>
-        <img className="card-img" src={gt600AB} alt="gt600AB" />
-      </>
+      <div className="card-img">
+        <img src={gt600AB} alt="gt600AB" />
+      </div>
     );
   } else if (props.curFocus === 3) {
     return (
-      <>
-        <img className="card-img" src={gt700AB} alt="gt700AB" />
-      </>
+      <div className="card-img">
+        <img src={gt700AB} alt="gt700AB" />
+      </div>
     );
   }
   return <></>;

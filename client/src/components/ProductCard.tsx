@@ -50,7 +50,6 @@ export default function ProductCard() {
       <div className="card-wrapper">
         <div className="card-content">
           <div className="card-text">
-            <div>모델소개</div>
             <CardText curFocus={focus} />
           </div>
           <div className="card-preview">
@@ -66,52 +65,90 @@ export default function ProductCard() {
             </div>
             <div
               className="preview-btn"
-              onClick={() => handleClick(2)}
+              onClick={() => {
+                handleClick(2);
+                handleFocus(2);
+              }}
               onMouseOver={() => handleFocus(2)}
             >
               <img className="card-preview-img" src={gt600AB} alt="" />
             </div>
             <div
               className="preview-btn"
-              onClick={() => handleClick(3)}
+              onClick={() => {
+                handleClick(3);
+                handleFocus(3);
+              }}
               onMouseOver={() => handleFocus(3)}
             >
               <img className="card-preview-img" src={gt700AB} alt="" />
             </div>
           </div>
+          <table className="detail-table">
+            <tr>
+              <th>총 중량</th>
+              <th>제품규격 W*D*H(mm)</th>
+              <th>컨베이어벨트(폭)</th>
+              <th>온도조절 범위</th>
+            </tr>
+            <tr>
+              <td data-th="Weight">132kg</td>
+              <td data-th="ModelSize">1520*1060*450</td>
+              <td data-th="VeltWidth">480mm(18inches)</td>
+              <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
+            </tr>
+          </table>
         </div>
         <CardImg curFocus={focus}></CardImg>
       </div>
       <div>
         {click === 1 ? (
-          <div className="card-detail">
-            <table className="detail-table">
-              <tr>
-                <th>제품규격 W*D*H(mm)</th>
-                <th>입력전압</th>
-                <th>Year</th>
-                <th>Gross</th>
-              </tr>
-              <tr>
-                <td data-th="ModelSize">1520*1060*450</td>
-                <td data-th="Voltage"> 220V</td>
-                <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
-                <td data-th="Gross">$460,935,665</td>
-              </tr>
-              {/* <tr>
-                <td data-th="Movie Title">Howard The Duck</td>
-                <td data-th="Genre">"Comedy"</td>
-                <td data-th="Year">1986</td>
-                <td data-th="Gross">$16,295,774</td>
-              </tr>
-              <tr>
-                <td data-th="Movie Title">American Graffiti</td>
-                <td data-th="Genre">Comedy, Drama</td>
-                <td data-th="Year">1973</td>
-                <td data-th="Gross">$115,000,000</td>
-              </tr> */}
-            </table>
-          </div>
+          <>
+            <div className="card-detail">
+              <table className="detail-table">
+                <tr>
+                  <th colSpan={5}>가스식</th>
+                </tr>
+                <tr>
+                  <th>입력전압</th>
+                  <th>소비전력</th>
+                  <th>가스종류</th>
+                  <th>가스소비량</th>
+                  <th>가스압력</th>
+                </tr>
+                <tr>
+                  <td data-th="Voltage" rowSpan={2}>
+                    220V
+                  </td>
+                  <td data-th="ElectricityUsage" rowSpan={2}>
+                    350W /Hr
+                  </td>
+                  <th>LNG</th>
+                  <td data-th="GasUsage">10,000kal/hr</td>
+                  <td data-th="GasUsage">0.83Kg/hr</td>
+                </tr>
+                <tr>
+                  <th>LPG</th>
+                  <td data-th="GasPressure">230mmH2O</td>
+                  <td data-th="GasPressure">280mmH2O</td>
+                </tr>
+                <tr></tr>
+              </table>
+              <table className="detail-table">
+                <tr>
+                  <th colSpan={3}>전기식</th>
+                </tr>
+                <tr>
+                  <th>입력전압</th>
+                  <th>소비전력</th>
+                </tr>
+                <tr>
+                  <td data-th="Voltage">220V</td>
+                  <td data-th="ElectricityUsage">350W /Hr</td>
+                </tr>
+              </table>
+            </div>
+          </>
         ) : (
           <></>
         )}

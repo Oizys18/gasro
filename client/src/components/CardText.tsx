@@ -7,15 +7,7 @@ export default function CardText(props: cardProps) {
     return (
       <>
         <div className="title">GT300 / GT300W</div>
-        <div className="content">
-          <ul>
-            <li>Gasro Quick 최대 판매 스테디셀러</li>
-            <li>공간효율적인 디자인</li>
-            <li>-.효율적 에너지 전달로 에너지 절약</li>
-            <li>-.콘트롤 조작이 간편</li>
-            <li>-.공기역학적으로 공기가 수직으로 이동</li>
-          </ul>
-        </div>
+        <div className="content"></div>
       </>
     );
   } else if (props.curFocus === 2) {
@@ -23,9 +15,20 @@ export default function CardText(props: cardProps) {
       <>
         <div className="title">GT600 / GT600W</div>
         <div className="content">
-          1995년 설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
-          왔습니다. 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
-          실현하였으며, 제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.
+          <table className="detail-table">
+            <tr>
+              <th>총 중량</th>
+              <th>제품규격 W*D*H(mm)</th>
+              <th>컨베이어벨트(폭)</th>
+              <th>온도조절 범위</th>
+            </tr>
+            <tr>
+              <td data-th="Weight">132kg</td>
+              <td data-th="ModelSize">1520*1060*450</td>
+              <td data-th="VeltWidth">480mm(18inches)</td>
+              <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
+            </tr>
+          </table>
         </div>
       </>
     );
@@ -34,9 +37,20 @@ export default function CardText(props: cardProps) {
       <>
         <div className="title">GT700 / GT700W</div>
         <div className="content">
-          1995년 설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
-          왔습니다. 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
-          실현하였으며, 제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.
+          <table className="detail-table">
+            <tr>
+              <th>총 중량</th>
+              <th>제품규격 W*D*H(mm)</th>
+              <th>컨베이어벨트(폭)</th>
+              <th>온도조절 범위</th>
+            </tr>
+            <tr>
+              <td data-th="Weight">132kg</td>
+              <td data-th="ModelSize">1520*1060*450</td>
+              <td data-th="VeltWidth">480mm(18inches)</td>
+              <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
+            </tr>
+          </table>
         </div>
       </>
     );
