@@ -6,25 +6,47 @@ export default function CardText(props: cardProps) {
   if (props.curFocus === 1) {
     return (
       <>
+        <div className="title">GT300 / GT300W</div>
+        <table className="detail-table">
+          <tr>
+            <th>총 중량</th>
+            <th>제품규격 W*D*H(mm)</th>
+            <th>컨베이어벨트(폭)</th>
+            <th>온도조절 범위</th>
+          </tr>
+          <tr>
+            <td data-th="Weight">132kg</td>
+            <td data-th="ModelSize">1520(W)*1060(D)*450(H)</td>
+            <td data-th="VeltWidth">480mm(18inches)</td>
+            <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
+          </tr>
+        </table>
+        <table className="detail-table">
+          <th>전기식</th>
+          <th>가스식</th>
+          <tr>
+            <th>입력전압</th>
+            <td data-th="Weight">220V</td>
+            <th>입력전압</th>
+            <td data-th="Weight">380V</td>
+          </tr>
+        </table>
+        {/* <table className="detail-table">
+          <tr>
+            <th>총 중량</th>
+            <th>제품규격 W*D*H(mm)</th>
+            <th>컨베이어벨트(폭)</th>
+            <th>온도조절 범위</th>
+          </tr>
+          <tr>
+            <td data-th="Weight">132kg</td>
+            <td data-th="ModelSize">1520(W)*1060(D)*450(H)</td>
+            <td data-th="VeltWidth">480mm(18inches)</td>
+            <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
+          </tr>
+        </table>
         <div>
-          <div className="title">GT300 / GT300W</div>
-          <table className="detail-table">
-            <tr>
-              <th>총 중량</th>
-              <th>제품규격 W*D*H(mm)</th>
-              <th>컨베이어벨트(폭)</th>
-              <th>온도조절 범위</th>
-            </tr>
-            <tr>
-              <td data-th="Weight">132kg</td>
-              <td data-th="ModelSize">1520(W)*1060(D)*450(H)</td>
-              <td data-th="VeltWidth">480mm(18inches)</td>
-              <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
-            </tr>
-          </table>
-        </div>
-        <div>
-          <div>가스식</div>
+          <div className="detail-title">가스식</div>
           <table className="detail-table">
             <tr>
               <th>입력전압</th>
@@ -52,7 +74,7 @@ export default function CardText(props: cardProps) {
           </table>
         </div>
         <div>
-          <div>전기식</div>
+          <div className="detail-title">전기식</div>
           <table className="detail-table">
             <tr>
               <th>입력전압</th>
@@ -63,7 +85,7 @@ export default function CardText(props: cardProps) {
               <td data-th="ElectricityUsage">11KW /Hr</td>
             </tr>
           </table>
-        </div>
+        </div> */}
       </>
     );
   } else if (props.curFocus === 2) {
@@ -85,7 +107,7 @@ export default function CardText(props: cardProps) {
           </tr>
         </table>
         <div>
-          <div>가스식</div>
+          <div className="detail-title">가스식</div>
           <table className="detail-table">
             <tr>
               <th>입력전압</th>
@@ -113,7 +135,7 @@ export default function CardText(props: cardProps) {
           </table>
         </div>
         <div>
-          <div>전기식</div>
+          <div className="detail-title">전기식</div>
           <table className="detail-table">
             <tr>
               <th>입력전압</th>
@@ -146,7 +168,7 @@ export default function CardText(props: cardProps) {
           </tr>
         </table>
         <div>
-          <div>가스식</div>
+          <div className="detail-title">가스식</div>
           <table className="detail-table">
             <tr>
               <th>입력전압</th>
@@ -174,7 +196,7 @@ export default function CardText(props: cardProps) {
           </table>
         </div>
         <div>
-          <div>전기식</div>
+          <div className="detail-title">전기식</div>
           <table className="detail-table">
             <tr>
               <th>입력전압</th>

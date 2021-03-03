@@ -84,62 +84,11 @@ export default function ProductCard() {
           </div>
         </div>
         <div className="card-text">
+          <div className="mg-title-l">
+            <span>제품상세</span>
+          </div>
           <CardText curFocus={focus} />
         </div>
-        {/* <div>
-            {click === 1 ? (
-              <>
-                <div className="card-detail">
-                  <table className="detail-table">
-                    <tr>
-                      <th colSpan={5}>가스식</th>
-                    </tr>
-                    <tr>
-                      <th>입력전압</th>
-                      <th>소비전력</th>
-                      <th>가스종류</th>
-                      <th>가스소비량</th>
-                      <th>가스압력</th>
-                    </tr>
-                    <tr>
-                      <td data-th="Voltage" rowSpan={2}>
-                        220V
-                      </td>
-                      <td data-th="ElectricityUsage" rowSpan={2}>
-                        350W /Hr
-                      </td>
-                      <th>LNG</th>
-                      <td data-th="GasUsage">10,000kal/hr</td>
-                      <td data-th="GasUsage">0.83Kg/hr</td>
-                    </tr>
-                    <tr>
-                      <th>LPG</th>
-                      <td data-th="GasPressure">230mmH2O</td>
-                      <td data-th="GasPressure">280mmH2O</td>
-                    </tr>
-                    <tr></tr>
-                  </table>
-                  <table className="detail-table">
-                    <tr>
-                      <th colSpan={3}>전기식</th>
-                    </tr>
-                    <tr>
-                      <th>입력전압</th>
-                      <th>소비전력</th>
-                    </tr>
-                    <tr>
-                      <td data-th="Voltage">220V</td>
-                      <td data-th="ElectricityUsage">350W /Hr</td>
-                    </tr>
-                  </table>
-                </div>
-              </>
-            ) : (
-              <></>
-            )}
-            {click === 2 ? <div className="card-detail">gt600AB</div> : <></>}
-            {click === 3 ? <div className="card-detail">gt700AB</div> : <></>}
-          </div> */}
       </div>
     </>
   );

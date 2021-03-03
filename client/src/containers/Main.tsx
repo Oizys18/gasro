@@ -68,7 +68,7 @@ function Main({ ...props }: IMain) {
       </section>
       <section id="product" className="basic-container ">
         <div className="mg-container">
-          <div className="mg-item-l title">
+          <div className="mg-item-l ">
             <div className="mg-title-r">
               <span>제품소개</span>
             </div>
@@ -85,7 +85,7 @@ function Main({ ...props }: IMain) {
         </div>
         <div className="mg-container">
           <img src={product01} alt="" className="mg-img content" />
-          <div className="mg-item-r title">
+          <div className="mg-item-r ">
             <div className="numTitle-r">
               <span className="numTitle">01</span>
             </div>
@@ -95,7 +95,7 @@ function Main({ ...props }: IMain) {
           </div>
         </div>
         <div className="mg-container">
-          <div className="mg-item-l title">
+          <div className="mg-item-l ">
             <div className="numTitle-l">
               <span>02</span>
             </div>
@@ -107,7 +107,7 @@ function Main({ ...props }: IMain) {
         </div>
         <div className="mg-container">
           <img src={product03} alt="" className="mg-img content" />
-          <div className="mg-item-r title">
+          <div className="mg-item-r ">
             <div className="numTitle-r">
               <span>03</span>
             </div>
@@ -117,7 +117,7 @@ function Main({ ...props }: IMain) {
           </div>
         </div>
         <div className="mg-container">
-          <div className="mg-item-l title">
+          <div className="mg-item-l ">
             <div className="numTitle-l">
               <span>04</span>
             </div>
