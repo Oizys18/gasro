@@ -182,7 +182,7 @@ export default function CardText(props: cardProps) {
                 220V
               </td>
               <td data-th="ElectricityUsage" rowSpan={2}>
-                350W /Hr
+                350W/Hr
               </td>
               <th>LNG</th>
               <td data-th="GasUsage">20,500Kal/hr</td>
@@ -204,7 +204,7 @@ export default function CardText(props: cardProps) {
             </tr>
             <tr>
               <td data-th="Voltage">380V</td>
-              <td data-th="ElectricityUsage">11KW /Hr</td>
+              <td data-th="ElectricityUsage">11KW/Hr</td>
             </tr>
           </table>
         </div>
