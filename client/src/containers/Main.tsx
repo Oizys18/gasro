@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import BannerCarousel from "components/BannerCarousel";
 import dough from "assets/images/foods/dough.jpg";
 import ProductCard from "components/ProductCard";
+import ICarousel from "components/ICarousel";
+
 // import styled from "styled-components";
 // import { Link } from "react-router-dom";
-// import gt300AB from "assets/images/ovens/gt300AB.png";
-// import gt600AB from "assets/images/ovens/gt600AB.png";
-// import gt700AB from "assets/images/ovens/gt700AB.png";
-// import pizzaTwo from "assets/images/foods/pizza2.jpg";
 // import Reveal from "react-awesome-reveal";
 // import { keyframes } from "@emotion/react";
 // import VideoDialog from "components/VideoDialog";
@@ -25,7 +23,7 @@ function Main({ ...props }: IMain) {
       <section id="banner">
         <BannerCarousel></BannerCarousel>
       </section>
-      <section id="company" className="basic-container ">
+      <section id="company" className="basic-container">
         <div className="mg-container">
           <div className="mg-item-l content">
             <p>
@@ -125,13 +123,15 @@ function Main({ ...props }: IMain) {
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
             <p>스테인레스 스틸 조형</p>
           </div>
-          <img src={product02} alt="" className="mg-img " />
+          <img src={product04} alt="" className="mg-img " />
         </div>
         <div className="card-container" id="card-container">
           <ProductCard></ProductCard>
         </div>
       </section>
-      <section id="instruction" className="instruction-wrapper"></section>
+      <section id="instruction" className="instruction-wrapper basic-container">
+        <ICarousel></ICarousel>
+      </section>
       <section id="support" className="support-wrapper">
         <div className="basic-container support-container">
           <h1 className="support-title">무엇이든 물어보세요 </h1>
