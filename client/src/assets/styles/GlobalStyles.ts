@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap');
     :root {
   --header-height: 1.5rem;
   /*========== Colors ==========*/
@@ -266,8 +267,8 @@ img{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
-  align-items:center;
-  margin:170px 0;
+  /* align-items:center; */
+  margin:60px 0;
 
 }
 .mg-item-l{
@@ -277,33 +278,24 @@ img{
  text-align:left
 }
 
-.mg-title-l{
-  text-align: left;
-  border-top: 1px solid #000;
-  line-height: 0.1em;
-  font-size: 14px;
-  & span{
-    background: #fefbfb;
-    padding: 0 40px 0 0;
-  }
+.subtitle{
+  font-size:14px;
+  font-weight:var(--font-regular)
 }
-.mg-title-r{
-  text-align: right;
-  border-top: 1px solid #000;
-  line-height: 0.1em;
-  font-size: 14px;
-  & span{
-    background: #fefbfb; 
-    padding: 0 0 0 40px;
-  }
+.maintitle{
+  font-size:36px;
+  font-weight:var(--font-bold);
+  color:var(--title-color);
 }
+
 .numTitle-l{
+  font-family: 'Heebo', sans-serif;
   text-align: right;
   border-bottom: 1px solid #000;
   line-height: 0.1em;
   margin: 0.5em 0 0.5em;
   font-size:55px;
-  font-weight:var(--font-bold);
+  font-weight:var(--font-black);
   color:var(--title-color);
   & span{
     background: #fefbfb; 
@@ -312,9 +304,10 @@ img{
   }
 }
 .numTitle-r{
+  font-family: 'Heebo', sans-serif;
   text-align: left;
   border-bottom: 1px solid #000;
-  line-height: 0.1em;
+  line-height: 0em;
   margin: 0.5em 0 0.5em;
   font-size:55px;
   font-weight:var(--font-bold);
@@ -330,6 +323,7 @@ img{
   border-radius: 0px;
   background: #ffffff;
   box-shadow: 15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
+  margin: 150px 0;
 }
 
 .mg-img{
@@ -337,8 +331,10 @@ img{
   width: 620px;
   object-fit: cover;
 }
+.mg-card-content{
+align-self:center;
 
-
+}
 /* product card */
 .card-container{
   margin:250px 0 250px 0;
@@ -356,7 +352,8 @@ img{
   flex-direction:column;
   justify-content:space-between;
   & .title {
-    line-height:1;
+    line-height:0.1em;
+    margin-bottom:0.5em;
     font-size:var(--biggest-font-size);
     font-weight:var(--font-bold);
     color:var(--title-color);
@@ -400,6 +397,15 @@ img{
   position:relative;
   }
 }
+
+/* .card-detail{
+  display:flex;
+  position:relative;
+  margin-top:15px;
+  animation: inAnimation 230ms ease;
+  overflow-x: auto;
+  gap:40px;
+}
 @keyframes inAnimation {
   0% {
     opacity: 0;
@@ -409,16 +415,7 @@ img{
     opacity: 1;
     visibility: visible;
   }
-}
-
-.card-detail{
-  display:flex;
-  position:relative;
-  margin-top:15px;
-  animation: inAnimation 230ms ease;
-  overflow-x: auto;
-  gap:40px;
-}
+} */
 
 
 .detail-table{

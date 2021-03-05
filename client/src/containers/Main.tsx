@@ -35,17 +35,15 @@ function Main({ ...props }: IMain) {
             <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.</p>
           </div>
-          <div className="mg-item-r title">
-            <div className="mg-title-l">
-              <span>회사소개</span>
-            </div>
-            <h2>가스텍코리아(주)</h2>
+          <div className="mg-item-r ">
+            <div className="subtitle">회사소개</div>
+            <div className="maintitle">가스텍코리아(주)</div>
           </div>
         </div>
         <div className="mg-container mg-card">
           <img src={dough} alt="" className="mg-img title" />
-          <div className="mg-item-r content">
-            <div>기계, 그 이상</div>
+          <div className="mg-item-r mg-card-content">
+            <div className="maintitle">기계, 그 이상</div>
             <div>
               <p>
                 1995년 설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
@@ -69,12 +67,10 @@ function Main({ ...props }: IMain) {
       <section id="product" className="basic-container ">
         <div className="mg-container">
           <div className="mg-item-l ">
-            <div className="mg-title-r">
-              <span>제품소개</span>
-            </div>
-            <h2>컨베이어 오븐</h2>
+            <div className="subtitle">제품소개</div>
+            <div className="maintitle">컨베이어 오븐</div>
           </div>
-          <div className="mg-item-r content">
+          <div className="mg-item-r ">
             <p>
               설립 이후 혁신과 도전으로 끊임없이 연구하며 지속 성장하여
               왔습니다.
@@ -84,11 +80,12 @@ function Main({ ...props }: IMain) {
           </div>
         </div>
         <div className="mg-container">
-          <img src={product01} alt="" className="mg-img content" />
+          <img src={product01} alt="" className="mg-img " />
           <div className="mg-item-r ">
             <div className="numTitle-r">
-              <span className="numTitle">01</span>
+              <span>01</span>
             </div>
+            <div className="maintitle">스테인레스 스틸 조형</div>
             <p>스테인레스 스틸 조형</p>
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
             <p>스테인레스 스틸 조형</p>
@@ -99,18 +96,20 @@ function Main({ ...props }: IMain) {
             <div className="numTitle-l">
               <span>02</span>
             </div>
+            <div className="maintitle">스테인레스 스틸 조형</div>
             <p>스테인레스 스틸 조형</p>
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
             <p>스테인레스 스틸 조형</p>
           </div>
-          <img src={product02} alt="" className="mg-img content" />
+          <img src={product02} alt="" className="mg-img " />
         </div>
         <div className="mg-container">
-          <img src={product03} alt="" className="mg-img content" />
+          <img src={product03} alt="" className="mg-img " />
           <div className="mg-item-r ">
             <div className="numTitle-r">
               <span>03</span>
             </div>
+            <div className="maintitle">스테인레스 스틸 조형</div>
             <p>스테인레스 스틸 조형</p>
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
             <p>스테인레스 스틸 조형</p>
@@ -121,19 +120,18 @@ function Main({ ...props }: IMain) {
             <div className="numTitle-l">
               <span>04</span>
             </div>
+            <div className="maintitle">스테인레스 스틸 조형</div>
             <p>스테인레스 스틸 조형</p>
             <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
             <p>스테인레스 스틸 조형</p>
           </div>
-          <img src={product02} alt="" className="mg-img content" />
+          <img src={product02} alt="" className="mg-img " />
         </div>
         <div className="card-container" id="card-container">
           <ProductCard></ProductCard>
         </div>
       </section>
-      <section id="instruction">
-        <div className="instruction">사용설명</div>
-      </section>
+      <section id="instruction" className="instruction-wrapper"></section>
       <section id="support" className="support-wrapper">
         <div className="basic-container support-container">
           <h1 className="support-title">무엇이든 물어보세요 </h1>
