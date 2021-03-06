@@ -199,6 +199,49 @@ img{
   font-family: 'Lexend Deca', sans-serif;
 }
 
+.iconbox{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+.flag-icon{
+  width:var(--h1-font-size);
+  padding:0 0 0 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  margin:0px 15px 15px 15px;
+  position: absolute;
+  background-color: black;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 6px 8px;
+  text-decoration: none;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 /* footer */
 .footer{
   width:100%;
