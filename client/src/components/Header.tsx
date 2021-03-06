@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import korea from "assets/images/flags/south-korea.svg";
-import china from "assets/images/flags/china.svg";
-import us from "assets/images/flags/united-states.svg";
-import vietnam from "assets/images/flags/vietnam.svg";
-// import { Link, useLocation } from "react-router-dom";
+import korea from "assets/images/svgs/south-korea.svg";
+import china from "assets/images/svgs/china.svg";
+import us from "assets/images/svgs/united-states.svg";
+import vietnam from "assets/images/svgs/vietnam.svg";
+import { useLocation } from "react-router-dom";
 interface Props {}
 export default function Header({ ...props }: Props) {
-  // const location = useLocation();
+  const location = useLocation();
   // const [menu, setMenu] = useState<boolean>();
   const [lang, setLang] = useState(0);
   const languages = [
@@ -33,7 +33,7 @@ export default function Header({ ...props }: Props) {
   };
   const nav = document.getElementById("header");
   if (nav) {
-    if (scrollPosition >= 100) {
+    if (scrollPosition >= 100 || location.pathname !== "/") {
       nav.classList.add("scroll-header");
     } else {
       nav.classList.remove("scroll-header");
@@ -48,7 +48,13 @@ export default function Header({ ...props }: Props) {
   }, []);
   return (
     <>
-      <header className="l-header" id="header">
+      {/* <header className="l-header" id="header"> */}
+      <header
+        className={
+          location.pathname !== "/" ? "l-header scroll-header" : "l-header"
+        }
+        id="header"
+      >
         <div className="basic-container nav-container">
           <ul className="nav-list">
             <a href="/#" className="nav-item nav-logo">

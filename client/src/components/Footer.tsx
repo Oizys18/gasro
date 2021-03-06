@@ -5,6 +5,8 @@ import catalog_kor from "assets/documents/catalog_kor.pdf";
 import el_kor from "assets/documents/el_kor.pdf";
 import gas_kor from "assets/documents/gas_kor.pdf";
 import rol_kor from "assets/documents/rol_kor.pdf";
+import youtube from "assets/images/svgs/youtube.svg";
+
 interface Props {}
 export default function Footer() {
   return (
@@ -48,13 +50,21 @@ export default function Footer() {
             <div className="footer-data">
               <div className="footer-docs">
                 <div className="docs-item personal">
-                  <a href="#">개인정보처리방침</a>
+                  <a href="/privacy">개인정보처리방침</a>
                 </div>
-                <div className="docs-item">회사정책</div>
-                <div>회사정책</div>
+                <div>
+                  {/* <a href="https://map.kakao.com/link/map/8732155">오시는 길</a> */}
+                  <a href="https://goo.gl/maps/s6MNjjkPMY6cb37PA">오시는 길</a>
+                </div>
+                {/* <div>회사정책</div> */}
               </div>
               <div className="footer-social">
-                <div className="social-icon">유튜브</div>
+                <div className="social-icon">
+                  <i
+                    className="bx bxl-youtube bx-sm"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                </div>
                 <div className="social-icon">네이버블로그</div>
               </div>
             </div>

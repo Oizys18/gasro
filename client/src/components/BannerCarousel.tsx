@@ -24,7 +24,7 @@ export default function MainCarousel({ ...props }: configProps) {
         showArrows={false}
         swipeable={true}
         useKeyboardArrows={true}
-        interval={2300}
+        interval={2000}
         infiniteLoop={true}
         showIndicators={true}
         showThumbs={false}

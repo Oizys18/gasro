@@ -1,15 +1,17 @@
 import * as React from "react";
 import Main from "containers/Main";
-import Products from "containers/Products";
-import Product from "containers/Product";
 import Support from "containers/Support";
-import Company from "containers/Company";
+import Privacy from "containers/Privacy";
 import Notice from "containers/Notice";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import Landing from "containers/Landing";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
+
+// import Products from "containers/Products";
+// import Product from "containers/Product";
+// import Company from "containers/Company";
+
 function Routes() {
   return (
     <>
@@ -17,12 +19,13 @@ function Routes() {
       <ScrollToTop />
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/landing" exact component={Landing} />
-        <Route path="/product" exact component={Product} />
-        <Route path="/company" exact component={Company} />
         <Route path="/support" exact component={Support} />
         <Route path="/notice" exact component={Notice} />
-        <Route path="/products" exact component={Products} />
+        <Route path="/privacy" exact component={Privacy} />
+
+        {/* <Route path="/products" exact component={Products} />
+        <Route path="/product" exact component={Product} />
+        <Route path="/company" exact component={Company} /> */}
         <Redirect path="*" to="/" />
       </Switch>
       <Footer />

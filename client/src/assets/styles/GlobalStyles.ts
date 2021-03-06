@@ -648,6 +648,13 @@ text-align:center;
   
 }
 
+.privacy-container{
+ margin:150px 0;
+}
+.privacy-text{
+  padding:150px;
+}
+
 @media screen and (min-width: 1200px){
   .basic-container{
     margin-left: auto;
