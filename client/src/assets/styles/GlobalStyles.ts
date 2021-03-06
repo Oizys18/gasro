@@ -368,6 +368,10 @@ img{
   height: 400px;
   width: 620px;
   object-fit: cover;
+
+}
+.videoImg{
+  cursor: pointer;
 }
 .mg-card-content{
 align-self:center;

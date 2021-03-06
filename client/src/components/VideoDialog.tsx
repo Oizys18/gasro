@@ -1,6 +1,6 @@
 import React from "react";
 import Dialog from "@material-ui/core/Dialog";
-import white from "assets/images/1.png";
+import poster from "assets/images/oven1.png";
 import gasro from "assets/videos/gasro.mp4";
 interface Props {
   open: boolean;
@@ -22,7 +22,7 @@ export default function VideoDialog({ ...props }: Props) {
           height="100%"
           controls={true}
           loop={false}
-          poster={white}
+          poster={poster}
           autoPlay={true}
           id="video"
         />

@@ -3,7 +3,6 @@ import BannerCarousel from "components/BannerCarousel";
 import dough from "assets/images/foods/dough.jpg";
 import ProductCard from "components/ProductCard";
 import ICarousel from "components/ICarousel";
-
 // import styled from "styled-components";
 // import { Link } from "react-router-dom";
 // import Reveal from "react-awesome-reveal";
@@ -15,12 +14,23 @@ import product02 from "assets/images/product/product02.png";
 import product03 from "assets/images/product/product03.png";
 import product04 from "assets/images/product/product04.png";
 import product05 from "assets/images/product/product05.png";
+import VideoDialog from "components/VideoDialog";
 
 interface IMain {}
 function Main({ ...props }: IMain) {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <>
       <section id="banner">
+        <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
         <BannerCarousel></BannerCarousel>
       </section>
       <section id="company" className="basic-container">
@@ -36,7 +46,12 @@ function Main({ ...props }: IMain) {
           </div>
         </div>
         <div className="mg-container mg-card mg-wrapper">
-          <img src={dough} alt="dough" className="mg-img title" />
+          <img
+            onClick={handleClickOpen}
+            src={dough}
+            alt="dough"
+            className="mg-img title videoImg"
+          />
           <div className="mg-item-r mg-card-content">
             <div className="maintitle">기계, 그 이상</div>
             <div>
