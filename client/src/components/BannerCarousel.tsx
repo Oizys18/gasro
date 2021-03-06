@@ -5,7 +5,7 @@ import banner01 from "assets/images/banner/GasroBanner01.png";
 import banner02 from "assets/images/banner/GasroBanner01kr.png";
 import banner03 from "assets/images/banner/GasroBanner01(mod01).png";
 import banner04 from "assets/images/banner/GasroBanner01kr(mod01).png";
-
+import Video from "components/Video";
 interface configProps {
   swipeable?: boolean;
 }

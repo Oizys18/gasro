@@ -1,5 +1,4 @@
 import React from "react";
-import white from "assets/images/1.png";
 import gasro from "assets/videos/gasro.mp4";
 const videoStyle = {
   padding: "none",
@@ -17,7 +16,6 @@ class Video extends React.Component {
         height="100%"
         controls={true}
         loop={false}
-        poster={white}
         id="video"
       />
     );
