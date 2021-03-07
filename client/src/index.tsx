@@ -5,6 +5,7 @@ import GlobalStyles from "assets/styles/GlobalStyles";
 import Routes from "routes/Routes";
 import "config/lang/i18n";
 import { BrowserRouter } from "react-router-dom";
+
 ReactDOM.render(
   <React.Fragment>
     <GlobalStyles />

@@ -4,12 +4,19 @@ import china from "assets/images/svgs/china.svg";
 import us from "assets/images/svgs/united-states.svg";
 import vietnam from "assets/images/svgs/vietnam.svg";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Languages, languages } from "config/lang/i18n";
+
 interface Props {}
 export default function Header({ ...props }: Props) {
   const location = useLocation();
-  // const [menu, setMenu] = useState<boolean>();
-  const [lang, setLang] = useState(0);
-  const languages = [
+  const { t, i18n } = useTranslation();
+  const handleChangeLanguage = (lang: Languages) => {
+    i18n.changeLanguage(lang);
+  };
+
+  const [locale, setLocale] = useState(0);
+  const locales = [
     <div className="iconbox">
       Korean
       <img src={korea} alt="korea" className="flag-icon" />
@@ -78,22 +85,48 @@ export default function Header({ ...props }: Props) {
               <a href="/#">공지사항</a>
             </li>
             <div className="dropdown">
-              <li className="nav-item language">{languages[lang]}</li>
+              {/* <li className="nav-item language">{languages[lang]}</li> */}
+              <li className="nav-item language">{locales[locale]}</li>
               <div className="dropdown-content">
-                <a href="/#" onClick={() => setLang(0)} className="iconbox">
-                  Korean
-                  <img src={korea} alt="korea" className="flag-icon" />
+                <a
+                  href="/#"
+                  onClick={() => {
+                    setLocale(0);
+                    handleChangeLanguage("ko");
+                  }}
+                  className="iconbox"
+                >
+                  {locales[0]}
                 </a>
-                <a href="/#" onClick={() => setLang(1)} className="iconbox">
-                  English <img src={us} alt="us" className="flag-icon" />
+                <a
+                  href="/#"
+                  onClick={() => {
+                    setLocale(1);
+                    handleChangeLanguage("en");
+                  }}
+                  className="iconbox"
+                >
+                  {locales[1]}
                 </a>
-                <a href="/#" onClick={() => setLang(2)} className="iconbox">
-                  Chinese
-                  <img src={china} alt="china" className="flag-icon" />
+                <a
+                  href="/#"
+                  onClick={() => {
+                    setLocale(2);
+                    handleChangeLanguage("cn");
+                  }}
+                  className="iconbox"
+                >
+                  {locales[2]}
                 </a>
-                <a href="/#" onClick={() => setLang(3)} className="iconbox">
-                  Vietnamese
-                  <img src={vietnam} alt="vietnam" className="flag-icon" />
+                <a
+                  href="/#"
+                  onClick={() => {
+                    setLocale(3);
+                    handleChangeLanguage("vn");
+                  }}
+                  className="iconbox"
+                >
+                  {locales[3]}
                 </a>
               </div>
             </div>

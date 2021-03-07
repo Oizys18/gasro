@@ -1,9 +1,9 @@
 {
-  "hello": "Hello !!",
-  "Main": {
-    "main-title": "아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐 ",
-    "main-description": "아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐 ",
-    "main-description2": "아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐 ",
-    "main-description3": "아시아 최고의 보급률을 자랑하는 컨베이어 피자오븐 "
+  "hello": "hello Korea",
+  "main": {
+    "title": "메인"
+  },
+  "header": {
+    "header": "헤더"
   }
 }

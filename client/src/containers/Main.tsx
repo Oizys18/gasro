@@ -3,21 +3,24 @@ import BannerCarousel from "components/BannerCarousel";
 import dough from "assets/images/foods/dough.jpg";
 import ProductCard from "components/ProductCard";
 import ICarousel from "components/ICarousel";
+import product01 from "assets/images/product/product01.png";
+import product02 from "assets/images/product/product02.png";
+import product03 from "assets/images/product/product03.png";
+import product04 from "assets/images/product/product04.png";
+// import product05 from "assets/images/product/product05.png";
+import VideoDialog from "components/VideoDialog";
+import { useTranslation } from "react-i18next";
+import { Languages, languages } from "config/lang/i18n";
+
 // import styled from "styled-components";
 // import { Link } from "react-router-dom";
 // import Reveal from "react-awesome-reveal";
 // import { keyframes } from "@emotion/react";
 // import VideoDialog from "components/VideoDialog";
 // import MainCarousel from "components/MainCarousel";
-import product01 from "assets/images/product/product01.png";
-import product02 from "assets/images/product/product02.png";
-import product03 from "assets/images/product/product03.png";
-import product04 from "assets/images/product/product04.png";
-import product05 from "assets/images/product/product05.png";
-import VideoDialog from "components/VideoDialog";
-
 interface IMain {}
 function Main({ ...props }: IMain) {
+  const { t, i18n } = useTranslation();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -36,6 +39,7 @@ function Main({ ...props }: IMain) {
       <section id="company" className="basic-container">
         <div className="mg-container">
           <div className="mg-item-l content">
+            {t("main.title")}
             <p>1995년 설립, 20년 이상의 피자오븐 기계 전문제조 경력</p>
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증 보유</p>
             <p>지속적인 연구개발을 통한 제품 혁신</p>
