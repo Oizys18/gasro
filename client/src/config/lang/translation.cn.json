@@ -1,3 +1,9 @@
 {
-  "hello": "hello China"
+  "hello": "hello Korea",
+  "main": {
+    "title": "중국"
+  },
+  "header": {
+    "header": "헤더"
+  }
 }

@@ -1,3 +1,9 @@
 {
-  "hello": "hello US"
+  "hello": "hello Korea",
+  "main": {
+    "title": "main"
+  },
+  "header": {
+    "header": "헤더"
+  }
 }

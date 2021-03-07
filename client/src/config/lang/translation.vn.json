@@ -1,3 +1,9 @@
 {
-  "hello": "hello Viet"
+  "hello": "hello Korea",
+  "main": {
+    "title": "베트남"
+  },
+  "header": {
+    "header": "헤더"
+  }
 }
