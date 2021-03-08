@@ -36,10 +36,10 @@ function Main({ ...props }: IMain) {
         <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
         <BannerCarousel></BannerCarousel>
       </section>
-      <section id="company" className="basic-container">
+      <section id="company" className="basic-container company">
         <div className="mg-container">
           <div className="mg-item-l content">
-            {t("main.title")}
+            {/* {t("main.title")} */}
             <p>1995년 설립, 20년 이상의 피자오븐 기계 전문제조 경력</p>
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증 보유</p>
             <p>지속적인 연구개발을 통한 제품 혁신</p>
@@ -154,7 +154,6 @@ function Main({ ...props }: IMain) {
           <div className="support-content">
             가스텍코리아 기술 전문가가 도와드립니다.
           </div>
-          {/* <a href="/notice" className="support-link"> */}
           <a href="/#" className="support-link">
             문의하기
           </a>

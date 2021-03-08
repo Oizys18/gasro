@@ -277,8 +277,6 @@ img{
   a{
     color:inherit
   }
-
-
 }
 .footer-box{
   padding:15px 0;
@@ -337,6 +335,13 @@ img{
 
 
 /* Main Grid */
+.company{
+  padding:50px 0;
+}
+.product{
+  padding:50px 0;
+}
+
 
 .mg-container{
   display:grid;
