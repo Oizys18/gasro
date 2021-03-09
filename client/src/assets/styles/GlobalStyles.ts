@@ -573,7 +573,7 @@ text-align:center;
   line-height:1;
   }
   color:var(--title-color);
-  /* reset button */
+  /* reset button  */
   /* span{
     font-size:36px;
     text-align:right;
