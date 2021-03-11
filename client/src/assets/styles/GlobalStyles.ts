@@ -434,7 +434,7 @@ align-self:center;
 }
 .card-content{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:730px auto;
   gap:40px;
 }
 .card-text{
@@ -460,7 +460,7 @@ align-self:center;
   border:1px solid transparent;
  
   background-color:#FFF;
-  height:140px;
+  height:120px;
   
   object-fit:cover;
   box-shadow: 3px 3px 15px #d9d9d9, -3px -3px 15px #ffffff;
@@ -480,8 +480,8 @@ align-self:center;
 }
 .card-img{
   img{
-    width:620px;
-    height:400px;
+    width:730px;
+    height:auto;
     object-fit:cover;
     background-color:#FFF;
   box-shadow: 3px 3px 15px #d9d9d9, -3px -3px 15px #ffffff;

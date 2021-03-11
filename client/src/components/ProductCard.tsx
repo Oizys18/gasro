@@ -50,6 +50,12 @@ export default function ProductCard() {
       <div className="card-content">
         <div className="card-image">
           <CardImg curFocus={focus}></CardImg>
+        </div>
+        <div className="card-text">
+          <div className="mg-title-l">
+            <span>제품상세</span>
+          </div>
+          <CardText curFocus={focus} />
           <div className="card-preview">
             <div
               className="preview-btn"
@@ -82,12 +88,6 @@ export default function ProductCard() {
               <img className="card-preview-img" src={gt700AB} alt="" />
             </div>
           </div>
-        </div>
-        <div className="card-text">
-          <div className="mg-title-l">
-            <span>제품상세</span>
-          </div>
-          <CardText curFocus={focus} />
         </div>
       </div>
     </>

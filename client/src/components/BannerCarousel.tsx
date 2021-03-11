@@ -1,11 +1,11 @@
 import React, { CSSProperties } from "react";
+import styled from "styled-components";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import banner01 from "assets/images/banner/GasroBanner01.png";
 import banner02 from "assets/images/banner/GasroBanner01kr.png";
 import banner03 from "assets/images/banner/GasroBanner01(mod01).png";
 import banner04 from "assets/images/banner/GasroBanner01kr(mod01).png";
-import Video from "components/Video";
 interface configProps {
   swipeable?: boolean;
 }
@@ -21,7 +21,7 @@ export default function MainCarousel({ ...props }: configProps) {
     <>
       <Carousel
         autoPlay={true}
-        showArrows={false}
+        showArrows={true}
         swipeable={true}
         useKeyboardArrows={true}
         interval={2000}
@@ -33,25 +33,29 @@ export default function MainCarousel({ ...props }: configProps) {
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           if (isSelected) {
             return (
-              <li
-                style={{ ...indicatorStyles, background: "red" }}
-                aria-label={`Selected: ${label} ${index + 1}`}
-                title={`Selected: ${label} ${index + 1}`}
-              />
+              <>
+                <li
+                  style={{ ...indicatorStyles, background: "red" }}
+                  aria-label={`Selected: ${label} ${index + 1}`}
+                  title={`Selected: ${label} ${index + 1}`}
+                />
+              </>
             );
           }
           return (
-            <li
-              style={indicatorStyles}
-              onClick={onClickHandler}
-              onKeyDown={onClickHandler}
-              value={index}
-              key={index}
-              role="button"
-              tabIndex={0}
-              title={`${label} ${index + 1}`}
-              aria-label={`${label} ${index + 1}`}
-            />
+            <>
+              <li
+                style={indicatorStyles}
+                onClick={onClickHandler}
+                onKeyDown={onClickHandler}
+                value={index}
+                key={index}
+                role="button"
+                tabIndex={0}
+                title={`${label} ${index + 1}`}
+                aria-label={`${label} ${index + 1}`}
+              ></li>
+            </>
           );
         }}
       >
@@ -71,3 +75,8 @@ export default function MainCarousel({ ...props }: configProps) {
     </>
   );
 }
+
+const Indicator = styled.div`
+  display: flex;
+  /* justify-content: center; */
+`;

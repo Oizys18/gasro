@@ -7,6 +7,61 @@ export default function CardText(props: cardProps) {
     return (
       <>
         <div className="title">GT300 / GT300W</div>
+        <table className="detail-table">
+          <tr>
+            <th>총 중량</th>
+            <th>제품규격 W*D*H(mm)</th>
+            <th>컨베이어벨트(폭)</th>
+            <th>온도조절 범위</th>
+          </tr>
+          <tr>
+            <td data-th="Weight">132kg</td>
+            <td data-th="ModelSize">1520(W)*1060(D)*450(H)</td>
+            <td data-th="VeltWidth">480mm(18inches)</td>
+            <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
+          </tr>
+        </table>
+        <div>
+          <div className="detail-title">가스식</div>
+          <table className="detail-table">
+            <tr>
+              <th>입력전압</th>
+              <th>소비전력</th>
+              <th>가스종류</th>
+              <th>가스소비량</th>
+              <th>가스압력</th>
+            </tr>
+            <tr>
+              <td data-th="Voltage" rowSpan={2}>
+                220V
+              </td>
+              <td data-th="ElectricityUsage" rowSpan={2}>
+                350W/Hr
+              </td>
+              <th>LNG</th>
+              <td data-th="GasUsage">10,000kal/hr</td>
+              <td data-th="GasUsage">230mmH2O</td>
+            </tr>
+            <tr>
+              <th>LPG</th>
+              <td data-th="GasPressure">0.83Kg/hr</td>
+              <td data-th="GasPressure">280mmH2O</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <div className="detail-title">전기식</div>
+          <table className="detail-table">
+            <tr>
+              <th>입력전압</th>
+              <th>소비전력</th>
+            </tr>
+            <tr>
+              <td data-th="Voltage">380V</td>
+              <td data-th="ElectricityUsage">11.0Kw/Hr</td>
+            </tr>
+          </table>
+        </div>
       </>
     );
     // return (
