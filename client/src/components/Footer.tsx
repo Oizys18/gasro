@@ -14,7 +14,7 @@ export default function Footer() {
       <footer className="footer">
         <div className="basic-container ">
           <div className="footer-top">
-            {/* <div className="footer-box">
+            <div className="footer-box">
               <div className="footer-title">
                 <span>공지사항</span>
               </div>
@@ -23,7 +23,7 @@ export default function Footer() {
                 <li className="footer-item">2</li>
                 <li className="footer-item">3</li>
               </ul>
-            </div> */}
+            </div>
             <div className="footer-box">
               <div className="footer-title">
                 <span>사용설명서 다운로드</span>
