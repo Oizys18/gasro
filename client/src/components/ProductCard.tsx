@@ -52,9 +52,6 @@ export default function ProductCard() {
           <CardImg curFocus={focus}></CardImg>
         </div>
         <div className="card-text">
-          <div className="mg-title-l">
-            <span>제품상세</span>
-          </div>
           <CardText curFocus={focus} />
           <div className="card-preview">
             <div

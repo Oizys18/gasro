@@ -6,6 +6,9 @@ export default function CardText(props: cardProps) {
   if (props.curFocus === 1) {
     return (
       <>
+        <div className="mg-title-l">
+          <span>제품상세</span>
+        </div>
         <div className="title">GT300 / GT300W</div>
       </>
     );
