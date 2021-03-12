@@ -6,14 +6,12 @@ interface Isupport {}
 function Support({ ...props }: Isupport) {
   return (
     <>
-      <section className="send section">
-        <div className="send__container bd-container">
-          <div className="send__content">
-            <h2 className="section-title-center send__title">고객지원 문의</h2>
-            <p className="send__description">hello</p>
-            {/* 라디오버튼 */}
+      <section className="basic-container">
+        <div className="sp-container">
+          <div className="sp-title">고객지원 문의</div>
+          <div className="sp-content">
             <form action="">
-              <div className="send__radio">
+              <div className="sp-radio">
                 <p>지원종류</p>
                 <label>
                   <input
@@ -45,8 +43,7 @@ function Support({ ...props }: Isupport) {
                   상담신청
                 </label>
               </div>
-              {/* 개인정보 */}
-              <div>
+              <div className="sp-input">
                 <input type="text" placeholder="업체명/성명" />
                 <input type="text" placeholder="소재지/주소" />
                 <input type="text" placeholder="전화번호" />
@@ -63,18 +60,11 @@ function Support({ ...props }: Isupport) {
                     <option value="Roller">피자도우 롤러기</option>
                   </select>
                 </label>
-                <input type="text" placeholder="문의내용" />
+                <input type="textarea" placeholder="문의내용" />
               </div>
-              <div className="send__direction">
-                <input
-                  type="text"
-                  placeholder="House address"
-                  className="send__input"
-                />
-                <a href="#home" className="button">
-                  확인
-                </a>
-              </div>
+              <a href="#" className="button" type="submit">
+                확인
+              </a>
             </form>
           </div>
 

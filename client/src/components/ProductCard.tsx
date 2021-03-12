@@ -7,6 +7,28 @@ import gt700AB from "assets/images/ovens/gt700AB.png";
 export default function ProductCard() {
   const [focus, setFocus] = useState(1);
   const [click, setClick] = useState(0);
+  const curOven = [
+    0,
+    "GT300 - 소형 18인치",
+    "GT600 - 중형 22인치",
+    "GT700 - 대형 33인치",
+  ];
+  const ovenFeature = [0, <>feature 300</>, <>feature 600</>, <>feature 700</>];
+  const ovenDetail = [
+    0,
+    <>
+      300스테인레스 스틸 조형 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
+      실현 스테인레스 스틸 조형
+    </>,
+    <>
+      600스테인레스 스틸 조형 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
+      실현 스테인레스 스틸 조형
+    </>,
+    <>
+      700스테인레스 스틸 조형 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
+      실현 스테인레스 스틸 조형
+    </>,
+  ];
   const handleFocus = (focused: number) => {
     switch (focused) {
       case 1:
@@ -47,17 +69,28 @@ export default function ProductCard() {
   };
   return (
     <>
-      <div className="card-content">
+      <div className="card-content" id="card-content">
         <div className="card-image">
           <CardImg curFocus={focus}></CardImg>
         </div>
         <div className="card-text">
-          <CardText curFocus={focus} />
+          <div className="text-detail">
+            <h2>{curOven[focus]}</h2>
+            <div className="detail">{ovenDetail[focus]}</div>
+            <div className="feature">{ovenFeature[focus]}</div>
+            <a
+              href="#card-content"
+              onClick={() => {
+                handleClick(focus);
+              }}
+            >
+              <div className="check-spec">상세스펙 확인 →</div>
+            </a>
+          </div>
           <div className="card-preview">
             <div
               className="preview-btn"
               onClick={() => {
-                handleClick(1);
                 handleFocus(1);
               }}
               onMouseOver={() => handleFocus(1)}
@@ -67,7 +100,6 @@ export default function ProductCard() {
             <div
               className="preview-btn"
               onClick={() => {
-                handleClick(2);
                 handleFocus(2);
               }}
               onMouseOver={() => handleFocus(2)}
@@ -77,7 +109,6 @@ export default function ProductCard() {
             <div
               className="preview-btn"
               onClick={() => {
-                handleClick(3);
                 handleFocus(3);
               }}
               onMouseOver={() => handleFocus(3)}
@@ -87,6 +118,7 @@ export default function ProductCard() {
           </div>
         </div>
       </div>
+      {click ? <CardText curFocus={click}></CardText> : <></>}
     </>
   );
 }

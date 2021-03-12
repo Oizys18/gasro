@@ -39,10 +39,7 @@ function Main({ ...props }: IMain) {
       <section id="company" className="basic-container company">
         <div className="mg-container">
           <div className="mg-item-l content">
-            <p>
-              1995년 설립, 20년 이상의 피자오븐김치나베우동 먹고싶다 기계
-              전문제조 경력
-            </p>
+            <p>1995년 설립, 20년 이상의 피자오븐기계 전문제조 경력</p>
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증 보유</p>
             <p>지속적인 연구개발을 통한 제품 혁신</p>
           </div>
@@ -156,7 +153,7 @@ function Main({ ...props }: IMain) {
           <div className="support-content">
             가스텍코리아 기술 전문가가 도와드립니다.
           </div>
-          <a href="/#" className="support-link">
+          <a href="/support" className="support-link">
             문의하기
           </a>
         </div>

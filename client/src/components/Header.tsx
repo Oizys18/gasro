@@ -77,7 +77,7 @@ export default function Header({ ...props }: Props) {
               <a href="/#product">제품소개</a>
             </li>
             <li className="nav-item">
-              <a href="/#support">고객지원</a>
+              <a href="/support">고객지원</a>
             </li>
           </ul>
           <ul className="nav-list">

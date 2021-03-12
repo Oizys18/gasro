@@ -5,194 +5,384 @@ interface cardProps {
 export default function CardText(props: cardProps) {
   if (props.curFocus === 1) {
     return (
-      <>
-        <div className="mg-title-l">
-          <span>제품상세</span>
+      <section className="card-detail-slide">
+        <div className="table-title">GT300 제품 스펙</div>
+        <div className="spec-table">
+          <dl>
+            <dt>외관사양</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>무게(kg)</strong>
+                  <p>132</p>
+                </li>
+                <li>
+                  <strong>크기(W*D*H,mm)</strong>
+                  <p>1520*1060*450</p>
+                </li>
+                <li>
+                  <strong>중첩설치</strong>
+                  <p>최대 3대</p>
+                </li>
+                <li>
+                  <strong>측면 창면</strong>
+                  <p>추가가능</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>컨베이어벨트</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>벨트 길이(mm)</strong>
+                  <p>480</p>
+                </li>
+                <li>
+                  <strong>벨트 폭(inch)</strong>
+                  <p>18</p>
+                </li>
+                <li>
+                  <strong>소재</strong>
+                  <p>식품용 스테인레스 스틸</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>온도조절 범위</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>섭씨</strong>
+                  <p>최고 300°C</p>
+                </li>
+                <li>
+                  <strong>화씨</strong>
+                  <p>최고 570°F</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <div className="table-subtitle">가스오븐</div>
+          <dl>
+            <dt>전력</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>입력전압</strong>
+                  <p>220V</p>
+                </li>
+                <li>
+                  <strong>소비전력</strong>
+                  <p>350W/Hr</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>LNG사용</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>가스소비량</strong>
+                  <p>10,000kal/hr</p>
+                </li>
+                <li>
+                  <strong>가스압력</strong>
+                  <p>230mmH2O</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>LPG사용</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>가스소비량</strong>
+                  <p>0.83Kg/hr</p>
+                </li>
+                <li>
+                  <strong>가스압력</strong>
+                  <p>280mmH2O</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <div className="table-subtitle">전기오븐</div>
+          <dl>
+            <dt>전력</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>입력전압</strong>
+                  <p>380V</p>
+                </li>
+                <li>
+                  <strong>소비전력</strong>
+                  <p>11.0Kw/Hr</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
         </div>
-        <div className="title">GT300 / GT300W</div>
-      </>
+      </section>
     );
-    // return (
-    //   <>
-    //     <div className="title">GT300 / GT300W</div>
-    //     <table className="detail-table">
-    //       <tr>
-    //         <th>총 중량</th>
-    //         <th>제품규격 W*D*H(mm)</th>
-    //         <th>컨베이어벨트(폭)</th>
-    //         <th>온도조절 범위</th>
-    //       </tr>
-    //       <tr>
-    //         <td data-th="Weight">132kg</td>
-    //         <td data-th="ModelSize">1520(W)*1060(D)*450(H)</td>
-    //         <td data-th="VeltWidth">480mm(18inches)</td>
-    //         <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
-    //       </tr>
-    //     </table>
-    //     <div>
-    //       <div className="detail-title">가스식</div>
-    //       <table className="detail-table">
-    //         <tr>
-    //           <th>입력전압</th>
-    //           <th>소비전력</th>
-    //           <th>가스종류</th>
-    //           <th>가스소비량</th>
-    //           <th>가스압력</th>
-    //         </tr>
-    //         <tr>
-    //           <td data-th="Voltage" rowSpan={2}>
-    //             220V
-    //           </td>
-    //           <td data-th="ElectricityUsage" rowSpan={2}>
-    //             350W/Hr
-    //           </td>
-    //           <th>LNG</th>
-    //           <td data-th="GasUsage">10,000kal/hr</td>
-    //           <td data-th="GasUsage">230mmH2O</td>
-    //         </tr>
-    //         <tr>
-    //           <th>LPG</th>
-    //           <td data-th="GasPressure">0.83Kg/hr</td>
-    //           <td data-th="GasPressure">280mmH2O</td>
-    //         </tr>
-    //       </table>
-    //     </div>
-    //     <div>
-    //       <div className="detail-title">전기식</div>
-    //       <table className="detail-table">
-    //         <tr>
-    //           <th>입력전압</th>
-    //           <th>소비전력</th>
-    //         </tr>
-    //         <tr>
-    //           <td data-th="Voltage">380V</td>
-    //           <td data-th="ElectricityUsage">11.0Kw/Hr</td>
-    //         </tr>
-    //       </table>
-    //     </div>
-    //   </>
-    // );
   } else if (props.curFocus === 2) {
     return (
-      <>
-        <div className="title">GT600 / GT600W</div>
-        <table className="detail-table">
-          <tr>
-            <th>총 중량</th>
-            <th>제품규격 W*D*H(mm)</th>
-            <th>컨베이어벨트(폭)</th>
-            <th>온도조절 범위</th>
-          </tr>
-          <tr>
-            <td data-th="Weight"> 153kg</td>
-            <td data-th="ModelSize">1520(W)*1160(D)*450(H)</td>
-            <td data-th="VeltWidth">580mm(22inches)</td>
-            <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
-          </tr>
-        </table>
-        <div>
-          <div className="detail-title">가스식</div>
-          <table className="detail-table">
-            <tr>
-              <th>입력전압</th>
-              <th>소비전력</th>
-              <th>가스종류</th>
-              <th>가스소비량</th>
-              <th>가스압력</th>
-            </tr>
-            <tr>
-              <td data-th="Voltage" rowSpan={2}>
-                220V
-              </td>
-              <td data-th="ElectricityUsage" rowSpan={2}>
-                350W/Hr
-              </td>
-              <th>LNG</th>
-              <td data-th="GasUsage">15,000Kal/hr</td>
-              <td data-th="GasUsage">230mmH2O</td>
-            </tr>
-            <tr>
-              <th>LPG</th>
-              <td data-th="GasPressure">1.2kg/hr</td>
-              <td data-th="GasPressure">280mmH2O</td>
-            </tr>
-          </table>
+      <section className="card-detail-slide">
+        <div className="table-title">GT600 제품 스펙</div>
+        <div className="spec-table">
+          <dl>
+            <dt>외관사양</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>무게(kg)</strong>
+                  <p>153</p>
+                </li>
+                <li>
+                  <strong>크기(W*D*H,mm)</strong>
+                  <p>1520*1160*450</p>
+                </li>
+                <li>
+                  <strong>중첩설치</strong>
+                  <p>최대 3대</p>
+                </li>
+                <li>
+                  <strong>측면 창면</strong>
+                  <p>추가가능</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>컨베이어벨트</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>벨트 길이(mm)</strong>
+                  <p>580</p>
+                </li>
+                <li>
+                  <strong>벨트 폭(inch)</strong>
+                  <p>22</p>
+                </li>
+                <li>
+                  <strong>소재</strong>
+                  <p>식품용 스테인레스 스틸</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>온도조절 범위</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>섭씨</strong>
+                  <p>최고 300°C</p>
+                </li>
+                <li>
+                  <strong>화씨</strong>
+                  <p>최고 570°F</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <div className="table-subtitle">가스오븐</div>
+          <dl>
+            <dt>전력</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>입력전압</strong>
+                  <p>220V</p>
+                </li>
+                <li>
+                  <strong>소비전력</strong>
+                  <p>350W/Hr</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>LNG사용</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>가스소비량</strong>
+                  <p>15,000kal/hr</p>
+                </li>
+                <li>
+                  <strong>가스압력</strong>
+                  <p>230mmH2O</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>LPG사용</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>가스소비량</strong>
+                  <p>1.2Kg/hr</p>
+                </li>
+                <li>
+                  <strong>가스압력</strong>
+                  <p>280mmH2O</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <div className="table-subtitle">전기오븐</div>
+          <dl>
+            <dt>전력</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>입력전압</strong>
+                  <p>380V</p>
+                </li>
+                <li>
+                  <strong>소비전력</strong>
+                  <p>12.5Kw/Hr</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
         </div>
-        <div>
-          <div className="detail-title">전기식</div>
-          <table className="detail-table">
-            <tr>
-              <th>입력전압</th>
-              <th>소비전력</th>
-            </tr>
-            <tr>
-              <td data-th="Voltage">380V</td>
-              <td data-th="ElectricityUsage">12.5Kw/Hr</td>
-            </tr>
-          </table>
-        </div>
-      </>
+      </section>
     );
   } else if (props.curFocus === 3) {
     return (
-      <>
-        <div className="title">GT700 / GT700W</div>
-        <table className="detail-table">
-          <tr>
-            <th>총 중량</th>
-            <th>제품규격 W*D*H(mm)</th>
-            <th>컨베이어벨트(폭)</th>
-            <th>온도조절 범위</th>
-          </tr>
-          <tr>
-            <td data-th="Weight"> 185Kg</td>
-            <td data-th="ModelSize">2010(W)*1425(D)*450(H)</td>
-            <td data-th="VeltWidth">840mm(33inches)</td>
-            <td data-th="TemperatureRange">0°F~570°F (0°C~300°C)</td>
-          </tr>
-        </table>
-        <div>
-          <div className="detail-title">가스식</div>
-          <table className="detail-table">
-            <tr>
-              <th>입력전압</th>
-              <th>소비전력</th>
-              <th>가스종류</th>
-              <th>가스소비량</th>
-              <th>가스압력</th>
-            </tr>
-            <tr>
-              <td data-th="Voltage" rowSpan={2}>
-                220V
-              </td>
-              <td data-th="ElectricityUsage" rowSpan={2}>
-                350W/Hr
-              </td>
-              <th>LNG</th>
-              <td data-th="GasUsage">20,500Kal/hr</td>
-              <td data-th="GasUsage">230mmH2O</td>
-            </tr>
-            <tr>
-              <th>LPG</th>
-              <td data-th="GasPressure">1.7kg/hr</td>
-              <td data-th="GasPressure">280mmH2O</td>
-            </tr>
-          </table>
+      <section className="card-detail-slide">
+        <div className="table-title">GT700 제품 스펙</div>
+        <div className="spec-table">
+          <dl>
+            <dt>외관사양</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>무게(kg)</strong>
+                  <p>185</p>
+                </li>
+                <li>
+                  <strong>크기(W*D*H,mm)</strong>
+                  <p>2010*1425*450</p>
+                </li>
+                <li>
+                  <strong>중첩설치</strong>
+                  <p>최대 3대</p>
+                </li>
+                <li>
+                  <strong>측면 창면</strong>
+                  <p>추가가능</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>컨베이어벨트</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>벨트 길이(mm)</strong>
+                  <p>840</p>
+                </li>
+                <li>
+                  <strong>벨트 폭(inch)</strong>
+                  <p>33</p>
+                </li>
+                <li>
+                  <strong>소재</strong>
+                  <p>식품용 스테인레스 스틸</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>온도조절 범위</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>섭씨</strong>
+                  <p>최고 300°C</p>
+                </li>
+                <li>
+                  <strong>화씨</strong>
+                  <p>최고 570°F</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <div className="table-subtitle">가스오븐</div>
+          <dl>
+            <dt>전력</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>입력전압</strong>
+                  <p>220V</p>
+                </li>
+                <li>
+                  <strong>소비전력</strong>
+                  <p>350W/Hr</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>LNG사용</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>가스소비량</strong>
+                  <p>20,500kal/hr</p>
+                </li>
+                <li>
+                  <strong>가스압력</strong>
+                  <p>230mmH2O</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <dl>
+            <dt>LPG사용</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>가스소비량</strong>
+                  <p>1.7Kg/hr</p>
+                </li>
+                <li>
+                  <strong>가스압력</strong>
+                  <p>280mmH2O</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
+          <div className="table-subtitle">전기오븐</div>
+          <dl>
+            <dt>전력</dt>
+            <dd>
+              <ol>
+                <li>
+                  <strong>입력전압</strong>
+                  <p>380V</p>
+                </li>
+                <li>
+                  <strong>소비전력</strong>
+                  <p>21.0Kw/Hr</p>
+                </li>
+              </ol>
+            </dd>
+          </dl>
         </div>
-        <div>
-          <div className="detail-title">전기식</div>
-          <table className="detail-table">
-            <tr>
-              <th>입력전압</th>
-              <th>소비전력</th>
-            </tr>
-            <tr>
-              <td data-th="Voltage">380V</td>
-              <td data-th="ElectricityUsage">21.0Kw/Hr</td>
-            </tr>
-          </table>
-        </div>
-      </>
+      </section>
     );
   }
   return <></>;
