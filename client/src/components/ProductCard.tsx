@@ -4,6 +4,8 @@ import CardImg from "components/CardImg";
 import gt300AB from "assets/images/ovens/gt300AB.png";
 import gt600AB from "assets/images/ovens/gt600AB.png";
 import gt700AB from "assets/images/ovens/gt700AB.png";
+import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 export default function ProductCard() {
   const [focus, setFocus] = useState(1);
   const [click, setClick] = useState(0);
@@ -78,20 +80,15 @@ export default function ProductCard() {
             <h2>{curOven[focus]}</h2>
             <div className="detail">{ovenDetail[focus]}</div>
             <div className="feature">{ovenFeature[focus]}</div>
-            <a
-              href="#card-content"
-              onClick={() => {
-                handleClick(focus);
-              }}
-            >
-              <div className="check-spec">상세스펙 확인 →</div>
-            </a>
           </div>
           <div className="card-preview">
             <div
               className="preview-btn"
               onClick={() => {
                 handleFocus(1);
+                if (click) {
+                  handleClick(1);
+                }
               }}
               onMouseOver={() => handleFocus(1)}
             >
@@ -101,6 +98,9 @@ export default function ProductCard() {
               className="preview-btn"
               onClick={() => {
                 handleFocus(2);
+                if (click) {
+                  handleClick(2);
+                }
               }}
               onMouseOver={() => handleFocus(2)}
             >
@@ -110,6 +110,9 @@ export default function ProductCard() {
               className="preview-btn"
               onClick={() => {
                 handleFocus(3);
+                if (click) {
+                  handleClick(3);
+                }
               }}
               onMouseOver={() => handleFocus(3)}
             >
@@ -118,7 +121,31 @@ export default function ProductCard() {
           </div>
         </div>
       </div>
-      {click ? <CardText curFocus={click}></CardText> : <></>}
+      {click ? (
+        <>
+          <a
+            className="detail-show"
+            onClick={() => {
+              handleClick(focus);
+            }}
+          >
+            {/* <span>상세스펙</span> */}
+            <i className="bx  bxs-chevrons-up bx-flashing bx-tada-hover"></i>
+          </a>
+
+          <CardText curFocus={click}></CardText>
+        </>
+      ) : (
+        <a
+          className="detail-show"
+          onClick={() => {
+            handleClick(focus);
+          }}
+        >
+          {/* <span>상세스펙</span> */}
+          <i className="bx bxs-chevrons-down bx-flashing bx-tada-hover"></i>
+        </a>
+      )}
     </>
   );
 }

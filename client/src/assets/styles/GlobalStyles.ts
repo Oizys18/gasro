@@ -593,7 +593,17 @@ align-self:center;
   }
 }
 
-
+.detail-show{
+  cursor: pointer;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+  padding:10px;
+  color:black;
+  font-size:50px;
+  flex-direction:column;
+  background-color:white;
+}
 
 
 
