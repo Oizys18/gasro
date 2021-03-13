@@ -129,7 +129,7 @@ export default function ProductCard() {
               handleClick(focus);
             }}
           >
-            {/* <span>상세스펙</span> */}
+            <span>상세스펙</span>
             <i className="bx  bxs-chevrons-up bx-flashing bx-tada-hover"></i>
           </a>
 
