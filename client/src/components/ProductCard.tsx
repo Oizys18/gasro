@@ -121,6 +121,7 @@ export default function ProductCard() {
           </div>
         </div>
       </div>
+      
       {click ? (
         <>
           <a
@@ -129,7 +130,7 @@ export default function ProductCard() {
               handleClick(focus);
             }}
           >
-            <span>상세스펙</span>
+            <span>상세스펙 보기</span>
             <i className="bx  bxs-chevrons-up bx-flashing bx-tada-hover"></i>
           </a>
 
