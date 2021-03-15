@@ -157,6 +157,7 @@ img{
 .scroll-header{
   box-shadow: 0 2px 5px rgba(0,0,0,.2);
   background-color:var(--title-color);
+  opacity:0.8;
   transition:.4s;
 }
 
