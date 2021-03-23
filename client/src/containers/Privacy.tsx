@@ -1,5 +1,4 @@
 import * as React from "react";
-import Board from "components/Board";
 interface IPrivacy {}
 function Privacy({ ...props }: IPrivacy) {
   return (

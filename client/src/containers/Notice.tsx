@@ -1,5 +1,4 @@
 import * as React from "react";
-import Board from "components/Board";
 interface Inotice {}
 function Notice({ ...props }: Inotice) {
   return (

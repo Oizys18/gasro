@@ -4,8 +4,8 @@ import CardImg from "components/CardImg";
 import gt300AB from "assets/images/ovens/gt300AB.png";
 import gt600AB from "assets/images/ovens/gt600AB.png";
 import gt700AB from "assets/images/ovens/gt700AB.png";
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+// import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+// import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 export default function ProductCard() {
   const [focus, setFocus] = useState(1);
   const [click, setClick] = useState(0);
@@ -121,7 +121,7 @@ export default function ProductCard() {
           </div>
         </div>
       </div>
-      
+
       {click ? (
         <>
           <a
@@ -130,7 +130,7 @@ export default function ProductCard() {
               handleClick(focus);
             }}
           >
-            <span>상세스펙 보기</span>
+            {/* <span>상세스펙 보기</span> */}
             <i className="bx  bxs-chevrons-up bx-flashing bx-tada-hover"></i>
           </a>
 

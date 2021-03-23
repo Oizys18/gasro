@@ -60,10 +60,12 @@ export default function ICarousel() {
   const setSlide = (num: number) => {
     setCurrentSlide(num);
   };
+
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
     slideRef.current.style.transform = `translateX(-${340 * currentSlide}px)`;
   }, [currentSlide]);
+
   return (
     <>
       <div className="basic-container">
@@ -87,22 +89,19 @@ export default function ICarousel() {
           <ISlide image={product05} cur={currentSlide} page={4} />
         </a>
       </div>
-      <div className="basic-container slide-controller">
+      <div className="basic-container slide-container">
         <div className="slide-title">
           <div className="num">0{currentSlide + 1}</div>
           <div className="text">{slide_title[currentSlide]}</div>
-          <a onClick={() => setSlide(0)}>
-            <span className="material-icons refresh">refresh</span>
+
+          <a onClick={nextSlide} className="slide-button slide-next">
+            다음
+          </a>
+          <a onClick={() => setSlide(0)} className="slide-button slide-start">
+            처음부터
           </a>
         </div>
-        {/* <div className="slide-pointer">
-          <a onClick={prevSlide} className="prev">
-            <span className="material-icons">keyboard_arrow_left</span>
-          </a>
-          <a onClick={nextSlide} className="next">
-            <span className="material-icons ">keyboard_arrow_right</span>
-          </a>
-        </div> */}
+
         <div className="slide-text">{slide_text[currentSlide]}</div>
       </div>
     </>

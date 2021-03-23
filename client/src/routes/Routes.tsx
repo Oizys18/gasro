@@ -8,10 +8,6 @@ import Footer from "components/Footer";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
-// import Products from "containers/Products";
-import Product from "containers/Product";
-// import Company from "containers/Company";
-
 function Routes() {
   return (
     <>
@@ -22,9 +18,6 @@ function Routes() {
         <Route path="/support" exact component={Support} />
         <Route path="/notice" exact component={Notice} />
         <Route path="/privacy" exact component={Privacy} />
-        <Route path="/product/:productId" exact component={Product} />
-        {/* <Route path="/products" exact component={Products} /> */}
-        {/* <Route path="/company" exact component={Company} /> */}
         <Redirect path="*" to="/" />
       </Switch>
       <Footer />

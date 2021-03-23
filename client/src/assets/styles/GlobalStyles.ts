@@ -157,7 +157,7 @@ img{
 .scroll-header{
   box-shadow: 0 2px 5px rgba(0,0,0,.2);
   background-color:var(--title-color);
-  opacity:0.8;
+  opacity:0.93;
   transition:.4s;
 }
 
@@ -667,6 +667,9 @@ text-align:center;
  
 }
 .slide-container{
+  margin-top:10px;
+  margin-bottom:200px;
+  height:100px;
 }
 .slide-image{
   height:350px;
@@ -681,14 +684,11 @@ text-align:center;
   transition: all 0.6s ease;
 }
 
-.slide-controller{
-  margin-top:10px;
-  margin-bottom:200px;
-  height:100px;
-}
+
 .slide-title{
   margin-bottom:10px;
   display:flex;
+  color:var(--title-color);
   .text{
   font-size:var(--biggest-font-size);
   font-weight:var(--font-bold);
@@ -700,11 +700,9 @@ text-align:center;
   font-weight:var(--font-bold);
   line-height:1;
   }
-  color:var(--title-color);
-
+  
 }
 .refresh{
-  
   &:hover{
     color:red;
   }
@@ -716,6 +714,48 @@ text-align:center;
   cursor: pointer;
   font-weight:bold;
 }
+.next{
+  &:hover{
+    color:red;
+  }
+  font-size:var(--biggest-font-size);
+  text-align:right;
+  line-height:1;
+  align-self:center;
+  margin:0 0 0 15px;
+  cursor: pointer;
+  font-weight:bold;
+}
+
+.slide-button{
+  
+  align-self:center;
+  text-align:center;
+  &:hover{
+    background-color:var(--title-color);
+    color:var(--body-color);
+  }
+  cursor: pointer;
+  background-color:var(--text-color);
+  color:var(--body-color);
+  font-size:var(--normal-font-size);
+  font-weight:var(--font-bold);
+  border:1px solid var(--body-color);
+  width:130px;
+  border-radius:3px;
+  padding:8px 0;
+  margin:5px 15px;
+  &.slide-next{
+    margin:5px 10px 5px 50px;
+  }
+}
+
+
+
+
+
+
+
 
 
 /* support */
@@ -742,6 +782,10 @@ text-align:center;
   font-size:var(--h3-font-size)
 }
 .support-link{
+  &:hover{
+    background-color:var(--body-color);
+    color:var(--text-color)
+  }
   color:var(--body-color);
   font-size:var(--h3-font-size);
   border:1px solid var(--body-color);
@@ -749,7 +793,6 @@ text-align:center;
   margin-top:1em;
   padding:10px 100px;
   font-weight:var(--font-bold);
-  
 }
 
 .privacy-container{

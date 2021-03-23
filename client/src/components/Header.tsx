@@ -48,11 +48,11 @@ export default function Header({ ...props }: Props) {
   }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <>
       {/* <header className="l-header" id="header"> */}
