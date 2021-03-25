@@ -1,9 +1,11 @@
-import * as React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 interface Isupport {}
 
 function Support({ ...props }: Isupport) {
+  const [category, setCategory] = useState(0);
+
   return (
     <>
       <section className="basic-container">
@@ -11,6 +13,123 @@ function Support({ ...props }: Isupport) {
           <div className="sp-title">고객지원 문의</div>
           <div className="sp-content">
             <form action="">
+              <div className="spec-table">
+                <dl>
+                  <dt>문의종류</dt>
+                  <dd>
+                    <ol>
+                      <li>
+                        <strong>
+                          <label>
+                            <input
+                              type="radio"
+                              name="category"
+                              id="support-category"
+                              value="product-inquiry"
+                              checked={category === 0 ? true : false}
+                              onChange={() => setCategory(0)}
+                            />
+                            제품관련 문의
+                          </label>
+                        </strong>
+                      </li>
+                      <li>
+                        <strong>
+                          <label>
+                            <input
+                              type="radio"
+                              name="category"
+                              id="support-category"
+                              value="product-inquiry"
+                              checked={category === 1 ? true : false}
+                              onChange={() => setCategory(1)}
+                            />
+                            A/S 문의
+                          </label>
+                        </strong>
+                      </li>
+                      <li>
+                        <strong>
+                          <label>
+                            <input
+                              type="radio"
+                              name="category"
+                              id="support-category"
+                              value="product-inquiry"
+                              checked={category === 2 ? true : false}
+                              onChange={() => setCategory(2)}
+                            />
+                            상담신청
+                          </label>
+                        </strong>
+                      </li>
+                    </ol>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    고객정보
+                    {/* <label htmlFor="">*선택</label> */}
+                  </dt>
+                  <dd>
+                    <ol>
+                      <li>
+                        <strong>업체명/성명</strong>
+                        <p>
+                          <input
+                            type="text"
+                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                          />
+                        </p>
+                      </li>
+                      <li>
+                        <strong>소재지 / 주소</strong>
+                        <p>
+                          <input
+                            type="text"
+                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                          />
+                        </p>
+                      </li>
+                      <li>
+                        <strong>전화번호</strong>
+                        <p>
+                          <input
+                            type="text"
+                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                          />
+                        </p>
+                      </li>
+                      <li>
+                        <strong>이메일</strong>
+                        <p>
+                          <input
+                            type="text"
+                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                          />
+                        </p>
+                      </li>
+                    </ol>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>문의내용</dt>
+                  <dd>
+                    <ol>
+                      <li>
+                        <strong>이메일</strong>
+                        <p>
+                          <input
+                            type="text"
+                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                          />
+                        </p>
+                      </li>
+                    </ol>
+                  </dd>
+                </dl>
+              </div>
+              {/* 
               <div className="sp-radio">
                 <p>지원종류</p>
                 <label>
@@ -18,16 +137,9 @@ function Support({ ...props }: Isupport) {
                     type="radio"
                     name="category"
                     id="support-category"
-                    value="after-service"
-                  />
-                  A/S문의
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="category"
-                    id="support-category"
                     value="product-inquiry"
+                    checked={category === 0 ? true : false}
+                    onChange={() => setCategory(0)}
                   />
                   제품관련 문의
                 </label>
@@ -36,13 +148,24 @@ function Support({ ...props }: Isupport) {
                     type="radio"
                     name="category"
                     id="support-category"
-                    value="
-                    consulting"
-                    checked
+                    value="consulting"
+                    checked={category === 1 ? true : false}
+                    onChange={() => setCategory(1)}
                   />
                   상담신청
                 </label>
-              </div>
+                <label>
+                  <input
+                    type="radio"
+                    name="category"
+                    id="support-category"
+                    value="after-service"
+                    checked={category === 2 ? true : false}
+                    onChange={() => setCategory(2)}
+                  />
+                  A/S문의
+                </label>
+              </div> */}
               <div className="sp-input">
                 <input type="text" placeholder="업체명/성명" />
                 <input type="text" placeholder="소재지/주소" />

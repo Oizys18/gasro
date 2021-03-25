@@ -7,17 +7,18 @@ import product01 from "assets/images/product/product01.png";
 import product02 from "assets/images/product/product02.png";
 import product03 from "assets/images/product/product03.png";
 import product04 from "assets/images/product/product04.png";
-// import product05 from "assets/images/product/product05.png";
 import VideoDialog from "components/VideoDialog";
 import { useTranslation } from "react-i18next";
 import { Languages, languages } from "config/lang/i18n";
 
+// import product05 from "assets/images/product/product05.png";
 // import styled from "styled-components";
 // import { Link } from "react-router-dom";
 // import Reveal from "react-awesome-reveal";
 // import { keyframes } from "@emotion/react";
 // import VideoDialog from "components/VideoDialog";
 // import MainCarousel from "components/MainCarousel";
+
 interface IMain {}
 function Main({ ...props }: IMain) {
   const { t, i18n } = useTranslation();

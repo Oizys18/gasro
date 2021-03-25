@@ -5,16 +5,20 @@ import product02 from "assets/images/product/product02.png";
 import product03 from "assets/images/product/product03.png";
 import product04 from "assets/images/product/product04.png";
 import product05 from "assets/images/product/product05.png";
-
+import { useTranslation } from "react-i18next";
+import { Languages, languages } from "config/lang/i18n";
 export default function ICarousel() {
+  // {t("main.title")}
+  const { t, i18n } = useTranslation();
+
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const TOTAL_SLIDES = 4;
   const slide_title = [
-    "오븐점화",
-    "온도설정",
-    "시간설정",
-    "오븐소화",
-    "전원종료",
+    <>오븐점화</>,
+    <>온도설정</>,
+    <>시간설정</>,
+    <>오븐소화</>,
+    <>전원종료</>,
   ];
   const slide_text = [
     <>
@@ -50,13 +54,13 @@ export default function ICarousel() {
       setCurrentSlide(currentSlide + 1);
     }
   };
-  const prevSlide = () => {
-    if (currentSlide === 0) {
-      setCurrentSlide(TOTAL_SLIDES);
-    } else {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
+  // const prevSlide = () => {
+  //   if (currentSlide === 0) {
+  //     setCurrentSlide(TOTAL_SLIDES);
+  //   } else {
+  //     setCurrentSlide(currentSlide - 1);
+  //   }
+  // };
   const setSlide = (num: number) => {
     setCurrentSlide(num);
   };
