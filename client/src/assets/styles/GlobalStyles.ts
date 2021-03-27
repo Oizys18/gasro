@@ -796,12 +796,31 @@ text-align:center;
 }
 
 .privacy-container{
- margin:150px 0;
+ margin:50px 0;
 }
 .privacy-text{
-  padding:150px;
-}
+  padding:80px;
+  p{
 
+  }
+  .p-line{
+    font-size:var(--small-font-size);
+    margin: 0 0 0 10px;
+  }
+  .p-head{
+    font-size:var(--h2-font-size);
+    color:var(--text-color);
+    font-weight:var(--font-bold);
+    border-bottom:2px solid black;
+    margin:0 0 15px 0;
+    padding:0 0 5px 0;
+  }
+  .p-subhead{
+    font-size:var(--h3-font-size);
+    margin:5px 0;
+  }
+
+}
 
 /* support */
 .sp-container{

@@ -5,14 +5,13 @@ function Privacy({ ...props }: IPrivacy) {
     <>
       <section className="basic-container privacy-container" id="privacy">
         <div className="privacy-text">
-          <p className="p-line">개인정보 처리방침</p>
-          <p className="p-line"></p>
+          <p className="p-head">개인정보 처리방침</p>
           <p className="p-line">
             가스텍코리아(주)(이하 ‘회사’라 한다)는 이용자의 개인정보를 보호하고
             이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이
             개인정보 처리방침을 수립·공개합니다.
           </p>
-          <p className="p-line">제1조(개인정보의 처리목적)</p>
+          <p className="p-subhead">제1조(개인정보의 처리목적)</p>
           <p className="p-line">
             회사는 다음의 목적을 위하여 개인정보를 처리합니다.
           </p>
@@ -40,17 +39,19 @@ function Privacy({ ...props }: IPrivacy) {
             민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락․통지,
             처리결과 통보 등의 목적으로 개인정보를 처리합니다.
           </p>
-          <p className="p-line">제2조(처리하는 개인정보 항목)</p>
+          <p className="p-subhead">제2조(처리하는 개인정보 항목)</p>
           <p className="p-line">
             회사는 다음의 개인정보 항목을 처리하고 있습니다.
           </p>
           <p className="p-line">1. 홈페이지 회원 가입 및 관리</p>
-          필수항목 : 성명, 생년월일, 아이디, 비밀번호, 주소, 전화번호, 성별,
-          이메일주소, 아이핀번호 선택항목 : 결혼여부, 관심분야 2. 재화 또는
-          서비스 제공 필수항목 : 성명, 생년월일, 아이디, 비밀번호, 주소,
-          전화번호, 이메일주소, 아이핀번호, 신용카드번호 선택항목 : 관심분야,
-          과거 구매내역
-          <p className="p-line">제3조(개인정보 수집 방법)</p>
+          <p className="p-line">
+            필수항목 : 성명, 생년월일, 아이디, 비밀번호, 주소, 전화번호, 성별,
+            이메일주소, 아이핀번호 선택항목 : 결혼여부, 관심분야 2. 재화 또는
+            서비스 제공 필수항목 : 성명, 생년월일, 아이디, 비밀번호, 주소,
+            전화번호, 이메일주소, 아이핀번호, 신용카드번호 선택항목 : 관심분야,
+            과거 구매내역
+          </p>
+          <p className="p-subhead">제3조(개인정보 수집 방법)</p>
           <p className="p-line">
             1. 회원가입 및 서비스 이용 과정에서 이용자가 개인정보 수집에 대해
             동의를 하고 직접 정보를 입력하는 경우, 해당 개인정보를 수집합니다.
@@ -71,7 +72,7 @@ function Privacy({ ...props }: IPrivacy) {
             5. 14세 미만의 회원에 대해서는 법정대리인으로부터 동의를 받아야
             이용이 가능합니다.
           </p>
-          <p className="p-line">제4조(개인정보의 처리 및 보유기간)</p>
+          <p className="p-subhead">제4조(개인정보의 처리 및 보유기간)</p>
           <p className="p-line">
             ① 회사는 법령에 따른 개인정보 보유·이용기간 또는 이용자로부터
             개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서
@@ -120,7 +121,7 @@ function Privacy({ ...props }: IPrivacy) {
           <p className="p-line">
             - 컴퓨터통신, 인터넷 로그기록자료, 접속지 추적자료 : 3개월
           </p>
-          <p className="p-line">제5조(개인정보의 파기)</p>
+          <p className="p-subhead">제5조(개인정보의 파기)</p>
           <p className="p-line">
             ① 회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가
             불필요하게 되었을 때에는 5일 이내 해당 개인정보를 파기합니다.
@@ -146,7 +147,7 @@ function Privacy({ ...props }: IPrivacy) {
             파기하며, 종이 문서에 기록․저장된 개인정보는 분쇄기로 분쇄하거나
             소각하여 파기합니다.
           </p>
-          <p className="p-line">
+          <p className="p-subhead">
             제6조(이용자 및 법정대리인의 권리·의무 및 행사방법)
           </p>
           <p className="p-line">
@@ -182,7 +183,7 @@ function Privacy({ ...props }: IPrivacy) {
             회사가 처리하고 있는 이용자 본인 이나 타인의 개인정보 및 사생활을
             침해하여서는 아니됩니다.
           </p>
-          <p className="p-line">
+          <p className="p-subhead">
             제7조(개인정보 자동 수집 장치의 설치·운영 및 거부)
           </p>
           <p className="p-line">
@@ -206,7 +207,7 @@ function Privacy({ ...props }: IPrivacy) {
             (설정방법, IE 기준)웹 브라우저 상단의 도구 - 인터넷 옵션 - 개인정보
             - 사이트 차단
           </p>
-          <p className="p-line">제8조(개인정보의 안전성 확보조치)</p>
+          <p className="p-subhead">제8조(개인정보의 안전성 확보조치)</p>
           <p className="p-line">
             회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고
             있습니다.
@@ -221,7 +222,7 @@ function Privacy({ ...props }: IPrivacy) {
           <p className="p-line">
             3. 물리적 조치 : 전산실, 자료보관실 등의 접근통제
           </p>
-          <p className="p-line">제9조(개인정보 보호책임자)</p>
+          <p className="p-subhead">제9조(개인정보 보호책임자)</p>
           <p className="p-line">
             ① 회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보
             처리와 관련한 이용자의 불만처리 및 피해구제 등을 위하여 아래와 같이
