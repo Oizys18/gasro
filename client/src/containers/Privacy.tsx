@@ -6,7 +6,7 @@ function Privacy({ ...props }: IPrivacy) {
       <section className="basic-container privacy-container" id="privacy">
         <div className="privacy-text">
           <p className="p-head">개인정보 처리방침</p>
-          <p className="p-line">
+          <p className="p-line p-headinst">
             가스텍코리아(주)(이하 ‘회사’라 한다)는 이용자의 개인정보를 보호하고
             이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이
             개인정보 처리방침을 수립·공개합니다.

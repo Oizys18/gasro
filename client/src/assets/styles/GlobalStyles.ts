@@ -819,6 +819,9 @@ text-align:center;
     font-size:var(--h3-font-size);
     margin:5px 0;
   }
+  .p-headinst{
+    font-size:var(--h3-font-size);
+  }
 
 }
 
