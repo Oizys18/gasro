@@ -38,7 +38,7 @@ function Main({ ...props }: IMain) {
         <BannerCarousel></BannerCarousel>
       </section>
       <section id="company" className="basic-container company">
-        <div className="mg-container">
+        <div className="mg-container top">
           <div className="mg-item-l content">
             <p>1995년 설립, 20년 이상의 피자오븐기계 전문제조 경력</p>
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증 보유</p>

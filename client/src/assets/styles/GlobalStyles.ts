@@ -350,10 +350,10 @@ img{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
-  margin:60px 0;
+  margin:50px 0;
 }
 .mg-wrapper{
-  margin:150px 0;
+  /* margin:50px 0; */
 }
 .mg-item-l{
   text-align:right
@@ -387,7 +387,7 @@ img{
   font-weight:var(--font-black);
   color:var(--title-color);
   & span{
-    background: #fefbfb; 
+    background: var(--body-color); 
     padding: 0 0 0 40px;
     line-height:0;
   }
@@ -402,7 +402,7 @@ img{
   font-weight:var(--font-bold);
   color:var(--title-color);
   & span{
-    background: #fefbfb; 
+    background: var(--body-color); 
     padding: 0 40px 0 0;
     line-height:0;
   }
@@ -412,7 +412,7 @@ img{
   border-radius: 0px;
   background: var(--container-color);
   box-shadow: 15px 15px 30px #d9d9d9, -15px -15px 30px #ffffff;
-  margin: 150px 0;
+  margin: 50px 0 150px 0;
 }
 
 .mg-img{
