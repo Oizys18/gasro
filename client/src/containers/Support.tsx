@@ -67,10 +67,7 @@ function Support({ ...props }: Isupport) {
                   </dd>
                 </dl>
                 <dl>
-                  <dt>
-                    고객정보
-                    {/* <label htmlFor="">*선택</label> */}
-                  </dt>
+                  <dt>고객정보</dt>
                   <dd>
                     <ol>
                       <li>
@@ -82,6 +79,23 @@ function Support({ ...props }: Isupport) {
                           />
                         </p>
                       </li>
+
+                      <li>
+                        <strong>이메일</strong>
+                        <p>
+                          <input
+                            type="text"
+                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                          />
+                        </p>
+                      </li>
+                    </ol>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>추가정보(선택)</dt>
+                  <dd>
+                    <ol>
                       <li>
                         <strong>소재지 / 주소</strong>
                         <p>
@@ -100,15 +114,6 @@ function Support({ ...props }: Isupport) {
                           />
                         </p>
                       </li>
-                      <li>
-                        <strong>이메일</strong>
-                        <p>
-                          <input
-                            type="text"
-                            placeholder="ex)가스텍코리아(주) / 홍길동"
-                          />
-                        </p>
-                      </li>
                     </ol>
                   </dd>
                 </dl>
@@ -117,10 +122,9 @@ function Support({ ...props }: Isupport) {
                   <dd>
                     <ol>
                       <li>
-                        <strong>이메일</strong>
                         <p>
-                          <input
-                            type="text"
+                          <textarea
+                            // type="text"
                             placeholder="ex)가스텍코리아(주) / 홍길동"
                           />
                         </p>
@@ -129,43 +133,7 @@ function Support({ ...props }: Isupport) {
                   </dd>
                 </dl>
               </div>
-              {/* 
-              <div className="sp-radio">
-                <p>지원종류</p>
-                <label>
-                  <input
-                    type="radio"
-                    name="category"
-                    id="support-category"
-                    value="product-inquiry"
-                    checked={category === 0 ? true : false}
-                    onChange={() => setCategory(0)}
-                  />
-                  제품관련 문의
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="category"
-                    id="support-category"
-                    value="consulting"
-                    checked={category === 1 ? true : false}
-                    onChange={() => setCategory(1)}
-                  />
-                  상담신청
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="category"
-                    id="support-category"
-                    value="after-service"
-                    checked={category === 2 ? true : false}
-                    onChange={() => setCategory(2)}
-                  />
-                  A/S문의
-                </label>
-              </div> */}
+
               <div className="sp-input">
                 <input type="text" placeholder="업체명/성명" />
                 <input type="text" placeholder="소재지/주소" />
