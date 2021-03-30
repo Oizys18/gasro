@@ -123,10 +123,7 @@ function Support({ ...props }: Isupport) {
                     <ol>
                       <li>
                         <p>
-                          <textarea
-                            // type="text"
-                            placeholder="ex)가스텍코리아(주) / 홍길동"
-                          />
+                          <textarea placeholder="ex)가스텍코리아(주) / 홍길동" />
                         </p>
                       </li>
                     </ol>
@@ -134,7 +131,7 @@ function Support({ ...props }: Isupport) {
                 </dl>
               </div>
 
-              <div className="sp-input">
+              {/* <div className="sp-input">
                 <input type="text" placeholder="업체명/성명" />
                 <input type="text" placeholder="소재지/주소" />
                 <input type="text" placeholder="전화번호" />
@@ -152,9 +149,9 @@ function Support({ ...props }: Isupport) {
                   </select>
                 </label>
                 <input type="textarea" placeholder="문의내용" />
-              </div>
-              <a href="#" className="button" type="submit">
-                확인
+              </div> */}
+              <a href="#" className="support-link">
+                문의하기
               </a>
             </form>
           </div>
