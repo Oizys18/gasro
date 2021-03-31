@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router";
-import CardImg from "components/CardImg";
+import CardImg from "components/Card/CardImg";
 interface Params {
   productId: string;
 }

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import CardText from "components/CardText";
-import CardImg from "components/CardImg";
+import CardText from "components/Card/CardText";
+import CardImg from "components/Card/CardImg";
 import gt300AB from "assets/images/ovens/gt300AB.png";
 import gt600AB from "assets/images/ovens/gt600AB.png";
 import gt700AB from "assets/images/ovens/gt700AB.png";
-// import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
-// import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+
 export default function ProductCard() {
   const [focus, setFocus] = useState(1);
   const [click, setClick] = useState(0);

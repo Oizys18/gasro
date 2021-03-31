@@ -1,5 +1,4 @@
 import React, { CSSProperties } from "react";
-import styled from "styled-components";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import banner01 from "assets/images/banner/GasroBanner01.png";
@@ -16,7 +15,7 @@ const indicatorStyles: CSSProperties = {
   display: "inline-block",
   margin: "0 8px",
 };
-export default function MainCarousel({ ...props }: configProps) {
+export default function BannerCarousel({ ...props }: configProps) {
   return (
     <>
       <Carousel
@@ -75,8 +74,3 @@ export default function MainCarousel({ ...props }: configProps) {
     </>
   );
 }
-
-const Indicator = styled.div`
-  display: flex;
-  /* justify-content: center; */
-`;

@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-
+import PersonalInfo from "components/PersonalInfo";
 interface Isupport {}
 
 function Support({ ...props }: Isupport) {
   const [category, setCategory] = useState(0);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       <section className="basic-container">
-        <div className="sp-container">
-          <div className="sp-title">고객지원 문의</div>
-          <div className="sp-content">
+        <div className="support-container">
+          <div className="support-title">고객지원 문의</div>
+          <div className="support-content">
             <form action="">
-              <div className="spec-table">
+              <div className="support-table">
                 <dl>
                   <dt>문의종류</dt>
                   <dd>
-                    <ol>
+                    <ol className="support-radiogroup">
                       <li>
                         <strong>
                           <label>
@@ -67,7 +67,12 @@ function Support({ ...props }: Isupport) {
                   </dd>
                 </dl>
                 <dl>
-                  <dt>고객정보</dt>
+                  <dt>
+                    <div className="support-optional">
+                      고객정보
+                      <p>*선택입력</p>
+                    </div>
+                  </dt>
                   <dd>
                     <ol>
                       <li>
@@ -81,7 +86,7 @@ function Support({ ...props }: Isupport) {
                       </li>
 
                       <li>
-                        <strong>이메일</strong>
+                        <strong>소재지 / 주소</strong>
                         <p>
                           <input
                             type="text"
@@ -93,11 +98,11 @@ function Support({ ...props }: Isupport) {
                   </dd>
                 </dl>
                 <dl>
-                  <dt>추가정보(선택)</dt>
+                  <dt>연락처</dt>
                   <dd>
                     <ol>
                       <li>
-                        <strong>소재지 / 주소</strong>
+                        <strong>이메일</strong>
                         <p>
                           <input
                             type="text"
@@ -120,39 +125,43 @@ function Support({ ...props }: Isupport) {
                 <dl>
                   <dt>문의내용</dt>
                   <dd>
-                    <ol>
-                      <li>
-                        <p>
-                          <textarea placeholder="ex)가스텍코리아(주) / 홍길동" />
-                        </p>
-                      </li>
-                    </ol>
+                    <textarea placeholder="ex)가스텍코리아(주) / 홍길동" />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <a
+                      className="support-personalinfo"
+                      onClick={() => {
+                        if (open) {
+                          setOpen(false);
+                        } else {
+                          setOpen(true);
+                        }
+                      }}
+                    >
+                      개인정보 수집동의
+                    </a>
+                  </dt>
+                  <dd>
+                    <strong>
+                      <label htmlFor="personal-info">동의</label>
+                      <input
+                        type="checkbox"
+                        name="personal-info"
+                        id="personal-info"
+                      />
+                    </strong>
                   </dd>
                 </dl>
               </div>
 
-              {/* <div className="sp-input">
-                <input type="text" placeholder="업체명/성명" />
-                <input type="text" placeholder="소재지/주소" />
-                <input type="text" placeholder="전화번호" />
-                <input type="text" placeholder="이메일" />
-                <label htmlFor="product-option">
-                  <select name="product" id="product-option">
-                    <option value="">제품을 선택해주세요</option>
-                    <option value="GT300-G">GT300(가스)</option>
-                    <option value="GT300-E">GT300(전기)</option>
-                    <option value="GT600-G">GT600(가스)</option>
-                    <option value="GT600-E">GT600(전기)</option>
-                    <option value="GT700-G">GT700(가스)</option>
-                    <option value="GT700-E">GT700(전기)</option>
-                    <option value="Roller">피자도우 롤러기</option>
-                  </select>
-                </label>
-                <input type="textarea" placeholder="문의내용" />
-              </div> */}
-              <a href="#" className="support-link">
-                문의하기
-              </a>
+              <PersonalInfo open={open}></PersonalInfo>
+              <div className="support-send-btn">
+                <a href="#" className="support-link">
+                  문의하기
+                </a>
+              </div>
             </form>
           </div>
 

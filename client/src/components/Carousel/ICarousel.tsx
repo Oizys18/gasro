@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import ISlide from "components/ISlide";
+import ISlide from "components/Carousel/ISlide";
 import product01 from "assets/images/product/product01.png";
 import product02 from "assets/images/product/product02.png";
 import product03 from "assets/images/product/product03.png";
@@ -7,6 +7,7 @@ import product04 from "assets/images/product/product04.png";
 import product05 from "assets/images/product/product05.png";
 import { useTranslation } from "react-i18next";
 import { Languages, languages } from "config/lang/i18n";
+
 export default function ICarousel() {
   // {t("main.title")}
   const { t, i18n } = useTranslation();

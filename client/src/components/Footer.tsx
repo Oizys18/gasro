@@ -1,11 +1,9 @@
 import React from "react";
-// import { keyframes } from "@emotion/react";
-// import Reveal from "react-awesome-reveal";
 import catalog_kor from "assets/documents/catalog_kor.pdf";
 import el_kor from "assets/documents/el_kor.pdf";
 import gas_kor from "assets/documents/gas_kor.pdf";
 import rol_kor from "assets/documents/rol_kor.pdf";
-import youtube from "assets/images/svgs/youtube.svg";
+// import youtube from "assets/images/svgs/youtube.svg";
 
 interface Props {}
 export default function Footer() {
@@ -54,7 +52,12 @@ export default function Footer() {
                 </div>
                 <div>
                   {/* <a href="https://map.kakao.com/link/map/8732155">오시는 길</a> */}
-                  <a href="https://goo.gl/maps/s6MNjjkPMY6cb37PA">오시는 길</a>
+                  <a
+                    href="https://goo.gl/maps/s6MNjjkPMY6cb37PA "
+                    target="_blank"
+                  >
+                    오시는 길
+                  </a>
                 </div>
                 {/* <div>회사정책</div> */}
               </div>

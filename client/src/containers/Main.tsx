@@ -1,23 +1,28 @@
 import React, { useState } from "react";
-import BannerCarousel from "components/BannerCarousel";
+//Card
+import ProductCard from "components/Card/ProductCard";
+
+//carousel
+import BannerCarousel from "components/Carousel/BannerCarousel";
+
+// video
+import ICarousel from "components/Carousel/ICarousel";
+import VideoDialog from "components/Video/VideoDialog";
+
+// translation
+import { useTranslation } from "react-i18next";
+import { Languages, languages } from "config/lang/i18n";
+
+//images
 import dough from "assets/images/foods/dough.jpg";
-import ProductCard from "components/ProductCard";
-import ICarousel from "components/ICarousel";
 import product01 from "assets/images/product/product01.png";
 import product02 from "assets/images/product/product02.png";
 import product03 from "assets/images/product/product03.png";
 import product04 from "assets/images/product/product04.png";
-import VideoDialog from "components/VideoDialog";
-import { useTranslation } from "react-i18next";
-import { Languages, languages } from "config/lang/i18n";
-
 // import product05 from "assets/images/product/product05.png";
-// import styled from "styled-components";
-// import { Link } from "react-router-dom";
+
 // import Reveal from "react-awesome-reveal";
 // import { keyframes } from "@emotion/react";
-// import VideoDialog from "components/VideoDialog";
-// import MainCarousel from "components/MainCarousel";
 
 interface IMain {}
 function Main({ ...props }: IMain) {
@@ -148,13 +153,13 @@ function Main({ ...props }: IMain) {
       <section id="instruction" className="instruction-wrapper">
         <ICarousel></ICarousel>
       </section>
-      <section id="support" className="support-wrapper">
-        <div className="basic-container support-container">
-          <h1 className="support-title">무엇이든 물어보세요 </h1>
-          <div className="support-content">
+      <section id="support" className="supportlink-wrapper">
+        <div className="basic-container supportlink-container">
+          <h1 className="supportlink-title">무엇이든 물어보세요 </h1>
+          <div className="supportlink-content">
             가스텍코리아 기술 전문가가 도와드립니다.
           </div>
-          <a href="/support" className="support-link">
+          <a href="/support" className="supportlink">
             문의하기
           </a>
         </div>
