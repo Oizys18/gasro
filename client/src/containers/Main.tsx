@@ -19,7 +19,7 @@ import product01 from "assets/images/product/product01.png";
 import product02 from "assets/images/product/product02.png";
 import product03 from "assets/images/product/product03.png";
 import product04 from "assets/images/product/product04.png";
-// import product05 from "assets/images/product/product05.png";
+import product05 from "assets/images/product/product05.png";
 
 // import Reveal from "react-awesome-reveal";
 // import { keyframes } from "@emotion/react";
@@ -80,6 +80,8 @@ function Main({ ...props }: IMain) {
               </p>
               <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
             </div>
+            <a href="">홍보영상 확인</a>
+            <a href="">찾아오시는 길</a>
           </div>
         </div>
       </section>
@@ -104,21 +106,26 @@ function Main({ ...props }: IMain) {
             <div className="numTitle-r">
               <span>01</span>
             </div>
-            <div className="maintitle">스테인레스 스틸 조형</div>
-            <p>스테인레스 스틸 조형</p>
-            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
-            <p>스테인레스 스틸 조형</p>
+            <div className="maintitle">스테인레스 강</div>
+            <p>스테인리스강을 사용해 내구성이 높고 안정감이 있습니다.</p>
+            <p>
+              부식에 강해 녹이 잘 슬지 않아 안전한 식품조리에 최적인 재질입니다.
+            </p>
           </div>
         </div>
+
         <div className="mg-container">
           <div className="mg-item-l ">
             <div className="numTitle-l">
               <span>02</span>
             </div>
-            <div className="maintitle">스테인레스 스틸 조형</div>
-            <p>스테인레스 스틸 조형</p>
-            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
-            <p>스테인레스 스틸 조형</p>
+            <div className="maintitle">고성능 부품 및 알고리즘</div>
+            <p>오븐 제어에 최적화된 자체제작 전용 CPU를 부착했습니다.</p>
+            <p>
+              고성능 온도센서와 온도제어 알고리즘 내장하여 정확한 온도조절이
+              가능합니다.
+            </p>
+            <p>가스 누출감지 센서를 부착하여 가스안전 사고를 방지합니다.</p>
           </div>
           <img src={product02} alt="" className="mg-img " />
         </div>
@@ -128,10 +135,14 @@ function Main({ ...props }: IMain) {
             <div className="numTitle-r">
               <span>03</span>
             </div>
-            <div className="maintitle">스테인레스 스틸 조형</div>
-            <p>스테인레스 스틸 조형</p>
-            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
-            <p>스테인레스 스틸 조형</p>
+            <div className="maintitle">내부 열순환 시스템</div>
+            <p>고온의 가열된 공기를 분사, 순환시키는 제트핑거방식으로</p>
+            <p>
+              빠르게 음식물을 가열하고 열을 순환시켜 에너지 소비를 최소화합니다.
+            </p>
+            <p>
+              오븐 내부의 열 전달이 골고루 이루어져 원활한 조리가 가능합니다.
+            </p>
           </div>
         </div>
         <div className="mg-container">
@@ -139,12 +150,25 @@ function Main({ ...props }: IMain) {
             <div className="numTitle-l">
               <span>04</span>
             </div>
-            <div className="maintitle">스테인레스 스틸 조형</div>
-            <p>스테인레스 스틸 조형</p>
-            <p>생산공정의 개선, 디지털화, 안전성과 편이성 증대를 실현</p>
-            <p>스테인레스 스틸 조형</p>
+            <div className="maintitle">측면 유리창</div>
+            <p>
+              조리과정을 한눈에 확인할 수 있는 측면 유리창이 추가 가능합니다.
+            </p>
+            <p>열손실은 최대한 줄이고 사용성은 높였습니다.</p>
           </div>
           <img src={product04} alt="" className="mg-img " />
+        </div>
+        <div className="mg-container">
+          <img src={product05} alt="" className="mg-img " />
+          <div className="mg-item-r ">
+            <div className="numTitle-r">
+              <span>05</span>
+            </div>
+            <div className="maintitle">최대 3단 적재 가능</div>
+            <p>2단, 3단 적재를 통해 높은 공간 효율성을 확보했으며</p>
+            <p>흔들리지 않고 안정적으로 고정되어 사고위험이 없습니다.</p>
+            <p>한정된 주방 공간을 위한 최적의 선택입니다.</p>
+          </div>
         </div>
         <div className="card-container" id="card-container">
           <ProductCard></ProductCard>

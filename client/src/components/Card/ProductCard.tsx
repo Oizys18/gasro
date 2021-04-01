@@ -8,11 +8,12 @@ import gt700AB from "assets/images/ovens/gt700AB.png";
 export default function ProductCard() {
   const [focus, setFocus] = useState(1);
   const [click, setClick] = useState(0);
-  const curOven = [
+  const curOven = [0, "GT300", "GT600", "GT700"];
+  const ovenSubtitle = [
     0,
-    "GT300 - 소형 18인치",
-    "GT600 - 중형 22인치",
-    "GT700 - 대형 33인치",
+    <>소형 18인치</>,
+    <>중형 22인치</>,
+    <>대형 33인치</>,
   ];
   const ovenFeature = [0, <>feature 300</>, <>feature 600</>, <>feature 700</>];
   const ovenDetail = [
@@ -75,10 +76,14 @@ export default function ProductCard() {
           <CardImg curFocus={focus}></CardImg>
         </div>
         <div className="card-text">
+          <div className="subtitle">제품상세</div>
           <div className="text-detail">
-            <h2>{curOven[focus]}</h2>
-            <div className="detail">{ovenDetail[focus]}</div>
-            <div className="feature">{ovenFeature[focus]}</div>
+            <div className="d-titles">
+              <div className="d-title">{curOven[focus]}</div>
+              <div className="d-subtitle">{ovenSubtitle[focus]}</div>
+            </div>
+            <div className="d-detail">{ovenDetail[focus]}</div>
+            <div className="d-feature">{ovenFeature[focus]}</div>
           </div>
           <div className="card-preview">
             <div
