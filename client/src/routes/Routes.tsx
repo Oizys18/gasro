@@ -2,6 +2,7 @@ import * as React from "react";
 import Main from "containers/Main";
 import Support from "containers/Support";
 import Privacy from "containers/Privacy";
+import Admin from "containers/Admin";
 import Notice from "containers/Notice";
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -18,6 +19,7 @@ function Routes() {
         <Route path="/support" exact component={Support} />
         <Route path="/notice" exact component={Notice} />
         <Route path="/privacy" exact component={Privacy} />
+        <Route path="/admin" exact component={Admin} />
         <Redirect path="*" to="/" />
       </Switch>
       <Footer />

@@ -13,7 +13,6 @@ function Notice() {
       });
     });
   }, []);
-  // console.log(data);
   return (
     <>
       <section className="basic-container notice-container" id="notice">
