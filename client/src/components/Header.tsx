@@ -33,11 +33,13 @@ export default function Header({ ...props }: Props) {
       <img src={vietnam} alt="vietnam" className="flag-icon" />
     </div>,
   ];
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
+
   const nav = document.getElementById("header");
   if (nav) {
     if (scrollPosition >= 100 || location.pathname !== "/") {

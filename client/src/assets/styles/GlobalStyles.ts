@@ -826,6 +826,7 @@ text-align:center;
     background-color:var(--text-color-dark);
     color:var(--body-color)
   }
+  cursor: pointer;
   color:var(--text-color-dark);
   font-size:var(--h3-font-size);
   border:1px solid var(--text-color-dark);
@@ -855,17 +856,16 @@ text-align:center;
       display:flex;
       justify-content:space-around;
     }
-    input[type=checkbox]
-{
-  /* Double-sized Checkboxes */
-  -ms-transform: scale(1.5); /* IE */
-  -moz-transform: scale(1.5); /* FF */
-  -webkit-transform: scale(1.5); /* Safari and Chrome */
-  -o-transform: scale(1.5); /* Opera */
-  transform: scale(1.5);
-  padding: 10px;
-  margin:0 10px;
-}
+    input[type=checkbox]{
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+    padding: 10px;
+    margin:0 10px;
+  }
 
   }
   dl{
@@ -897,7 +897,7 @@ text-align:center;
     p{
       width:100%;
     }
-    input[type=text]{
+    input[type=text],input[type=email],input[type=tel]{
       
        width: 20vw; 
        height: auto; 

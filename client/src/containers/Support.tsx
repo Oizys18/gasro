@@ -1,18 +1,70 @@
 import React, { useState } from "react";
+import emailjs, { init } from "emailjs-com";
+import apikeys from "assets/apikeys";
 import PersonalInfo from "components/PersonalInfo";
 interface Isupport {}
 
 function Support({ ...props }: Isupport) {
+  init(apikeys.USER_ID);
   const [category, setCategory] = useState(0);
-  const [open, setOpen] = useState(false);
+  const [agreed, setAgreed] = useState(0);
+  const [inputs, setInputs] = useState({
+    name: "",
+    address: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const { name, address, email, phone, message } = inputs; // 비구조화 할당을 통해 값 추출
 
+  const onChange = (e: any) => {
+    const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
+    setInputs({
+      ...inputs, // 기존의 input 객체를 복사한 뒤
+      [name]: value, // name 키를 가진 값을 value 로 설정
+    });
+  };
+
+  const [open, setOpen] = useState(false);
+  function onSubmit(e: any) {
+    e.preventDefault();
+    if (
+      inputs["name"] &&
+      inputs["email"] &&
+      inputs["phone"] &&
+      inputs["message"] &&
+      address
+    ) {
+      emailjs
+        .sendForm(
+          apikeys.SERVICE_ID,
+          apikeys.TEMPLATE_ID,
+          e.target,
+          apikeys.USER_ID
+        )
+        .then(
+          (result) => {
+            alert(
+              "문의완료, 빠른 시일 내에 답장 드리겠습니다.\nMessage Sent. I'll get back to you shortly. "
+            );
+          },
+          (error) => {
+            alert(
+              "에러가 발생했습니다. 다시 시도해주세요.\nError Occured. Please try again"
+            );
+          }
+        );
+    } else {
+      alert("문의정보를 입력해주세요.\n Please fill out the forms.");
+    }
+  }
   return (
     <>
       <section className="basic-container">
         <div className="support-container">
           <div className="support-title">고객지원 문의</div>
           <div className="support-content">
-            <form action="">
+            <form onSubmit={onSubmit}>
               <div className="support-table">
                 <dl>
                   <dt>문의종류</dt>
@@ -25,7 +77,7 @@ function Support({ ...props }: Isupport) {
                               type="radio"
                               name="category"
                               id="support-category"
-                              value="product-inquiry"
+                              value="제품관련문의"
                               checked={category === 0 ? true : false}
                               onChange={() => setCategory(0)}
                             />
@@ -40,7 +92,7 @@ function Support({ ...props }: Isupport) {
                               type="radio"
                               name="category"
                               id="support-category"
-                              value="product-inquiry"
+                              value="A/S 문의"
                               checked={category === 1 ? true : false}
                               onChange={() => setCategory(1)}
                             />
@@ -55,7 +107,7 @@ function Support({ ...props }: Isupport) {
                               type="radio"
                               name="category"
                               id="support-category"
-                              value="product-inquiry"
+                              value="상담신청"
                               checked={category === 2 ? true : false}
                               onChange={() => setCategory(2)}
                             />
@@ -70,7 +122,7 @@ function Support({ ...props }: Isupport) {
                   <dt>
                     <div className="support-optional">
                       고객정보
-                      <p>*선택입력</p>
+                      {/* <p>*선택입력</p> */}
                     </div>
                   </dt>
                   <dd>
@@ -80,6 +132,10 @@ function Support({ ...props }: Isupport) {
                         <p>
                           <input
                             type="text"
+                            name="name"
+                            value={name}
+                            onChange={onChange}
+                            required={true}
                             placeholder="ex)가스텍코리아(주) / 홍길동"
                           />
                         </p>
@@ -90,6 +146,10 @@ function Support({ ...props }: Isupport) {
                         <p>
                           <input
                             type="text"
+                            name="address"
+                            value={address}
+                            onChange={onChange}
+                            required={true}
                             placeholder="ex)가스텍코리아(주) / 홍길동"
                           />
                         </p>
@@ -105,7 +165,11 @@ function Support({ ...props }: Isupport) {
                         <strong>이메일</strong>
                         <p>
                           <input
-                            type="text"
+                            name="email"
+                            type="email"
+                            value={email}
+                            onChange={onChange}
+                            required={true}
                             placeholder="ex)가스텍코리아(주) / 홍길동"
                           />
                         </p>
@@ -114,7 +178,12 @@ function Support({ ...props }: Isupport) {
                         <strong>전화번호</strong>
                         <p>
                           <input
-                            type="text"
+                            name="phone"
+                            type="tel"
+                            id="phone_input"
+                            value={phone}
+                            onChange={onChange}
+                            required={true}
                             placeholder="ex)가스텍코리아(주) / 홍길동"
                           />
                         </p>
@@ -125,7 +194,14 @@ function Support({ ...props }: Isupport) {
                 <dl>
                   <dt>문의내용</dt>
                   <dd>
-                    <textarea placeholder="ex)가스텍코리아(주) / 홍길동" />
+                    <textarea
+                      name="message"
+                      id="message"
+                      value={message}
+                      onChange={onChange}
+                      required={true}
+                      placeholder="ex)가스텍코리아(주) / 홍길동"
+                    />
                   </dd>
                 </dl>
                 <dl>
@@ -148,8 +224,11 @@ function Support({ ...props }: Isupport) {
                       <label htmlFor="personal-info">동의</label>
                       <input
                         type="checkbox"
-                        name="personal-info"
+                        name="agreed"
                         id="personal-info"
+                        value={agreed}
+                        required={true}
+                        onChange={() => setAgreed(agreed)}
                       />
                     </strong>
                   </dd>
@@ -158,9 +237,7 @@ function Support({ ...props }: Isupport) {
 
               <PersonalInfo open={open}></PersonalInfo>
               <div className="support-send-btn">
-                <a href="#" className="support-link">
-                  문의하기
-                </a>
+                <button className="support-link">문의하기</button>
               </div>
             </form>
           </div>
