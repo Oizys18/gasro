@@ -1,18 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { noticeRef } from "database/textdata";
-import { filestorage } from "database/filedata";
+import React, { useContext, useEffect, useState } from "react";
+import noticeContext from "apis/noticeApi";
 
 function Notice() {
-  const [data, setData] = useState<Array<object>>([]);
-  // console.log(filestorage.ref().child("04a.jpg"));
-  useEffect(() => {
-    let tempData = [];
-    noticeRef.on("value", (snapshot: any) => {
-      snapshot.forEach((snap: any) => {
-        console.log(snap.val());
-      });
-    });
-  }, []);
+  const data = useContext(noticeContext);
   return (
     <>
       <section className="basic-container notice-container" id="notice">
@@ -20,12 +10,11 @@ function Notice() {
         <div className="support-content">
           <div className="support-table">
             {data.map((post: any) => (
-              <dl key={post}>
+              <dl key={post.id}>
                 <dt>{post ? post.title : <></>}</dt>
                 <dd>
                   <ol>
-                    <li>{post ? post.text : <></>}</li>
-                    <li>{post ? post.date : <></>}</li>
+                    <li>{post ? post.content : <></>}</li>
                   </ol>
                 </dd>
               </dl>

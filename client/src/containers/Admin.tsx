@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import firebase from "database/firebaseConfig";
 import "firebase/auth";
+import { filestorage } from "database/filedata";
+import { noticeRef } from "database/textdata";
+import { ImageAspectRatioTwoTone } from "@material-ui/icons";
 
 export default function Admin() {
   const [login, setLogin] = useState(Boolean);
@@ -55,13 +58,13 @@ export default function Admin() {
         // An error happened.
       });
   }
-
   //   input 관리
   const [image, setImage] = useState<Array<ImageData>>([]);
   const [inputs, setInputs] = useState({
     title: "",
     content: "",
     youtube: "",
+    images: Array<string>(),
   });
   const { title, content, youtube } = inputs; // 비구조화 할당을 통해 값 추출
 
@@ -74,16 +77,37 @@ export default function Admin() {
   };
   function handleFileInput(e: any) {
     setImage(e.target.files);
+    let temp = Array<string>();
+    for (let i = 0; i < e.target.files.length; i++) {
+      temp.push(e.target.files[i].name);
+    }
+    setInputs({ ...inputs, images: temp });
   }
   function onSubmit() {
-    console.log(inputs);
+    // // console.log();
+    // // key 생성
+    const newKey = firebase.database().ref().child("notice").push().key;
+    // // 파일저장소
+    // const filestorageRef = filestorage.ref();
+
+    // image.forEach((file) => {
+    //   filestorageRef.put(file.data).then(function (snapshot) {
+    //     console.log("Uploaded a blob or file!");
+    //   });
+    // });
+
+    const postData = {
+      ...inputs,
+      //   id: timeStamp(),
+    };
+    // noticeRef.push().set(postData);
     alert("성공적으로 작성되었습니다.");
   }
   return (
     <div className="basic-container admin-container">
       {login ? (
         <>
-          <form>
+          <form onSubmit={onSubmit}>
             <input type="text" onChange={onChange} name="title" value={title} />
             <input
               type="text"
@@ -99,7 +123,7 @@ export default function Admin() {
               value={youtube}
             />
             <input type="file" multiple onChange={handleFileInput} />
-            <button onClick={onSubmit}>submit!!</button>
+            <button>submit!!</button>
           </form>
           <button className="support-link" onClick={outGoogle}>
             google logout

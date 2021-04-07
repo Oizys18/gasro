@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import catalog_kor from "assets/documents/catalog_kor.pdf";
 import el_kor from "assets/documents/el_kor.pdf";
 import gas_kor from "assets/documents/gas_kor.pdf";
 import rol_kor from "assets/documents/rol_kor.pdf";
 // import youtube from "assets/images/svgs/youtube.svg";
+import noticeContext from "apis/noticeApi";
 
 interface Props {}
 export default function Footer() {
+  const data = useContext(noticeContext);
   return (
     <>
       <footer className="footer">
@@ -17,9 +19,11 @@ export default function Footer() {
                 <span>공지사항</span>
               </div>
               <ul className="footer-list">
-                <li className="footer-item">1</li>
-                <li className="footer-item">2</li>
-                <li className="footer-item">3</li>
+                {data.map((post: any) => (
+                  <li key={post.id} className="footer-item">
+                    <a href={`/notice/${post.id}`}>{post.title}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="footer-box">
