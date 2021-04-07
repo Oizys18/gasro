@@ -57,7 +57,6 @@ export default function Header({ ...props }: Props) {
 
   return (
     <>
-      {/* <header className="l-header" id="header"> */}
       <header
         className={
           location.pathname !== "/" ? "l-header scroll-header" : "l-header"
@@ -79,15 +78,20 @@ export default function Header({ ...props }: Props) {
               <a href="/#product">제품소개</a>
             </li>
             <li className="nav-item">
-              <a href="/support">고객지원</a>
+              <a href="/#product-detail">상세정보</a>
+            </li>
+            <li className="nav-item">
+              <a href="/#instruction">제품사용</a>
             </li>
           </ul>
           <ul className="nav-list">
             <li className="nav-item">
-              <a href="/#">공지사항</a>
+              <a href="/support">고객지원</a>
+            </li>
+            <li className="nav-item">
+              <a href="/notice">공지사항</a>
             </li>
             <div className="dropdown">
-              {/* <li className="nav-item language">{languages[lang]}</li> */}
               <li className="nav-item language">{locales[locale]}</li>
               <div className="dropdown-content">
                 <a

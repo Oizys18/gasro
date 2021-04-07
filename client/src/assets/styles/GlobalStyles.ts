@@ -142,7 +142,6 @@ img{
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
-  
 }
 
 
@@ -711,7 +710,7 @@ text-align:center;
   }
   
 }
-.refresh{
+/* .refresh{
   &:hover{
     color:red;
   }
@@ -734,7 +733,7 @@ text-align:center;
   margin:0 0 0 15px;
   cursor: pointer;
   font-weight:bold;
-}
+} */
 
 .slide-button{
   align-self:center;
@@ -752,10 +751,8 @@ text-align:center;
   width:130px;
   border-radius:3px;
   padding:8px 0;
-  margin:5px 15px;
-  &.slide-next{
-    margin:5px 10px 5px 50px;
-  }
+  margin:5px 10px 5px 50px;
+
 }
 
 
@@ -821,7 +818,7 @@ text-align:center;
   display:flex;
   flex-direction:column;
 }
-.support-link{
+/* .support-link{
   &:hover{
     background-color:var(--text-color-dark);
     color:var(--body-color)
@@ -834,11 +831,10 @@ text-align:center;
   margin-top:1em;
   padding:10px 100px;
   font-weight:var(--font-bold);
-}
+} */
 
 
 .support-table{
-  
   position:relative;
   align-items:center;
   font-size:1.1rem;
@@ -1024,8 +1020,79 @@ text-align:center;
   .p-headinst{
     font-size:var(--h3-font-size);
   }
+}
+
+
+
+/* Notice */
+.notice-container{
+  margin:200px 0;
+  background-color:#FFF;
+  padding:3em;
+}
+.notice-title{
+  font-weight:var(--font-bold);
+  font-size:var(--h2-font-size);
+  border-bottom:2px solid black;
+}
+.notice-content{
+  display:flex;
+  flex-direction:column;
+}
+
+
+.notice-table{
+  position:relative;
+  align-items:center;
+  font-size:1.1rem;
+  dl,dt,dd{
+    display:table-cell;
+  }
+  dt{
+    vertical-align:middle;
+    font-size:var(--h3-font-size);
+    min-width:200px;
+  }
+  dd{
+    width:100%;
+  }
+  dl{
+    width:100%;
+    display:inline-block;
+    padding:15px 0;
+    border-bottom:1px solid lightgray;
+    margin:0;
+  }
+  ol,li{
+    display:inline-block;
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+  ol{
+    display:flex;
+    justify-content:space-between;
+  }
+  li{
+    margin:0 5vw 0 0;
+    width:100%;
+    /* &:nth-child(1){
+    margin:0 0 0 10px;
+    } */
+    display: inline-block;
+    padding:15px 0;
+    vertical-align: top;
+    p{
+      width:100%;
+    }
+    
+  }
 
 }
+
+
+
+
 
 
 

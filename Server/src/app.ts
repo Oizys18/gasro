@@ -39,7 +39,7 @@ class App {
       this.app.use(hpp());
       this.app.use(helmet());
       this.app.use(logger("combined"));
-      this.app.use(cors({ origin: "your.domain.com", credentials: true }));
+      this.app.use(cors({ origin: "gasro.com", credentials: true }));
     } else {
       this.app.use(logger("dev"));
       this.app.use(cors({ origin: true, credentials: true }));
@@ -51,7 +51,7 @@ class App {
 
   private initializeRoutes(routes: Routes[]) {
     routes.forEach((route) => {
-      this.app.use("/", route.router);
+      this.app.use("/data/", route.router);
     });
   }
 

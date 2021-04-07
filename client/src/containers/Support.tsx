@@ -45,7 +45,7 @@ function Support({ ...props }: Isupport) {
         .then(
           (result) => {
             alert(
-              "문의완료, 빠른 시일 내에 답장 드리겠습니다.\nMessage Sent. I'll get back to you shortly. "
+              "문의완료, 빠른 시일 내에 답장 드리겠습니다.\nMessage Sent. I'll get back to you shortly."
             );
           },
           (error) => {
@@ -240,10 +240,6 @@ function Support({ ...props }: Isupport) {
                 <button className="support-link">문의하기</button>
               </div>
             </form>
-          </div>
-
-          <div className="send__img">
-            <img src="assets/img/send.png" alt="" />
           </div>
         </div>
       </section>

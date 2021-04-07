@@ -170,7 +170,7 @@ function Main({ ...props }: IMain) {
             <p>한정된 주방 공간을 위한 최적의 선택입니다.</p>
           </div>
         </div>
-        <div className="card-container" id="card-container">
+        <div className="card-container" id="product-detail">
           <ProductCard></ProductCard>
         </div>
       </section>

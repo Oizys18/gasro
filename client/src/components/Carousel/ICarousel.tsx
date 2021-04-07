@@ -98,13 +98,15 @@ export default function ICarousel() {
         <div className="slide-title">
           <div className="num">0{currentSlide + 1}</div>
           <div className="text">{slide_title[currentSlide]}</div>
-
-          <a onClick={nextSlide} className="slide-button slide-next">
-            다음
-          </a>
-          <a onClick={() => setSlide(0)} className="slide-button slide-start">
-            처음부터
-          </a>
+          {currentSlide < 4 ? (
+            <a onClick={nextSlide} className="slide-button">
+              다음
+            </a>
+          ) : (
+            <a onClick={() => setSlide(0)} className="slide-button">
+              처음부터
+            </a>
+          )}
         </div>
 
         <div className="slide-text">{slide_text[currentSlide]}</div>
