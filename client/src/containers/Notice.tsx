@@ -82,9 +82,7 @@ export default function Notice() {
               <div>{post?.date}</div>
             </AccordionSummary>
             <AccordionDetails>
-              <div>{post?.youtube}</div>
-              <div>{post?.images}</div>
-              <div>{post?.content}</div>
+              <div dangerouslySetInnerHTML={{ __html: post?.content }}></div>
             </AccordionDetails>
           </Accordion>
         ))}

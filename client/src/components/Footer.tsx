@@ -66,13 +66,18 @@ export default function Footer() {
                 {/* <div>회사정책</div> */}
               </div>
               <div className="footer-social">
-                <div className="social-icon">
+                {/* <div className="social-icon">
                   <i
                     className="bx bxl-youtube bx-sm"
                     style={{ color: "#ffffff" }}
                   ></i>
-                </div>
-                <div className="social-icon">네이버블로그</div>
+                </div> */}
+                <a
+                  href="https://www.youtube.com/channel/UCa0SlrpAltTd69t7H-sGfHA"
+                  target="_blank"
+                >
+                  <div className="social-icon">Youtube</div>
+                </a>
               </div>
             </div>
             <div className="footer-info">
