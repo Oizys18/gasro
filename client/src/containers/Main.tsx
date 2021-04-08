@@ -56,8 +56,8 @@ function Main({ ...props }: IMain) {
         </div>
         <div className="mg-container mg-card mg-wrapper">
           <img
-            onClick={handleClickOpen}
             src={dough}
+            onClick={handleClickOpen}
             alt="dough"
             className="mg-img title videoImg"
           />
@@ -80,8 +80,13 @@ function Main({ ...props }: IMain) {
               </p>
               <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
             </div>
-            <a href="">홍보영상 확인</a>
-            <a href="">찾아오시는 길</a>
+            <div className="mg-card-badge">
+              <a onClick={handleClickOpen}>홍보영상</a>
+              {/* <a>연혁</a> */}
+              <a href="https://goo.gl/maps/s6MNjjkPMY6cb37PA " target="_blank">
+                찾아오시는 길
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -111,6 +116,7 @@ function Main({ ...props }: IMain) {
             <p>
               부식에 강해 녹이 잘 슬지 않아 안전한 식품조리에 최적인 재질입니다.
             </p>
+            <p>오븐 내부의 열이 표면으로 전달되지 않도록 설계되었습니다.</p>
           </div>
         </div>
 

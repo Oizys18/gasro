@@ -5,7 +5,7 @@ import gas_kor from "assets/documents/gas_kor.pdf";
 import rol_kor from "assets/documents/rol_kor.pdf";
 // import youtube from "assets/images/svgs/youtube.svg";
 import noticeContext from "apis/noticeApi";
-
+import { uid } from "react-uid";
 interface Props {}
 export default function Footer() {
   const data = useContext(noticeContext);
@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
               <ul className="footer-list">
                 {data.map((post: any) => (
-                  <li key={post.id} className="footer-item">
+                  <li key={uid(post)} className="footer-item">
                     <a href={`/notice/${post.id}`}>{post.title}</a>
                   </li>
                 ))}

@@ -15,21 +15,21 @@ export default function ProductCard() {
     <>중형 22인치</>,
     <>대형 33인치</>,
   ];
-  const ovenFeature = [0, <>feature 300</>, <>feature 600</>, <>feature 700</>];
-  const ovenDetail = [
+  const ovenFeature = [
     0,
     <>
-      300스테인레스 스틸 조형 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
-      실현 스테인레스 스틸 조형
+      <p>공간 효율적인 크기와 디자인</p>
+      <p>최다 판매 보급형 모델</p>
     </>,
     <>
-      600스테인레스 스틸 조형 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
-      실현 스테인레스 스틸 조형
+      <p>터널 폭이 580mm(22인치)로 중간 크기의 제품입니다.</p>
+      <p>동시에 여러 피자 및 빵을 조리할 수 있습니다.</p>
     </>,
-    <>
-      700스테인레스 스틸 조형 생산공정의 개선, 디지털화, 안전성과 편이성 증대를
-      실현 스테인레스 스틸 조형
-    </>,
+    <p>
+      <p>대형 피자 조리가 가능한 프리미엄 대형 모델</p>
+      <p>터널의 폭이 840mm(33인치)로 대량생산이 가능한 제품입니다.</p>
+      <p>대형피자나 다량의 빵을 굽는데 효율적입니다.</p>
+    </p>,
   ];
   const handleFocus = (focused: number) => {
     switch (focused) {
@@ -82,8 +82,13 @@ export default function ProductCard() {
               <div className="d-title">{curOven[focus]}</div>
               <div className="d-subtitle">{ovenSubtitle[focus]}</div>
             </div>
-            <div className="d-detail">{ovenDetail[focus]}</div>
             <div className="d-feature">{ovenFeature[focus]}</div>
+            <div className="d-detail">
+              <p>• 1~3층으로 쌓아 올릴수 있는 직렬오븐</p>
+              <p>• 공기역학적 설계로 에너지 효율적</p>
+              <p>• 분리식 설계로 청소가 간편</p>
+              <p>• 조작 및 사용이 간편</p>
+            </div>
           </div>
           <div className="card-preview">
             <div

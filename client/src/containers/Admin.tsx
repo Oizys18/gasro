@@ -1,72 +1,74 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import firebase from "database/firebaseConfig";
-import "firebase/auth";
 import { filestorage } from "database/filedata";
 import { noticeRef } from "database/textdata";
-import { ImageAspectRatioTwoTone } from "@material-ui/icons";
+import "firebase/auth";
+
+import SunEditor, { buttonList } from "suneditor-react";
+import "suneditor/dist/css/suneditor.min.css"; // Import Sun Editor's CSS File
 
 export default function Admin() {
-  const [login, setLogin] = useState(Boolean);
+  const [post, setPost] = useState();
+  const [curUser, setCurUser] = useState<string | null>();
+  // const [image, setImage] = useState<Array<ImageData>>([]);
+
+  const [auth, setAuth] = useState({
+    email: "",
+    password: "",
+  });
+  const { email, password } = auth;
+
+  const authChange = (e: any) => {
+    const { value, name } = e.target;
+    setAuth({
+      ...auth,
+      [name]: value,
+    });
+  };
   useEffect(() => {
-    checkLogin();
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.
+        setCurUser(user?.email);
+      } else {
+        setCurUser("");
+      }
+    });
   }, []);
-  function checkLogin() {
-    firebase
-      .auth()
-      .getRedirectResult()
-      .then((result) => {
-        var user = result.user;
-        setLogin(true);
-      })
-      .catch((error) => {
-        setLogin(false);
-        var errorCode = error.code;
-      });
+  function authenticate() {
+    const isUser = firebase.auth().currentUser;
+    if (isUser) {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          // Sign-out successful.
+        })
+        .catch((error) => {
+          // An error happened.
+        });
+    } else {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          var user = userCredential.user;
+          console.log(user?.email);
+          setCurUser(user?.email);
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+        });
+    }
   }
-  var provider = new firebase.auth.GoogleAuthProvider();
-  function goGoogle() {
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then((result) => {
-        var credential = result.credential;
-        var user = result.user;
-        setLogin(true);
-        console.log("wow");
-        // ...
-      })
-      .catch((error) => {
-        console.log("no");
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        var email = error.email;
-        var credential = error.credential;
-        // ...
-      });
-  }
-  function outGoogle() {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        // Sign-out successful.
-        alert("로그아웃 성공");
-        setLogin(false);
-      })
-      .catch((error) => {
-        alert("로그아웃 실패..?");
-        // An error happened.
-      });
-  }
-  //   input 관리
-  const [image, setImage] = useState<Array<ImageData>>([]);
+
   const [inputs, setInputs] = useState({
+    date: "",
     title: "",
     content: "",
-    youtube: "",
-    images: Array<string>(),
   });
-  const { title, content, youtube } = inputs; // 비구조화 할당을 통해 값 추출
+  const { title } = inputs; // 비구조화 할당을 통해 값 추출
 
   const onChange = (e: any) => {
     const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
@@ -75,65 +77,79 @@ export default function Admin() {
       [name]: value, // name 키를 가진 값을 value 로 설정
     });
   };
-  function handleFileInput(e: any) {
-    setImage(e.target.files);
-    let temp = Array<string>();
-    for (let i = 0; i < e.target.files.length; i++) {
-      temp.push(e.target.files[i].name);
-    }
-    setInputs({ ...inputs, images: temp });
-  }
+
   function onSubmit() {
-    // // console.log();
-    // // key 생성
-    const newKey = firebase.database().ref().child("notice").push().key;
-    // // 파일저장소
-    // const filestorageRef = filestorage.ref();
-
-    // image.forEach((file) => {
-    //   filestorageRef.put(file.data).then(function (snapshot) {
-    //     console.log("Uploaded a blob or file!");
-    //   });
-    // });
-
     const postData = {
       ...inputs,
-      //   id: timeStamp(),
+      date: new Date().toISOString().slice(0, 10),
+      content: post,
     };
-    // noticeRef.push().set(postData);
+    noticeRef.push(postData);
     alert("성공적으로 작성되었습니다.");
+  }
+  const editorRef = useRef<SunEditor>(null);
+  useEffect(() => {
+    console.log(editorRef.current?.editor.core);
+  }, []);
+  function handleChange(content: any) {
+    setPost(content);
   }
   return (
     <div className="basic-container admin-container">
-      {login ? (
+      <div className="admin-title">관리자 페이지</div>
+      {curUser ? (
         <>
-          <form onSubmit={onSubmit}>
-            <input type="text" onChange={onChange} name="title" value={title} />
-            <input
-              type="text"
-              onChange={onChange}
-              name="content"
-              value={content}
+          <form onSubmit={onSubmit} className="admin-post">
+            <p>
+              <label htmlFor="title">제목</label>
+              <input
+                type="text"
+                onChange={onChange}
+                name="title"
+                value={title}
+              />
+            </p>
+            <SunEditor
+              ref={editorRef}
+              lang="ko"
+              onChange={handleChange}
+              setOptions={{
+                height: 500,
+                buttonList: [
+                  ...buttonList.formatting,
+                  ["image", "video", "link"],
+                ],
+              }}
             />
-            <textarea
-              rows={5}
-              cols={100}
-              onChange={onChange}
-              name="youtube"
-              value={youtube}
-            />
-            <input type="file" multiple onChange={handleFileInput} />
-            <button>submit!!</button>
+
+            <button className="support-link">작성</button>
           </form>
-          <button className="support-link" onClick={outGoogle}>
-            google logout
+          <button className="support-link" onClick={authenticate}>
+            Admin logout
           </button>
         </>
       ) : (
-        <div>
-          <div className="admin-title">관리자 페이지</div>
-          <button className="support-link" onClick={goGoogle}>
-            google login
+        <div className="admin-login">
+          <p>
+            <label htmlFor="email">이메일: </label>
+            <input
+              type="text"
+              onChange={authChange}
+              value={email}
+              name="email"
+            />
+          </p>
+          <p>
+            <label htmlFor="password">패스워드: </label>
+            <input
+              type="password"
+              onChange={authChange}
+              value={password}
+              name="password"
+            />
+          </p>
+          <button className="support-link" onClick={authenticate}>
+            Admin login
           </button>
         </div>
       )}
