@@ -1,19 +1,10 @@
 import React, { useState } from "react";
-//Card
 import ProductCard from "components/Card/ProductCard";
-
-//carousel
 import BannerCarousel from "components/Carousel/BannerCarousel";
-
-// video
 import ICarousel from "components/Carousel/ICarousel";
 import VideoDialog from "components/Video/VideoDialog";
-
-// translation
 import { useTranslation } from "react-i18next";
 import { Languages, languages } from "config/lang/i18n";
-
-//images
 import dough from "assets/images/foods/dough.jpg";
 import product01 from "assets/images/product/product01.png";
 import product02 from "assets/images/product/product02.png";
@@ -36,6 +27,7 @@ function Main({ ...props }: IMain) {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <>
       <section id="banner">
@@ -57,9 +49,9 @@ function Main({ ...props }: IMain) {
         <div className="mg-container mg-card mg-wrapper">
           <img
             src={dough}
-            onClick={handleClickOpen}
+            // onClick={handleClickOpen}
             alt="dough"
-            className="mg-img title videoImg"
+            className="mg-img title"
           />
           <div className="mg-item-r mg-card-content">
             <div className="maintitle">기계, 그 이상</div>
@@ -81,7 +73,13 @@ function Main({ ...props }: IMain) {
               <p>제품의 다양화와 성능향상을 위해 항상 노력하고 있습니다.</p>
             </div>
             <div className="mg-card-badge">
-              <a onClick={handleClickOpen}>홍보영상</a>
+              {/* <a onClick={handleClickOpen}>홍보영상</a> */}
+              <a
+                href="https://www.youtube.com/watch?v=N0lhgytbjQo"
+                target="_blank"
+              >
+                홍보영상
+              </a>
               {/* <a>연혁</a> */}
               <a href="https://goo.gl/maps/s6MNjjkPMY6cb37PA " target="_blank">
                 찾아오시는 길
