@@ -1,4 +1,5 @@
 import firebase from "firebase/app";
+import "firebase/analytics";
 let config = {
   apiKey: "AIzaSyBfA6g-qf_nGS5S-yuAF0694G-8tgaoSkw",
   authDomain: "gasro-4f24b.firebaseapp.com",
@@ -11,4 +12,5 @@ let config = {
 };
 
 firebase.initializeApp(config);
+const analytics = firebase.analytics();
 export default firebase;

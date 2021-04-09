@@ -1042,7 +1042,7 @@ text-align:center;
 .notice-container{
   margin:200px 150px;
   background-color:#FFF;
-  min-height:500px;
+  min-height:900px;
   padding:3em;
 }
 .notice-title{

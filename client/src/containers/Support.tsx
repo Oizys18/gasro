@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import emailjs, { init } from "emailjs-com";
 import apikeys from "assets/apikeys";
 import PersonalInfo from "components/PersonalInfo";
@@ -6,6 +7,7 @@ interface Isupport {}
 
 function Support({ ...props }: Isupport) {
   init(apikeys.USER_ID);
+  const history = useHistory();
   const [category, setCategory] = useState(0);
   const [agreed, setAgreed] = useState(0);
   const [inputs, setInputs] = useState({
@@ -47,6 +49,7 @@ function Support({ ...props }: Isupport) {
             alert(
               "문의완료, 빠른 시일 내에 답장 드리겠습니다.\nMessage Sent. I'll get back to you shortly."
             );
+            history.push("/");
           },
           (error) => {
             alert(
@@ -150,7 +153,7 @@ function Support({ ...props }: Isupport) {
                             value={address}
                             onChange={onChange}
                             required={true}
-                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                            placeholder="ex)서울시 강서구 양천로 47나길 18"
                           />
                         </p>
                       </li>
@@ -170,7 +173,7 @@ function Support({ ...props }: Isupport) {
                             value={email}
                             onChange={onChange}
                             required={true}
-                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                            placeholder="ex)gasteckorea@naver.com"
                           />
                         </p>
                       </li>
@@ -184,7 +187,7 @@ function Support({ ...props }: Isupport) {
                             value={phone}
                             onChange={onChange}
                             required={true}
-                            placeholder="ex)가스텍코리아(주) / 홍길동"
+                            placeholder="ex)(02) 3665-8611~4"
                           />
                         </p>
                       </li>
@@ -200,7 +203,7 @@ function Support({ ...props }: Isupport) {
                       value={message}
                       onChange={onChange}
                       required={true}
-                      placeholder="ex)가스텍코리아(주) / 홍길동"
+                      placeholder="ex)온도조절 관련 문의"
                     />
                   </dd>
                 </dl>
