@@ -57,7 +57,7 @@ const AccordionDetails = withStyles((theme) => ({
 
 export default function Notice() {
   const param = useParams<Param>();
-  const data = useContext(noticeContext);
+  let data = useContext(noticeContext);
   const [expanded, setExpanded] = React.useState<string | false>(
     `${param.post_id}`
   );
@@ -73,25 +73,44 @@ export default function Notice() {
     <section className="basic-container " id="notice">
       <div className="notice-container">
         <div className="notice-title">공지사항</div>
-        {data.map((post: any) => (
+        {data.length !== 0 ? (
+          data.map((post: any) => (
+            <Accordion
+              key={post.post_id}
+              square
+              expanded={expanded === `${post.post_id}`}
+              onChange={handleChange(`${post.post_id}`)}
+            >
+              <AccordionSummary
+                aria-controls="panel1d-content"
+                id="panel1d-header"
+              >
+                <div>{post?.title}</div>
+                <div>{post?.date}</div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div dangerouslySetInnerHTML={{ __html: post?.content }}></div>
+              </AccordionDetails>
+            </Accordion>
+          ))
+        ) : (
           <Accordion
-            key={post.post_id}
             square
-            expanded={expanded === `${post.post_id}`}
-            onChange={handleChange(`${post.post_id}`)}
+            expanded={expanded === `1`}
+            onChange={handleChange(`1`)}
           >
             <AccordionSummary
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              <div>{post?.title}</div>
-              <div>{post?.date}</div>
+              <div>공지사항이 없습니다.</div>
+              <div>{new Date().toISOString().slice(0, 10)}</div>
             </AccordionSummary>
             <AccordionDetails>
-              <div dangerouslySetInnerHTML={{ __html: post?.content }}></div>
+              <div>공지사항을 추가해주십시오.</div>
             </AccordionDetails>
           </Accordion>
-        ))}
+        )}
       </div>
     </section>
   );
