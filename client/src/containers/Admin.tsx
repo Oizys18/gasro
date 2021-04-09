@@ -3,7 +3,6 @@ import firebase from "database/firebaseConfig";
 import { filestorage } from "database/filedata";
 import { noticeRef } from "database/textdata";
 import "firebase/auth";
-
 import SunEditor, { buttonList } from "suneditor-react";
 import "suneditor/dist/css/suneditor.min.css"; // Import Sun Editor's CSS File
 
@@ -78,13 +77,23 @@ export default function Admin() {
   };
 
   function onSubmit() {
-    const postData = {
-      ...inputs,
-      date: new Date().toISOString().slice(0, 10),
-      content: post,
-    };
-    noticeRef.push(postData);
-    alert("성공적으로 작성되었습니다.");
+    if (inputs["title"] !== "" || inputs["content"] !== "") {
+      try {
+        const newKey = noticeRef.push().key;
+        const postData = {
+          ...inputs,
+          date: new Date().toISOString().slice(0, 10),
+          content: post,
+          post_id: newKey,
+        };
+        noticeRef.child(`${newKey}`).set(postData);
+        alert("글작성 성공");
+      } catch {
+        alert("글작성 실패, 다시 시도해주세요");
+      }
+    } else {
+      alert("제목과 내용을 입력해주세요");
+    }
   }
   const editorRef = useRef<SunEditor>(null);
   useEffect(() => {

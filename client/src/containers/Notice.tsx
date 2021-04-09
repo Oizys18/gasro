@@ -1,11 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import noticeContext from "apis/noticeApi";
 import { uid } from "react-uid";
+import { useParams } from "react-router";
 import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
-
+interface Param {
+  post_id: string;
+}
 const Accordion = withStyles({
   root: {
     borderBottom: "1px solid #f7f7f7",
@@ -53,8 +56,11 @@ const AccordionDetails = withStyles((theme) => ({
 }))(MuiAccordionDetails);
 
 export default function Notice() {
+  const param = useParams<Param>();
   const data = useContext(noticeContext);
-  const [expanded, setExpanded] = React.useState<string | false>("panel1");
+  const [expanded, setExpanded] = React.useState<string | false>(
+    `${param.post_id}`
+  );
 
   const handleChange = (panel: string) => (
     event: React.ChangeEvent<{}>,
@@ -69,10 +75,10 @@ export default function Notice() {
         <div className="notice-title">공지사항</div>
         {data.map((post: any) => (
           <Accordion
-            key={uid(post)}
+            key={post.post_id}
             square
-            expanded={expanded === `${uid(post)}`}
-            onChange={handleChange(`${uid(post)}`)}
+            expanded={expanded === `${post.post_id}`}
+            onChange={handleChange(`${post.post_id}`)}
           >
             <AccordionSummary
               aria-controls="panel1d-content"

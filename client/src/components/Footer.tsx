@@ -5,10 +5,10 @@ import gas_kor from "assets/documents/gas_kor.pdf";
 import rol_kor from "assets/documents/rol_kor.pdf";
 // import youtube from "assets/images/svgs/youtube.svg";
 import noticeContext from "apis/noticeApi";
-import { uid } from "react-uid";
+
 interface Props {}
 export default function Footer() {
-  const data = useContext(noticeContext);
+  const data = useContext(noticeContext).slice(0, 5);
   return (
     <>
       <footer className="footer">
@@ -20,8 +20,8 @@ export default function Footer() {
               </div>
               <ul className="footer-list">
                 {data.map((post: any) => (
-                  <li key={uid(post)} className="footer-item">
-                    <a href={`/notice/${post.id}`}>{post.title}</a>
+                  <li key={post.post_id} className="footer-item">
+                    <a href={`/notice/${post.post_id}`}>{post.title}</a>
                   </li>
                 ))}
               </ul>
@@ -30,7 +30,6 @@ export default function Footer() {
               <div className="footer-title">
                 <span>사용설명서 다운로드</span>
               </div>
-
               <ul className="footer-list">
                 <li className="footer-item">
                   <a href={catalog_kor}>제품 카탈로그</a>

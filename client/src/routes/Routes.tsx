@@ -18,6 +18,7 @@ function Routes() {
         <Route path="/" exact component={Main} />
         <Route path="/support" exact component={Support} />
         <Route path="/notice" exact component={Notice} />
+        <Route path="/notice/:post_id" exact component={Notice} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/admin" exact component={Admin} />
         <Redirect path="*" to="/" />

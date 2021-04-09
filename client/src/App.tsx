@@ -8,10 +8,12 @@ export default function App() {
   const [data, setData] = useState<Array<object>>([]);
   useEffect(() => {
     let allData = Array<Object>();
-    const postData = noticeRef.on("value", (snapshot) => {
+
+    noticeRef.on("value", (snapshot) => {
       snapshot.forEach((snap) => {
         allData.push(snap.val());
       });
+      allData.reverse();
       setData(allData);
     });
   }, []);
