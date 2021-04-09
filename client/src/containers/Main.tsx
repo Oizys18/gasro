@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProductCard from "components/Card/ProductCard";
 import BannerCarousel from "components/Carousel/BannerCarousel";
 import ICarousel from "components/Carousel/ICarousel";
-import VideoDialog from "components/Video/VideoDialog";
+// import VideoDialog from "components/Video/VideoDialog";
 import { useTranslation } from "react-i18next";
 import { Languages, languages } from "config/lang/i18n";
 import dough from "assets/images/foods/dough.jpg";
@@ -31,7 +31,7 @@ function Main({ ...props }: IMain) {
   return (
     <>
       <section id="banner">
-        <VideoDialog open={open} handleClose={handleClose}></VideoDialog>
+        {/* <VideoDialog open={open} handleClose={handleClose}></VideoDialog> */}
         <BannerCarousel></BannerCarousel>
       </section>
       <section id="company" className="basic-container company">

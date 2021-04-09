@@ -548,7 +548,6 @@ img{
 }
 .card-img{
   img{
-    width:730px;
     height:480px;
     object-fit:fill;
     background-color:transparent;

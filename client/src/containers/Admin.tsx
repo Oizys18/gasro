@@ -10,7 +10,6 @@ import "suneditor/dist/css/suneditor.min.css"; // Import Sun Editor's CSS File
 export default function Admin() {
   const [post, setPost] = useState();
   const [curUser, setCurUser] = useState<string | null>();
-  // const [image, setImage] = useState<Array<ImageData>>([]);
 
   const [auth, setAuth] = useState({
     email: "",
