@@ -26,7 +26,6 @@ export default function Admin() {
   useEffect(() => {
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-        // User is signed in.
         setCurUser(user?.email);
       } else {
         setCurUser("");
@@ -40,10 +39,10 @@ export default function Admin() {
         .auth()
         .signOut()
         .then(() => {
-          // Sign-out successful.
+          alert("로그아웃 성공");
         })
         .catch((error) => {
-          // An error happened.
+          alert("로그아웃 실패, 다시 시도해주세요");
         });
     } else {
       firebase
@@ -51,12 +50,13 @@ export default function Admin() {
         .signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
           var user = userCredential.user;
-          console.log(user?.email);
+          console.log(user?.email, "로그인 완료");
           setCurUser(user?.email);
         })
         .catch((error) => {
           var errorCode = error.code;
           var errorMessage = error.message;
+          console.log(errorCode, errorMessage);
         });
     }
   }
@@ -108,6 +108,7 @@ export default function Admin() {
       {curUser ? (
         <>
           <form onSubmit={onSubmit} className="admin-post">
+            <p>현재 사용자:{curUser}</p>
             <p>
               <label htmlFor="title">제목</label>
               <input
@@ -133,7 +134,7 @@ export default function Admin() {
             <button className="support-link">작성</button>
           </form>
           <button className="support-link" onClick={authenticate}>
-            Admin logout
+            관리자 로그아웃
           </button>
         </>
       ) : (
@@ -157,7 +158,7 @@ export default function Admin() {
             />
           </p>
           <button className="support-link" onClick={authenticate}>
-            Admin login
+            관리자 로그인
           </button>
         </div>
       )}

@@ -47,7 +47,7 @@ function Support({ ...props }: Isupport) {
         .then(
           (result) => {
             alert(
-              "문의완료, 빠른 시일 내에 답장 드리겠습니다.\nMessage Sent. I'll get back to you shortly."
+              "문의 전송완료, 빠른 시일 내에 답장 드리겠습니다.\nMessage Sent. I'll get back to you shortly."
             );
             history.push("/");
           },
