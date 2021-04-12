@@ -10,7 +10,6 @@ let config = {
   appId: "1:947164128059:web:688d3367a2f12c0e9f0d1e",
   measurementId: "G-4NQQSYDGTF",
 };
-
 firebase.initializeApp(config);
 const analytics = firebase.analytics();
 export default firebase;
