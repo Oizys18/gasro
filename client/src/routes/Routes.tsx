@@ -9,6 +9,7 @@ import Footer from "components/Footer";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
+// 라우터
 function Routes() {
   return (
     <>

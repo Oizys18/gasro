@@ -4,6 +4,8 @@ import noticeContext from "apis/noticeApi";
 import Routes from "routes/Routes";
 import { BrowserRouter } from "react-router-dom";
 
+// 공지사항 data를 firebase DB로부터 fetch 후 context provider에 저장
+
 export default function App() {
   const [data, setData] = useState<Array<object>>([]);
   useEffect(() => {

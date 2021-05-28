@@ -6,6 +6,8 @@ import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
+
+// 공지사항: Material-UI Accordian 사용
 interface Param {
   post_id: string;
 }
@@ -62,12 +64,10 @@ export default function Notice() {
     `${param.post_id}`
   );
 
-  const handleChange = (panel: string) => (
-    event: React.ChangeEvent<{}>,
-    newExpanded: boolean
-  ) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+  const handleChange =
+    (panel: string) => (event: React.ChangeEvent<{}>, newExpanded: boolean) => {
+      setExpanded(newExpanded ? panel : false);
+    };
 
   return (
     <section className="basic-container " id="notice">

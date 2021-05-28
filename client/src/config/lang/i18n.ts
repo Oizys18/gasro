@@ -7,6 +7,7 @@ import tranVn from "config/lang/translation.vn.json";
 export const languages = ["en", "ko", "vn", "cn"] as const;
 export type Languages = typeof languages[number]; // 'en' | 'ko' | 'cn' | 'vn
 
+// 다국어옵션, 번역본 전송 시 적용
 const resources = {
   en: { translation: tranEn },
   ko: { translation: tranKo },

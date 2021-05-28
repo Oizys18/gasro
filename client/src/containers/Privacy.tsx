@@ -1,4 +1,5 @@
 import * as React from "react";
+// 개인정보처리방침
 interface IPrivacy {}
 function Privacy({ ...props }: IPrivacy) {
   return (

@@ -4,7 +4,7 @@ import emailjs, { init } from "emailjs-com";
 import apikeys from "assets/apikeys";
 import PersonalInfo from "components/PersonalInfo";
 interface Isupport {}
-
+// 문의사항: emailjs를 통해 회사메일로 고객문의 전송
 function Support({ ...props }: Isupport) {
   init(apikeys.USER_ID);
   const history = useHistory();

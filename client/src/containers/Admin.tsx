@@ -6,6 +6,7 @@ import "firebase/auth";
 import SunEditor, { buttonList } from "suneditor-react";
 import "suneditor/dist/css/suneditor.min.css"; // Import Sun Editor's CSS File
 
+// 관리자페이지 authentication (공지사항 작성)
 export default function Admin() {
   const [post, setPost] = useState();
   const [curUser, setCurUser] = useState<string | null>();

@@ -1,5 +1,6 @@
 # gasro
 
+- www.gasteckorea.com
 - 기업용 웹사이트 개발, 퍼블리싱
 
 ## To-do
@@ -21,14 +22,17 @@
   - [x] 제품 정보 입력 및 이미지 추가
   - [x] REST API 연결
   - [x] 배포
+  - [ ] 회사 제공 고해상도 이미지로 변경 (촬영 대기중..)
+  - [ ] 다국어 옵션 제공 (번역본 대기중)
   - [x] 최적화 (...진행중)
     - [ ] 이미지 최적화
     - [ ] 재렌더링 방지
-  - [ ] 반응형 (모바일) 설정
+  - [ ] 반응형 (모바일) 개발
 
 ## 개발환경
 
-- Front: React Typescript
+- Front: React + Typescript
+
 - Backend: Firebase
   - NodeJS Express Typescript 서버를 만들었으나, 아래와 같은 이유로 Firebase로 변경했다.
     1. 기존 웹사이트가 cafe24 유료 웹호스팅을 사용하고 있었으나, NodeJS 서버 업로드를 위해선 추가 결제가 필요하다.
