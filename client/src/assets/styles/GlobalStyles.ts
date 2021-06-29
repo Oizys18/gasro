@@ -1160,8 +1160,14 @@ text-align:center;
 
 
 /* Media queries */
-/* @media screen and (max-width: 360px){}
-@media screen and (min-width: 768px){ } */
+/* 모바일 */
+@media screen and (max-width: 360px){
+
+}
+/* 타블렛 */
+@media screen and (min-width: 768px){ 
+  
+}
 
 `;
 
