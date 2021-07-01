@@ -1171,8 +1171,9 @@ text-align:center;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smallest-font-size: .7rem;
-
 }
+
+
 }
 /* 타블렛 */
 @media screen and (min-width: 768px){ 
