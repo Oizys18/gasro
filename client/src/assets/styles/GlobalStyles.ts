@@ -1163,6 +1163,16 @@ text-align:center;
 /* 모바일 */
 @media screen and (max-width: 360px){
 
+  :root{
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smallest-font-size: .7rem;
+
+}
 }
 /* 타블렛 */
 @media screen and (min-width: 768px){ 
