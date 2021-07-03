@@ -102,7 +102,7 @@ function Main({ ...props }: IMain) {
             <div className="numTitle-l">
               <span>02</span>
             </div>
-            <div className="maintitle">고성능 부품 및 알고리즘</div>
+            <div className="maintitle">고성능 부품</div>
             <p>오븐 제어에 최적화된 자체제작 전용 PC를 부착했습니다.</p>
             <p>
               고성능 온도센서와 온도제어 알고리즘 내장하여 정확한 온도조절이
