@@ -1236,7 +1236,6 @@ text-align:center;
  
 }
 .slide-container{
-  /* margin-top:10px; */
   margin-bottom:200px;
   height:100px;
 }
@@ -1273,16 +1272,13 @@ text-align:center;
     
   }
   dl{
-    /* width:100%; */
     display:inline-block;
     padding:15px 0;
     border-bottom:1px solid lightgray;
-    /* margin:0 40px 0 0; */
   }
   ol,li{
     display:inline-block;
     list-style: none;
-    /* margin:0 0 0 40px; */
     padding:0;
   }
   ol {
