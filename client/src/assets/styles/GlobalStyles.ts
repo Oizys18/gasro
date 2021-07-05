@@ -1265,7 +1265,6 @@ text-align:center;
   dt{
     /* vertical-align:middle; */
     font-size:var(--h3-font-size);
-    /* min-width:200px; */
   }
   dd{
     /* width:100%; */
