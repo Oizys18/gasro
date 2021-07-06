@@ -24,12 +24,12 @@ function Main({ ...props }: IMain) {
       </section>
       <section id="company" className="basic-container company">
         <div className="mg-container top">
-          <div className="mg-item-l content">
+          <div className="mg-item-l content mg-text">
             <p>1995년 설립, 20년 이상의 피자오븐기계 전문제조 경력</p>
             <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증 보유</p>
             <p>지속적인 연구개발을 통한 제품 혁신</p>
           </div>
-          <div className="mg-item-r ">
+          <div className="mg-item-r top">
             <div className="subtitle">회사소개</div>
             <div className="maintitle">가스텍코리아(주)</div>
           </div>
@@ -85,8 +85,8 @@ function Main({ ...props }: IMain) {
           </div>
         </div>
         <div className="mg-container">
-          <img src={product01} alt="" className="mg-img " />
-          <div className="mg-item-r ">
+          <img src={product01} alt="" className="mg-img" />
+          <div className="mg-item-r mg-text">
             <div className="numTitle-r">
               <span>01</span>
             </div>
@@ -98,7 +98,7 @@ function Main({ ...props }: IMain) {
         </div>
 
         <div className="mg-container">
-          <div className="mg-item-l ">
+          <div className="mg-item-l mg-text">
             <div className="numTitle-l">
               <span>02</span>
             </div>
@@ -114,7 +114,7 @@ function Main({ ...props }: IMain) {
         </div>
         <div className="mg-container">
           <img src={product03} alt="" className="mg-img " />
-          <div className="mg-item-r ">
+          <div className="mg-item-r mg-text">
             <div className="numTitle-r">
               <span>03</span>
             </div>
@@ -129,7 +129,7 @@ function Main({ ...props }: IMain) {
           </div>
         </div>
         <div className="mg-container">
-          <div className="mg-item-l ">
+          <div className="mg-item-l mg-text">
             <div className="numTitle-l">
               <span>04</span>
             </div>
@@ -143,7 +143,7 @@ function Main({ ...props }: IMain) {
         </div>
         <div className="mg-container">
           <img src={product05} alt="" className="mg-img " />
-          <div className="mg-item-r ">
+          <div className="mg-item-r mg-text">
             <div className="numTitle-r">
               <span>05</span>
             </div>
