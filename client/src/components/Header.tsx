@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import korea from "assets/images/svgs/south-korea.svg";
 import china from "assets/images/svgs/china.svg";
 import us from "assets/images/svgs/united-states.svg";
@@ -65,37 +66,37 @@ export default function Header({ ...props }: Props) {
       >
         <div className="basic-container nav-container">
           <ul className="nav-list">
-            <a href="/#" className="nav-item nav-logo">
+            <Link to="/#" className="nav-item nav-logo">
               Gasro Quick
-            </a>
+            </Link>
             <li className="nav-item">
-              <a href="/#banner">홈</a>
+              <Link to="/#banner">홈</Link>
             </li>
             <li className="nav-item">
-              <a href="/#company">회사소개</a>
+              <Link to="/#company">회사소개</Link>
             </li>
             <li className="nav-item">
-              <a href="/#product">제품소개</a>
+              <Link to="/#product">제품소개</Link>
             </li>
             <li className="nav-item">
-              <a href="/#product-detail">상세정보</a>
+              <Link to="/#product-detail">상세정보</Link>
             </li>
             <li className="nav-item">
-              <a href="/#instruction">제품사용</a>
+              <Link to="/#instruction">제품사용</Link>
             </li>
           </ul>
           <ul className="nav-list">
             <li className="nav-item">
-              <a href="/support">고객지원</a>
+              <Link to="/support">고객지원</Link>
             </li>
             <li className="nav-item">
-              <a href="/notice">공지사항</a>
+              <Link to="/notice">공지사항</Link>
             </li>
             <div className="dropdown">
               <li className="nav-item language">{locales[locale]}</li>
               <div className="dropdown-content">
-                <a
-                  href="/#"
+                <Link
+                  to="/#"
                   onClick={() => {
                     setLocale(0);
                     handleChangeLanguage("ko");
@@ -103,9 +104,9 @@ export default function Header({ ...props }: Props) {
                   className="iconbox"
                 >
                   {locales[0]}
-                </a>
-                <a
-                  href="/#"
+                </Link>
+                <Link
+                  to="/#"
                   onClick={() => {
                     setLocale(1);
                     handleChangeLanguage("en");
@@ -113,9 +114,9 @@ export default function Header({ ...props }: Props) {
                   className="iconbox"
                 >
                   {locales[1]}
-                </a>
-                <a
-                  href="/#"
+                </Link>
+                <Link
+                  to="/#"
                   onClick={() => {
                     setLocale(2);
                     handleChangeLanguage("cn");
@@ -123,9 +124,9 @@ export default function Header({ ...props }: Props) {
                   className="iconbox"
                 >
                   {locales[2]}
-                </a>
-                <a
-                  href="/#"
+                </Link>
+                <Link
+                  to="/#"
                   onClick={() => {
                     setLocale(3);
                     handleChangeLanguage("vn");
@@ -133,7 +134,7 @@ export default function Header({ ...props }: Props) {
                   className="iconbox"
                 >
                   {locales[3]}
-                </a>
+                </Link>
               </div>
             </div>
           </ul>
