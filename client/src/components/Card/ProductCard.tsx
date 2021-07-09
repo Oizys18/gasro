@@ -5,7 +5,7 @@ import gt300AB from "assets/images/ovens/gt300AB.png";
 import gt600AB from "assets/images/ovens/gt600AB.png";
 import gt700AB from "assets/images/ovens/gt700AB.png";
 
-export default function ProductCard() {
+function ProductCard() {
   const [focus, setFocus] = useState(1);
   const [click, setClick] = useState(0);
   const curOven = [0, "GT300", "GT600", "GT700"];
@@ -44,31 +44,7 @@ export default function ProductCard() {
         break;
     }
   };
-  const handleClick = (clicked: number) => {
-    switch (clicked) {
-      case 1:
-        if (click === 1) {
-          setClick(0);
-        } else {
-          setClick(1);
-        }
-        break;
-      case 2:
-        if (click === 2) {
-          setClick(0);
-        } else {
-          setClick(2);
-        }
-        break;
-      case 3:
-        if (click === 3) {
-          setClick(0);
-        } else {
-          setClick(3);
-        }
-        break;
-    }
-  };
+  const handleClick = newFunction(click, setClick);
   return (
     <>
       <div className="card-content" id="card-content">
@@ -158,4 +134,36 @@ export default function ProductCard() {
       )}
     </>
   );
+}
+export default ProductCard;
+
+function newFunction(
+  click: number,
+  setClick: React.Dispatch<React.SetStateAction<number>>
+): (clicked: number) => void {
+  return (clicked: number) => {
+    switch (clicked) {
+      case 1:
+        if (click === 1) {
+          setClick(0);
+        } else {
+          setClick(1);
+        }
+        break;
+      case 2:
+        if (click === 2) {
+          setClick(0);
+        } else {
+          setClick(2);
+        }
+        break;
+      case 3:
+        if (click === 3) {
+          setClick(0);
+        } else {
+          setClick(3);
+        }
+        break;
+    }
+  };
 }
