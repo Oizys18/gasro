@@ -44,7 +44,31 @@ function ProductCard() {
         break;
     }
   };
-  const handleClick = newFunction(click, setClick);
+  const handleClick = (clicked: number) => {
+    switch (clicked) {
+      case 1:
+        if (click === 1) {
+          setClick(0);
+        } else {
+          setClick(1);
+        }
+        break;
+      case 2:
+        if (click === 2) {
+          setClick(0);
+        } else {
+          setClick(2);
+        }
+        break;
+      case 3:
+        if (click === 3) {
+          setClick(0);
+        } else {
+          setClick(3);
+        }
+        break;
+    }
+  };
   return (
     <>
       <div className="card-content" id="card-content">
@@ -136,34 +160,3 @@ function ProductCard() {
   );
 }
 export default ProductCard;
-
-function newFunction(
-  click: number,
-  setClick: React.Dispatch<React.SetStateAction<number>>
-): (clicked: number) => void {
-  return (clicked: number) => {
-    switch (clicked) {
-      case 1:
-        if (click === 1) {
-          setClick(0);
-        } else {
-          setClick(1);
-        }
-        break;
-      case 2:
-        if (click === 2) {
-          setClick(0);
-        } else {
-          setClick(2);
-        }
-        break;
-      case 3:
-        if (click === 3) {
-          setClick(0);
-        } else {
-          setClick(3);
-        }
-        break;
-    }
-  };
-}

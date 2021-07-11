@@ -9,6 +9,8 @@ import Footer from "components/Footer";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
+import Test from "containers/Test";
+
 // 라우터
 function Routes() {
   return (
@@ -22,6 +24,8 @@ function Routes() {
         <Route path="/notice/:post_id" exact component={Notice} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/admin" exact component={Admin} />
+
+        <Route path="/test" exact component={Test} />
         <Redirect path="*" to="/" />
       </Switch>
       <Footer />

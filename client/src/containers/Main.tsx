@@ -13,7 +13,8 @@ import product05 from "assets/images/product/product05.png";
 // import Reveal from "react-awesome-reveal";
 // import { keyframes } from "@emotion/react";
 
-// 메인페이지
+import styled from "styled-components";
+
 interface IMain {}
 function Main({ ...props }: IMain) {
   const { t, i18n } = useTranslation();
@@ -176,3 +177,10 @@ function Main({ ...props }: IMain) {
 }
 
 export default Main;
+
+const container = styled.div`
+  max-width: 1280px;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
+`;
