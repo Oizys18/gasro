@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { HTMLProps, useState } from "react";
 import { useHistory } from "react-router";
 import emailjs, { init } from "emailjs-com";
 import apikeys from "assets/apikeys";
 import PersonalInfo from "components/PersonalInfo";
+
 interface Isupport {}
-// 문의사항: emailjs를 통해 회사메일로 고객문의 전송
+type InputProps = {
+  className?: string;
+  placeholder?: string;
+} & (
+  | {
+      type?: "text";
+      onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    }
+  | {
+      type: "textarea";
+      onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    }
+);
+
 function Support({ ...props }: Isupport) {
   init(apikeys.USER_ID);
   const history = useHistory();
@@ -28,7 +42,7 @@ function Support({ ...props }: Isupport) {
   };
 
   const [open, setOpen] = useState(false);
-  function onSubmit(e: any) {
+  function onSubmit(e: React.ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     if (
       inputs["name"] &&
