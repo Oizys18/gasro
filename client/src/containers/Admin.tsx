@@ -10,20 +10,19 @@ import "suneditor/dist/css/suneditor.min.css"; // Import Sun Editor's CSS File
 export default function Admin() {
   const [post, setPost] = useState();
   const [curUser, setCurUser] = useState<string | null>();
-
   const [auth, setAuth] = useState({
     email: "",
     password: "",
   });
   const { email, password } = auth;
 
-  const authChange = (e: any) => {
+  function authChange(e: React.ChangeEvent<HTMLInputElement>): void {
     const { value, name } = e.target;
     setAuth({
       ...auth,
       [name]: value,
     });
-  };
+  }
   useEffect(() => {
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
@@ -33,7 +32,7 @@ export default function Admin() {
       }
     });
   }, []);
-  function authenticate() {
+  function authenticate(): void {
     const isUser = firebase.auth().currentUser;
     if (isUser) {
       firebase
@@ -69,7 +68,7 @@ export default function Admin() {
   });
   const { title } = inputs; // 비구조화 할당을 통해 값 추출
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
     setInputs({
       ...inputs, // 기존의 input 객체를 복사한 뒤
@@ -77,7 +76,7 @@ export default function Admin() {
     });
   };
 
-  function onSubmit() {
+  function onSubmit(): void {
     if (inputs["title"] !== "" || inputs["content"] !== "") {
       try {
         const newKey = noticeRef.push().key;
