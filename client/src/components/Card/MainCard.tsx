@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-
 interface cardProps {
-  textL?: boolean;
+  Lchildren?: React.ReactNode;
+  Rchildren?: React.ReactNode;
+  text?: boolean;
+  image?: boolean;
 }
-export default function MainCard(props: cardProps) {
+export default function MainCard({ ...props }: cardProps) {
   return (
     <>
-      {props.textL ? (
-        <>
-          <Container></Container>
-        </>
-      ) : (
-        <Container>hi</Container>
-      )}
+      <Container>
+        <ItemLeft>{props.Lchildren}</ItemLeft>
+        <ItemRight>{props.Rchildren}</ItemRight>
+      </Container>
     </>
   );
 }
