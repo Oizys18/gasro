@@ -13,6 +13,7 @@ import product05 from "assets/images/product/product05.png";
 // import Reveal from "react-awesome-reveal";
 // import { keyframes } from "@emotion/react";
 import MainCard from "components/Card/MainCard";
+import TextCard from "components/Card/TextCard";
 import styled from "styled-components";
 
 interface IMain {}
@@ -24,17 +25,22 @@ function Main({ ...props }: IMain) {
         <BannerCarousel></BannerCarousel>
       </section>
       <section id="company" className="basic-container company">
-        <div className="mg-container top">
-          <div className="mg-item-l content mg-text">
-            <p>1995년 설립, 20년 이상의 피자오븐기계 전문제조 경력</p>
-            <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증 보유</p>
-            <p>지속적인 연구개발을 통한 제품 혁신</p>
-          </div>
-          <div className="mg-item-r top">
-            <div className="subtitle">회사소개</div>
-            <div className="maintitle">가스텍코리아(주)</div>
-          </div>
-        </div>
+        <MainCard
+          Lchildren={
+            <TextCard
+              Mchildren={<>가스텍코리아(주)</>}
+              Schildren={<>회사소개</>}
+            />
+          }
+          Rchildren={
+            <>
+              <p>1995년 설립, 20년 이상의 피자오븐기계 전문제조 경력</p>
+              <p>국제품질경영시스템 (KSA9001 / ISO9001) 통합인증 보유</p>
+              <p>지속적인 연구개발을 통한 제품 혁신</p>
+            </>
+          }
+        />
+
         <MainCard
           Lchildren={<img src={dough} alt="dough" className="mg-img title" />}
           Rchildren={
@@ -50,6 +56,7 @@ function Main({ ...props }: IMain) {
                   인증 받았으며,
                 </p>
                 <p>
+                  <br />
                   국제품질경영시스템 (KSA9001 / ISO9001) 통합인증을 받았습니다.
                 </p>
                 <p>

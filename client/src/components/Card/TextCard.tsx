@@ -10,8 +10,8 @@ interface cardProps {
 export default function TextCard({ ...props }: cardProps) {
   return (
     <>
-      <MainTitle>{props.Mchildren}</MainTitle>
       <SubTitle>{props.Schildren}</SubTitle>
+      <MainTitle>{props.Mchildren}</MainTitle>
     </>
   );
 }
