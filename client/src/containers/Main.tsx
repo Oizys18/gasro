@@ -24,7 +24,8 @@ function Main({ ...props }: IMain) {
       <section id="banner">
         <BannerCarousel></BannerCarousel>
       </section>
-      <section id="company" className="basic-container company">
+      <MContainer>
+        {/* <section id="company" className="basic-container company"> */}
         <MainCard
           Lchildren={
             <TextCard
@@ -82,22 +83,28 @@ function Main({ ...props }: IMain) {
             </>
           }
         />
-      </section>
-      <section id="product" className="basic-container ">
-        <div className="mg-container">
-          <div className="mg-item-l ">
-            <div className="subtitle">제품소개</div>
-            <div className="maintitle">컨베이어 오븐</div>
-          </div>
-          <div className="mg-item-r ">
-            <p>아시아 최고의 보급율을 자랑하는 컨베이어 피자오븐</p>
-            <p>
-              컨베이어와 터널을 통해 연속으로 다량의 피자를 조리해낼 수
-              있습니다.
-            </p>
-            <p>분해, 조립이 간편하여 청소하기 용이합니다.</p>
-          </div>
-        </div>
+        {/* </section> */}
+      </MContainer>
+      {/* <section id="product" className="basic-container "> */}
+      <MContainer>
+        <MainCard
+          Lchildren={
+            <>
+              <p>아시아 최고의 보급율을 자랑하는 컨베이어 피자오븐</p>
+              <p>
+                컨베이어와 터널을 통해 연속으로 다량의 피자를 조리해낼 수
+                있습니다.
+              </p>
+              <p>분해, 조립이 간편하여 청소하기 용이합니다.</p>
+            </>
+          }
+          Rchildren={
+            <TextCard
+              Mchildren={<>컨베이어 오븐</>}
+              Schildren={<>제품소개</>}
+            />
+          }
+        />
         <MainCard
           Lchildren={<img src={product01} alt="" className="mg-img" />}
           Rchildren={
@@ -183,7 +190,8 @@ function Main({ ...props }: IMain) {
         <div className="card-container" id="product-detail">
           <ProductCard></ProductCard>
         </div>
-      </section>
+      </MContainer>
+      {/* </section> */}
       <section id="instruction" className="instruction-wrapper">
         <ICarousel></ICarousel>
       </section>
@@ -204,9 +212,9 @@ function Main({ ...props }: IMain) {
 
 export default Main;
 
-const container = styled.div`
+const MContainer = styled.div`
   max-width: 1280px;
   width: calc(100% - 3rem);
-  margin-left: var(--mb-3);
-  margin-right: var(--mb-3);
+  margin-left: auto;
+  margin-right: auto;
 `;
