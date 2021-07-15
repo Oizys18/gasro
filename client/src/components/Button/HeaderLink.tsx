@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 interface HeaderProps {
   children: React.ReactNode;
   to: string;
@@ -8,7 +9,7 @@ interface HeaderProps {
 export default function HeaderLink({ children, ...props }: HeaderProps) {
   return (
     <HeaderListItem className="nav-item">
-      <Link to={props.to}>{children}</Link>
+      <HashLink to={props.to}>{children}</HashLink>
     </HeaderListItem>
   );
 }

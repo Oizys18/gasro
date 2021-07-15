@@ -24,8 +24,7 @@ function Main({ ...props }: IMain) {
       <section id="banner">
         <BannerCarousel></BannerCarousel>
       </section>
-      <MContainer>
-        {/* <section id="company" className="basic-container company"> */}
+      <section id="company" className="basic-container company">
         <MainCard
           Lchildren={
             <TextCard
@@ -83,10 +82,8 @@ function Main({ ...props }: IMain) {
             </>
           }
         />
-        {/* </section> */}
-      </MContainer>
-      {/* <section id="product" className="basic-container "> */}
-      <MContainer>
+      </section>
+      <section id="product" className="basic-container ">
         <MainCard
           Lchildren={
             <>
@@ -190,8 +187,7 @@ function Main({ ...props }: IMain) {
         <div className="card-container" id="product-detail">
           <ProductCard></ProductCard>
         </div>
-      </MContainer>
-      {/* </section> */}
+      </section>
       <section id="instruction" className="instruction-wrapper">
         <ICarousel></ICarousel>
       </section>
@@ -213,8 +209,8 @@ function Main({ ...props }: IMain) {
 export default Main;
 
 const MContainer = styled.div`
-  max-width: 1280px;
+  /* max-width: 1280px;
   width: calc(100% - 3rem);
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 `;

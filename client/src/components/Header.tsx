@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import korea from "assets/images/svgs/south-korea.svg";
 import china from "assets/images/svgs/china.svg";
 import us from "assets/images/svgs/united-states.svg";
 import vietnam from "assets/images/svgs/vietnam.svg";
-import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Languages, languages } from "config/lang/i18n";
+import HeaderLink from "components/Button/HeaderLink";
 
 interface Props {}
 export default function Header({ ...props }: Props) {
@@ -66,24 +67,12 @@ export default function Header({ ...props }: Props) {
       >
         <div className="basic-container nav-container">
           <ul className="nav-list">
-            <Link to="/#" className="nav-item nav-logo">
-              Gasro Quick
-            </Link>
-            <li className="nav-item">
-              <Link to="/#banner">홈</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/#company">회사소개</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/#product">제품소개</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/#product-detail">상세정보</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/#instruction">제품사용</Link>
-            </li>
+            <HeaderLink to="/#">Gasro Quick</HeaderLink>
+            <HeaderLink to="/#banner">홈</HeaderLink>
+            <HeaderLink to="/#company">회사소개</HeaderLink>
+            <HeaderLink to="/#product">제품소개</HeaderLink>
+            <HeaderLink to="/#product-detail">상세정보</HeaderLink>
+            <HeaderLink to="/#instruction">제품사용</HeaderLink>
           </ul>
           <ul className="nav-list">
             <li className="nav-item">
