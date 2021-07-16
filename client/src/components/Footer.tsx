@@ -62,15 +62,8 @@ export default function Footer() {
                     오시는 길
                   </a>
                 </div>
-                {/* <div>회사정책</div> */}
               </div>
               <div className="footer-social">
-                {/* <div className="social-icon">
-                  <i
-                    className="bx bxl-youtube bx-sm"
-                    style={{ color: "#ffffff" }}
-                  ></i>
-                </div> */}
                 <a
                   href="https://www.youtube.com/channel/UCa0SlrpAltTd69t7H-sGfHA"
                   target="_blank"
