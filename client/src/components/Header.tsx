@@ -75,12 +75,8 @@ export default function Header({ ...props }: Props) {
             <HeaderLink to="/#instruction">제품사용</HeaderLink>
           </ul>
           <ul className="nav-list">
-            <li className="nav-item">
-              <Link to="/support">고객지원</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/notice">공지사항</Link>
-            </li>
+            <HeaderLink to="/support">고객지원</HeaderLink>
+            <HeaderLink to="/notice">공지사항</HeaderLink>
             <div className="dropdown">
               <li className="nav-item language">{locales[locale]}</li>
               <div className="dropdown-content">
