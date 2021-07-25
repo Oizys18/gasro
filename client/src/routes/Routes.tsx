@@ -24,7 +24,6 @@ function Routes() {
         <Route path="/notice/:post_id" exact component={Notice} />
         <Route path="/privacy" exact component={Privacy} />
         <Route path="/admin" exact component={Admin} />
-
         <Route path="/test" exact component={Test} />
         <Redirect path="*" to="/" />
       </Switch>
